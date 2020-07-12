@@ -13,18 +13,23 @@ const getYamlData = require('./utils/get-yaml-data');
 const inlineSvg = require('./utils/inline-svg');
 const cssVars = require('./utils/css-vars');
 const codeFilter = require('./utils/code-filter');
+const svelteSourceFilter = require('./utils/svelte-source-filter');
 const codeInlineFilter = require('./utils/code-inline-filter');
 const createIndex = require('./utils/create-index');
 const createMobilePreviewLinks = require('./utils/create-mobile-preview-links');
+const createInlineCodeTags = require('./utils/create-inline-code-tags');
+const createCodeFilter = require('./utils/create-code-filter');
+const releaseNotes = require('./utils/release-notes');
 
 if (!pug.filter && !pug.filters.code) {
   pug.filters = {
+    svelteSource: svelteSourceFilter,
     code: codeFilter,
     code_inline: codeInlineFilter,
   };
 }
 
-function buildPages(cb, { src = ['**/*.pug', '!**/_*.pug', '!_*.pug'], dest = './' } = {}) {
+function buildPages(cb, { src = ['**/*.pug', '!**/_*.pug', '!_*.pug', '!docs-demos/svelte/*.pug'], dest = './public' } = {}) {
   const cdn = process.argv.slice(3) ? process.argv.slice(3).toString().replace('-', '') !== 'local' : true;
   const time = Date.now();
 
@@ -39,6 +44,8 @@ function buildPages(cb, { src = ['**/*.pug', '!**/_*.pug', '!_*.pug'], dest = '.
         let content = file.contents.toString();
         content = createIndex(content, file.path);
         content = createMobilePreviewLinks(content, file.path);
+        content = createCodeFilter(content);
+        content = createInlineCodeTags(content);
         file.contents = Buffer.from(content);
       }
       cbInternal(null, file);
@@ -56,6 +63,7 @@ function buildPages(cb, { src = ['**/*.pug', '!**/_*.pug', '!_*.pug'], dest = '.
         getYamlData,
         inlineSvg,
         cssVars,
+        releaseNotes,
       },
     }))
     .on('error', (err) => {

@@ -41,7 +41,7 @@ block content
       import ReactDOM from  'react-dom';
 
       // Import F7 Bundle
-      import Framework7 from 'framework7/framework7.esm.bundle.js';
+      import Framework7 from 'framework7/framework7-lite.esm.bundle.js';
 
       // Import F7-React Plugin
       import Framework7React from 'framework7-react';
@@ -75,9 +75,8 @@ block content
       };
 
       export default () => (
-        // Main Framework7 App component where we pass Framework7 params
+        {/* Main Framework7 App component where we pass Framework7 params */}
         <App params={f7params}>
-          <Statusbar />
 
           {/* initial page is specified in routes.js */}
           <View main url="/" />
@@ -86,7 +85,7 @@ block content
 
     p In the examples above:
     ul
-      li we pass <a href="../docs/init-app.html">Framework7 parameters</a> to the <code>App</code> main Framework7 app component in its <code><b>params</b></code> property;
-      li root element passed to ReactDOM.render (<code>document.getElementById('app')</code>) will be used as Framework7 root element
+      li we pass <a href="../docs/init-app.html">Framework7 parameters</a> to the `App` main Framework7 app component in its `params` property;
+      li root element passed to ReactDOM.render (`document.getElementById('app')`) will be used as Framework7 root element
     p We also must specify array with routes (if we have navigation between pages in the app). Check out information about <a href="react-component-extensions.html">React Component Extensions</a>, router and routes in the <a href="navigation-router.html">Navigation Router</a> section.
 

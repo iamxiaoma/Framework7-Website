@@ -3,11 +3,52 @@ import initDocsSearch from './init-docs-search';
 import initDocsDevice from './init-docs-device';
 import initDocsNav from './init-docs-nav';
 import initDocsHeaders from './init-docs-headers';
+import initDocsColorForm from './init-docs-color-form';
+import copyToClipboard from './copy-to-clipboard';
 
 initDocsSearch();
 initDocsDevice();
 initDocsNav();
 initDocsHeaders();
+initDocsColorForm();
+
+function trackOutboundClick(url, category) {
+  if (!window.ga || !url) return;
+  if (!url) return;
+  window.ga('send', 'event', category, 'click', url);
+}
+
+
+$('a').on('click', function onClick() {
+  const url = this.href;
+  if (!url) return;
+  if (url.indexOf('http') !== 0 || url.indexOf(document.location.host) >= 0) return;
+  trackOutboundClick(url, 'outbound');
+});
+
+// Shuffle sponsors
+function shuffleArray(array, inPlace = false) {
+  const arr = inPlace ? array : [...array];
+  let j;
+  let x;
+  let i;
+  for (i = arr.length - 1; i > 0; i -= 1) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = arr[i];
+    arr[i] = arr[j];
+    arr[j] = x;
+  }
+  return arr;
+}
+if ($('footer .custom-sponsors a').length) {
+  let sponsors = [];
+  $('footer .custom-sponsors a').each((index, el) => {
+    sponsors.push(el);
+  });
+  sponsors = shuffleArray(sponsors);
+
+  $('footer .custom-sponsors').append($(sponsors));
+}
 
 // Home device theme switch
 $('.home-header .theme-switch a').click(function onClick(e) {
@@ -24,6 +65,25 @@ $('.home-header .theme-switch a').click(function onClick(e) {
 $('.home-header .mobile-preview-button').click((e) => {
   e.preventDefault();
   $('.home-header').toggleClass('mobile-preview-enabled');
+});
+$('.home-header a[href="#get-started"]').click((e) => {
+  e.preventDefault();
+  $('#get-started')[0].scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+  });
+});
+
+$('.f7-demo-icon i').on('click', function onClick() {
+  const el = this;
+  const text = $(el).parent().next().text();
+  copyToClipboard(text, () => {
+    const $toastEl = $(`<div class="f7-demo-icons-toast"><b>${text}</b> is copied to clipboard</div>`);
+    $toastEl.once('animationend', () => {
+      $toastEl.remove();
+    });
+    $(document.body).append($toastEl);
+  });
 });
 
 

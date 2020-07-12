@@ -1,69 +1,44 @@
 official:
--
-  title: Single View
-  iconUrl: '#{cdn}/i/templates/single-view.svg'
-  url: https://github.com/framework7io/framework7-template-single-view
-  previewUrl: https://framework7io.github.io/framework7-template-single-view/
-  badges:
-  - v4
--
-  title: Tabbed Views
-  iconUrl: '#{cdn}/i/templates/tabs.svg'
-  url: https://github.com/framework7io/framework7-template-tabs
-  previewUrl: https://framework7io.github.io/framework7-template-tabs/
-  badges:
-  - v4
--
-  title: Split View
-  iconUrl: '#{cdn}/i/templates/split-view.svg'
-  url: https://github.com/framework7io/framework7-template-split-view
-  previewUrl: https://framework7io.github.io/framework7-template-split-view/
-  badges:
-  - v4
--
-  title: Framework7 Webpack
-  iconUrl: '#{cdn}/i/templates/webpack.svg'
-  url: https://github.com/framework7io/framework7-template-webpack
-  badges:
-  - v4
--
-  title: React
-  iconUrl: '#{cdn}/i/templates/f7-react.svg'
-  url: https://github.com/framework7io/framework7-template-react
-  description: Framework7-React starter app template with hot-reload & css extraction
-  badges:
-  - v4
-  - React
--
-  title: Vue.js Simple
-  iconUrl: '#{cdn}/i/templates/f7-vue-simple.svg'
-  url: https://github.com/framework7io/framework7-template-vue-simple
-  previewUrl: https://framework7io.github.io/framework7-template-vue-simple/
-  description: Simple Framework7-Vue starter app template in a single HTML file
-  badges:
-  - v4
-  - Vue
--
-  title: Vue.js Webpack
-  iconUrl: '#{cdn}/i/templates/f7-vue-webpack.svg'
-  url: https://github.com/framework7io/framework7-template-vue-webpack
-  description: Framework7-Vue Webpack starter app template with hot-reload & css extraction
-  badges:
-  - v4
-  - Vue
--
-  title: Vue.js Browserify
-  iconUrl: '#{cdn}/i/templates/f7-vue-browserify.svg'
-  url: https://github.com/framework7io/framework7-template-vue-browserify
-  description: Framework7-Vue Browserify starter app template with hot-reload & css extraction
-  badges:
-  - v2
-  - Vue
-
 community:
 -
+  title: HackerNews7
+  iconUrl: https://github.com/GuillaumeBiton/HackerNews7/raw/master/assets-src/apple-touch-icon.png
+  author:
+    url: https://github.com/GuillaumeBiton
+    name: Guillaume Biton
+  url: https://github.com/GuillaumeBiton/hackernews7-svelte
+  previewUrl: http://guillaumebiton.github.io/hackernews7-svelte/
+  description: Hacker News Reader powered by Framework7 and Svelte
+  badges:
+  - v5
+  - Svelte
+-
+  title: Framework7 iOS App Store
+  iconUrl: "/i/templates/appstore.png"
+  author:
+    url: https://github.com/nolimits4web/
+    name: Vladimir Kharlampidi
+  url: https://github.com/framework7io/framework7-appstore-react
+  previewUrl: https://f7appstore.netlify.app/
+  description: iOS App Store UI made with Framework7 and React
+  badges:
+  - v5
+  - React
+-
+  title: Framework7 Recipes
+  icon:
+    text: Framework7 Recipes
+    bgColor: '#ee350f'
+    textColor: '#fff'
+  author:
+    url: https://github.com/framework7io/framework7-recipes
+    name: Community
+  url: https://github.com/framework7io/framework7-recipes
+  previewUrl: https://framework7io.github.io/framework7-recipes/
+  description: Framework7 proof of concept templates, layouts and scripts
+-
   title: Telefones Úteis
-  iconUrl: "#{cdn}/i/templates/telefones.png"
+  iconUrl: "/i/templates/telefones.png"
   author:
     url: https://github.com/CesarBalzer
     name: Cesar E. Balzer
@@ -185,7 +160,7 @@ community:
   - v1
 -
   title: Weather7 Material
-  iconUrl: "#{cdn}/i/templates/weather7-material.png"
+  iconUrl: "/i/templates/weather7-material.png"
   author:
     url: https://github.com/nolimits4web/
     name: Vladimir Kharlampidi

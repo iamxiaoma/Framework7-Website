@@ -18,7 +18,7 @@ block content
     h2 Appbar Components
     p There are following components included:
     ul
-      li <code><b>f7-appbar</b></code>
+      li `f7-appbar`
     h2 Appbar Properties
     table.params-table
       thead
@@ -49,7 +49,7 @@ block content
           td inner-class
           td string
           td
-          td Adds additional class to <code>appbar-inner</code> element
+          td Adds additional class to `appbar-inner` element
     .with-device
       h2(data-device-preview="../docs-demos/vue/appbar.html") Examples
       :code
@@ -57,8 +57,8 @@ block content
           <f7-appbar>
             <div class="left">
               <f7-button small panel-toggle="left" class="display-flex" icon-f7="bars"></f7-button>
-              <f7-button small class="display-flex margin-left-half" icon-f7="reply_fill"></f7-button>
-              <f7-button small class="display-flex margin-left-half" icon-f7="forward_fill"></f7-button>
+              <f7-button small class="display-flex margin-left-half" icon-f7="square_list"></f7-button>
+              <f7-button small class="display-flex margin-left-half" icon-f7="arrowshape_turn_up_left_fill"></f7-button>
             </div>
             <div class="right">
               <f7-searchbar
@@ -68,6 +68,11 @@ block content
               ></f7-searchbar>
             </div>
           </f7-appbar>
+          <f7-panel left>
+            <f7-block>
+              <p>Panel left content</p>
+            </f7-block>
+          </f7-panel>
           <f7-view main>
             <f7-page>
               <f7-navbar title="Appbar"></f7-navbar>

@@ -1,0 +1,99 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Chips Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Chip Svelte Component
+    ul.docs-index
+    p <a href="../docs/chips.html">Chips (Tags)</a> Svelte component represent complex entities in small blocks, such as a contact. They can contain a photo, short title string, and brief information
+    h2 Chip Components
+    p There are following components included:
+    ul
+      li `Chip`
+    h2 Chip Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;Chip&gt; properties
+        tr
+          td text
+          td string
+          td
+          td Chip label text
+        tr
+          td media
+          td string
+          td
+          td Text content of chip media
+        tr
+          td mediaBgColor
+          td string
+          td
+          td Chip media element background color. One of the <a href="colors.html">default colors</a>
+        tr
+          td mediaTextColor
+          td string
+          td
+          td Chip media element text color. One of the <a href="colors.html">default colors</a>
+        tr
+          td deleteable
+          td boolean
+          td false
+          td Defines whether the Chip has additional "delete" button or not
+        tr
+          td outline
+          td boolean
+          td false
+          td Makes Card outline
+        tr
+          td tooltip
+          td string
+          td
+          td <a href="../docs/tooltip.html">tooltip</a> text to show on hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
+        tr
+          th(colspan="4") &lt;Chip&gt; icon related properties
+        +svelteLinkIconProps
+    h2 Chip Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;Chip&gt; events
+        tr
+          td click
+          td Event will be triggered on Chip click
+        tr
+          td delete
+          td Event will be triggered on Chip delete button click
+    h2 Chip Slots
+    p Chip Svelte component has additional slots for custom elements:
+    ul
+      li `text` - element will be inserted in place of chip text label
+      li `default` - (same as `text`)
+      li `media` - element will be inserted in the chip's media element
+
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/chips.html") Examples
+      include:svelteSource ../docs-demos/svelte/chips.svelte

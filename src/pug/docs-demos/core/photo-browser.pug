@@ -3,6 +3,7 @@ block content
   .view.view-main.view-init
     .page
       .navbar
+        .navbar-bg
         .navbar-inner
           .left
           .title.sliding Photo Browser
@@ -69,7 +70,7 @@ block scripts
             'https://cdn.framework7.io/placeholder/sports-1024x1024-3.jpg',
         ],
         type: 'page',
-        backLinkText: 'Back'
+        pageBackLinkText: 'Back'
     });
     $$('.pb-page').on('click', function () {
         myPhotoBrowserPage.open();

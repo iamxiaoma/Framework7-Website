@@ -17,7 +17,28 @@ block content
     h2 Badge Components
     p There are following components included:
     ul
-      li <code><b>f7-badge</b></code>
+      li `f7-badge`
+    h2 Badge Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;f7-badge&gt; properties
+        tr
+          td tooltip
+          td string
+          td
+          td <a href="../docs/tooltip.html">tooltip</a> text to show on hover/press
+        tr
+          td tooltip-trigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
     .with-device
       h2(data-device-preview="../docs-demos/vue/badge.html") Examples
       :code
@@ -33,7 +54,7 @@ block content
               </f7-navbar>
               <f7-toolbar bottom tabbar labels>
                 <f7-link tab-link="#tab-1" tab-link-active>
-                  <f7-icon class="icon-fill" ios="f7:email_fill" aurora="f7:email_fill" md="material:email">
+                  <f7-icon class="icon-fill" ios="f7:envelope_fill" aurora="f7:envelope_fill" md="material:email">
                     <f7-badge color="green">5</f7-badge>
                   </f7-icon>
                   <span class="tabbar-label">Inbox</span>

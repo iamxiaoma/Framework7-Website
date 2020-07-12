@@ -17,8 +17,8 @@ block content
     h2 Tabs Components
     p There are following components included:
     ul
-      li <code><b>f7-tabs</b></code>
-      li <code><b>f7-tab</b></code>
+      li `f7-tabs`
+      li `f7-tab`
     h2 Tabs Properties
     table.params-table.cols-3
       thead
@@ -41,6 +41,10 @@ block content
           td routable
           td boolean
           td Enables routable tabs
+        tr
+          td swiper-params
+          td object
+          td Object with <a href="https://swiperjs.com/api/#parameters" target="_blank">Swiper parameters</a> (applies if `swipeable` enabled)
         tr
           th(colspan="3") &lt;f7-tab&gt; properties
         tr
@@ -76,7 +80,7 @@ block content
     h2 Switch Tabs
     p You can control/switch tabs:
     ul
-      li by clicking on <a href="button.html">Button</a> or <a href="link.html">Link</a> specifying related tab's ID using <code>tab-link</code> prop
+      li by clicking on <a href="button.html">Button</a> or <a href="link.html">Link</a> specifying related tab's ID using `tab-link` prop
       li using <a href="../docs/tabs.html">Tabs API</a>
       li using <a href="../docs/tabs.html#routable-tabs">Routable Tabs</a>
     .with-device

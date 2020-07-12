@@ -17,7 +17,7 @@ block content
     h2 Chip Components
     p There are following components included:
     ul
-      li <code><b>Chip</b></code> / <code><b>F7Chip</b></code>
+      li `Chip` / `F7Chip`
     h2 Chip Properties
     table.params-table
       thead
@@ -59,6 +59,19 @@ block content
           td boolean
           td false
           td Makes Card outline
+        tr
+          td tooltip
+          td string
+          td
+          td <a href="../docs/tooltip.html">tooltip</a> text to show on hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
+        tr
+          th(colspan="4") &lt;Chip&gt; icon related properties
+        +reactLinkIconProps
     h2 Chip Events
     table.events-table
       thead
@@ -77,8 +90,9 @@ block content
     h2 Chip Slots
     p Chip React component has additional slots for custom elements:
     ul
-      li <code><b>text</b></code> - element will be inserted in place of chip text label
-      li <code><b>media</b></code> - element will be inserted in the chip's media element
+      li `text` - element will be inserted in place of chip text label
+      li `default` - (same as `text`)
+      li `media` - element will be inserted in the chip's media element
 
     .with-device
       h2(data-device-preview="../docs-demos/react/chips.html") Examples
@@ -114,7 +128,7 @@ block content
                     <BlockTitle>Icon Chips</BlockTitle>
                     <Block strong>
                       <Chip text="Add Contact" mediaBgColor="blue">
-                        <Icon slot="media" ios="f7:add_round" aurora="f7:add_round" md="material:add_circle"></Icon>
+                        <Icon slot="media" ios="f7:plus_circle" aurora="f7:plus_circle" md="material:add_circle"></Icon>
                       </Chip>
                       <Chip text="London" mediaBgColor="green">
                         <Icon slot="media" ios="f7:compass" aurora="f7:compass" md="material:location_on"></Icon>

@@ -9,8 +9,8 @@ block content
         this.state = {
           mounted: false,
           photos: [
-            'http://placekitten.com/800/800',
-            'http://placekitten.com/1024/1024',
+            'https://placekitten.com/800/800',
+            'https://placekitten.com/1024/1024',
           ],
         };
       }
@@ -50,7 +50,7 @@ block content
                     </Col>
                     {this.state.mounted && (
                       <Col>
-                        <PhotoBrowser routableModals={false} photos={this.state.photos} type="page" backLinkText="Back" ref={(el) => {this.page = el}} />
+                        <PhotoBrowser routableModals={false} photos={this.state.photos} type="page" pageBackLinkText="Back" ref={(el) => {this.page = el}} />
                         <Button raised onClick={() => this.page.open()}>Page</Button>
                       </Col>
                     )}
@@ -69,7 +69,7 @@ block content
                     </Col>
                     {this.state.mounted && (
                       <Col>
-                        <PhotoBrowser routableModals={false} photos={this.state.photos} theme="dark" type="page" backLinkText="Back" ref={(el) => {this.pageDark = el}} />
+                        <PhotoBrowser routableModals={false} photos={this.state.photos} theme="dark" type="page" pageBackLinkText="Back" ref={(el) => {this.pageDark = el}} />
                         <Button raised onClick={() => this.pageDark.open()}>Page</Button>
                       </Col>
                     )}

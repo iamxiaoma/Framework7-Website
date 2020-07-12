@@ -1,0 +1,186 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Toolbar Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Toolbar Svelte Component
+    ul.docsIndex
+    p Toolbar is a fixed (with Fixed and Through layout types) area at the bottom of a screen that contains navigation elements. Toolbar does not have any parts, just plain links inside
+    p Toolbar Svelte component represents <a href="../docs/toolbar-tabbar.html">Toolbar</a> component.
+
+    h2 Toolbar Components
+    p There are following components included:
+    ul
+      li `Toolbar`
+
+    h2 Toolbar Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;Toolbar&gt; properties
+        tr
+          td inner
+          td boolean
+          td true
+          td When enabled (by default), it will put all the content within internal `toolbarInner` element. Disable it only in case you want to put totally custom layout inside
+        tr
+          td position
+          td string
+          td
+          td #[a(href="/docs/toolbar-tabbar.html#toolbar-position") Toolbar position], can be `top` or `bottom`
+        tr
+          td top
+          td boolean
+          td
+          td Top positioned toolbar. Shortening for `position="top"`
+        tr
+          td topIos
+          td boolean
+          td
+          td Top positioned toolbar only for iOS theme
+        tr
+          td topMd
+          td boolean
+          td
+          td Top positioned toolbar only for MD theme
+        tr
+          td topAurora
+          td boolean
+          td
+          td Top positioned toolbar only for Aurora theme
+        tr
+          td bottom
+          td boolean
+          td
+          td Bottom positioned toolbar. Shortening for `position="bottom"`
+        tr
+          td bottomIos
+          td boolean
+          td
+          td Bottom positioned toolbar only for iOS theme
+        tr
+          td bottomMd
+          td boolean
+          td
+          td Bottom positioned toolbar only for MD theme
+        tr
+          td bottomAurora
+          td boolean
+          td
+          td Bottom positioned toolbar only for Aurora theme
+        tr
+          td tabbar
+          td boolean
+          td false
+          td Defines whether the Toolbar is also a Tabbar or not
+        tr
+          td labels
+          td boolean
+          td false
+          td Enables Tabbar with labels (affects only when `tabbar: true`)
+        tr
+          td scrollable
+          td boolean
+          td false
+          td Enables scrollable Tabbar (affects only when `tabbar: true`)
+        tr
+          td noShadow
+          td boolean
+          td
+          td Disable shadow rendering for Material theme
+        tr
+          td noHairline
+          td boolean
+          td false
+          td Disable toolbar/tabbar top thin border (hairline) for iOS theme
+        tr
+          td hidden
+          td boolean
+          td false
+          td Makes toolbar hidden
+
+    h2 Toolbar Methods
+    table.methods-table
+      td
+        th(colspan="2") &lt;Toolbar&gt; methods
+      tr
+        td .hide(<span>animate</span>)
+        td Hide toolbar
+      tr
+        td .show(<span>animate</span>)
+        td Show toolbar
+
+    h2 Toolbar Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;Toolbar&gt; events
+        tr
+          td toolbarHide
+          td Event will be triggered when Toolbar becomes hidden
+        tr
+          td toolbarShow
+          td Event will be triggered when Toolbar becomes visible
+
+    h2 Toolbar Slots
+    p Toolbar Svelte component (`<Toolbar>`) has additional slots for custom elements:
+    ul
+      li `default` - element will be inserted as a child of `<div class="toolbarInner">` element
+      li `beforeInner` - element will be inserted right before `<div class="toolbarInner">` element
+      li `afterInner` - element will be inserted right after `<div class="toolbarInner">` element
+
+    ```svelte
+      <Toolbar>
+        <div slot="beforeInner">Before Inner</div>
+        <div slot="afterInner">After Inner</div>
+        <!-- Goes to default slot: -->
+        <Link>Left Link</Link>
+        <Link>Right Link</Link>
+      </Toolbar>
+
+      <!-- Renders to: -->
+
+      <div class="toolbar">
+        <div>Before Inner</div>
+        <div class="toolbarInner">
+          <a href="#" class="link">Left Link</a>
+          <a href="#" class="link">Right Link</a>
+        </div>
+        <div>After Inner</div>
+      </div>
+    ```
+
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/toolbar-tabbar.html") Examples
+      h3 Toolbar
+      include:svelteSource ../docs-demos/svelte/toolbar-tabbar_toolbar.svelte
+
+      h3 Tabbar
+      include:svelteSource ../docs-demos/svelte/toolbar-tabbar_tabbar.svelte
+
+      h3 Tabbar Labels
+      include:svelteSource ../docs-demos/svelte/toolbar-tabbar_tabbar-labels.svelte
+
+      h3 Tabbar Scrollable
+      include:svelteSource ../docs-demos/svelte/toolbar-tabbar_tabbar-scrollable.svelte
+
+      h3 Hide Toolbar On Scroll
+      include:svelteSource ../docs-demos/svelte/toolbar-tabbar_toolbar-hide-scroll.svelte

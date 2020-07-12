@@ -35,7 +35,7 @@ block content
       h2 Default Theme Color
       p Default theme color is set to the following:
       p #[b #007aff]
-      div.color-example(style=`background-color: #007aff`)
+      div.color-example(style="background-color: #007aff")
 
       h2 Colors
       p Framework7 comes with 15 ready to use additional color themes.
@@ -51,88 +51,88 @@ block content
                   b=color
 
       h2 Apply Color Themes
-      p It is easy to apply color themes. All you need is just to add <code>color-theme-[color]</code> class to the required parent element. It could be body, app root, view, page, navbar, toolbar, list-block, etc. For example:
+      p It is easy to apply color themes. All you need is just to add `color-theme-[color]` class to the required parent element. It could be body, app root, view, page, navbar, toolbar, list-block, etc. For example:
       :code(lang="html")
-           &lt;body class="color-theme-red"&gt;
+           <body class="color-theme-red">
                ...
-           &lt;/body&gt;
+           </body>
 
-           &lt;div class="page color-theme-green"&gt;
+           <div class="page color-theme-green">
                ...
-           &lt;/div&gt;
+           </div>
 
-           &lt;div class="list-block color-theme-pink"&gt;
+           <div class="list-block color-theme-pink">
                ...
-           &lt;/div&gt;
+           </div>
 
-           &lt;div class="navbar color-theme-orange"&gt;
+           <div class="navbar color-theme-orange">
                ...
-           &lt;/div&gt;
+           </div>
 
-           &lt;div class="segmented color-theme-yellow"&gt;
+           <div class="segmented color-theme-yellow">
                ...
-           &lt;/div&gt;
+           </div>
       .important-note
         p Note, that applied color theme affects only interractive elements such as links, buttons, form elements, icons. It doesn't change basic text color or background colors on other blocks.
       h2 Dark Theme
-      p Framework7 also has additional dark theme layout. To apply dark theme we need to add <code>theme-dark</code> class to the required parent element. It could be body, app root, view, page, navbar, toolbar, list-block, etc. For example:
+      p Framework7 also has additional dark theme layout. To apply dark theme we need to add `theme-dark` class to the required parent element. It could be body, app root, view, page, navbar, toolbar, list-block, etc. For example:
       :code(lang="html")
-           &lt;html class="theme-dark"&gt;
+           <html class="theme-dark">
                ...
-           &lt;/html&gt;
+           </html>
 
-           &lt;body class="theme-dark"&gt;
+           <body class="theme-dark">
                ...
-           &lt;/body&gt;
+           </body>
 
-           &lt;div class="page theme-dark"&gt;
+           <div class="page theme-dark">
                ...
-           &lt;/div&gt;
+           </div>
 
-           &lt;div class="list-block theme-dark"&gt;
+           <div class="list-block theme-dark">
                ...
-           &lt;/div&gt;
+           </div>
 
     h2 Helper Classes
     p There are also additional helper classes that could be used without/outside color themes:
     ul
       li
-        p <code>color-[color]</code> - if you want to change color of individual button, link or icon, for example:
+        p `color-[color]` - if you want to change color of individual button, link or icon, for example:
         :code(lang="html")
-              &lt;a class="button color-red"&gt;Red button&lt;/a&gt;
+              <a class="button color-red">Red button</a>
       li
-        p <code>text-color-[color]</code> - if you want to change text color of required element:
+        p `text-color-[color]` - if you want to change text color of required element:
         :code(lang="html")
-              &lt;p class="text-color-red"&gt;Red color text&lt;/p&gt;
+              <p class="text-color-red">Red color text</p>
       li
-        p <code>bg-color-[color]</code> - if you want quickly to set predefined background color on some block or element:
+        p `bg-color-[color]` - if you want quickly to set predefined background color on some block or element:
         :code(lang="html")
-              &lt;span class="badge bg-color-pink"&gt;14&lt;/span&gt; - pink badge
+              <span class="badge bg-color-pink">14</span> - pink badge
       li
-        p <code>border-color-[color]</code> - if you want to set predefined border color:
+        p `border-color-[color]` - if you want to set predefined border color:
         :code(lang="html")
-              &lt;div class="button border-color-red"&gt;...&lt;/div&gt;
+              <div class="button border-color-red">...</div>
     p And of course, you can mix these helper classes:
     :code(lang="html")
-      &lt;a class="button bg-color-blue text-color-white border-color-gray"&gt;...&lt;/a&gt;
+      <a class="button bg-color-blue text-color-white border-color-gray">...</a>
 
     h2 Primary Color Classes
-    p Helper classes support additional <code>primary</code> color which is equal to context color theme.
+    p Helper classes support additional `primary` color which is equal to context color theme.
     ul
       li
-        p <code>text-color-primary</code> - to change text color of element to theme color.
+        p `text-color-primary` - to change text color of element to theme color.
       li
-        p <code>bg-color-primary</code> - to change background color of element to theme color.
+        p `bg-color-primary` - to change background color of element to theme color.
       li
-        p <code>border-color-primary</code> - to change border color of element to theme color.
+        p `border-color-primary` - to change border color of element to theme color.
 
     h2 Custom Color Theme
     p To set custom color theme, we need to specify few CSS variables:
     ul
-      li #[code --f7-theme-color] — HEX value of theme color.
-      li #[code --f7-theme-color-shade] — 8% darken theme color. Required, for example, for pressed buttons state.
-      li #[code --f7-theme-color-tint] — 8% lighten theme color. Required, for example, for pressed buttons state.
-      li #[code --f7-theme-color-rgb] — RGB value of theme color. Required for semitransparent elements.
+      li `--f7-theme-color` — HEX value of theme color.
+      li `--f7-theme-color-shade` — 8% darken theme color. Required, for example, for pressed buttons state.
+      li `--f7-theme-color-tint` — 8% lighten theme color. Required, for example, for pressed buttons state.
+      li `--f7-theme-color-rgb` — RGB value of theme color. Required for semitransparent elements.
     p For example, if custom theme color is #f00 (red), we just need to add following variables to our CSS:
     :code(lang="css")
       :root {
@@ -154,6 +154,50 @@ block content
         "--f7-theme-color-tint": "#ff2929"
       }
 
+    .with-device.with-device-inline
+      h2 Generate Color Theme
+      .docs-demo-device.docs-inline-device
+        .docs-demo-device-buttons
+          a(data-theme="ios").active
+            i.f7-icons logo_apple
+          a(data-theme="md")
+            i.f7-icons logo_android
+          a(data-theme="aurora")
+            i.f7-icons device_desktop
+        .docs-demo-device-iframe
+          iframe(width="320", height="548", frameborder="0", scrolling="on", src="/docs-demos/core/color-themes-generate.html")
+          .fade-overlay
+      form.docs-color-form
+        fieldset.docs-color-form-col
+          p
+            b Layout Theme
+          label.docs-color-form-radio
+            input(name="theme" value="light" type="radio" checked)
+            span Light
+          label.docs-color-form-radio
+            input(name="theme" value="dark" type="radio")
+            span Dark
+        fieldset.docs-color-form-col
+          p
+            b Navigation Bars Style
+          label.docs-color-form-radio
+            input(name="bars" value="empty" type="radio" checked)
+            span Empty
+          label.docs-color-form-radio
+            input(name="bars" value="fill" type="radio")
+            span Fill
+        fieldset
+          p
+            b Color
+          p
+            label.docs-color-form-input
+              span HEX Color
+              input(type="text" name="color" placeholder="#ff0000")
+      h4 Generated Styles
+      p Copy following CSS styles to your app's styles:
+      <pre class="docs-color-form-code">
+        <code class="css"><span class="token comment">/*<br>  Change color or navigation bars style to see genearted styles<br>*/</span></code>
+      </pre>
     h2 CSS Variables
     :code(lang="css")
       /*====================
@@ -617,4 +661,3 @@ block content
       .ripple-black {
         --f7-theme-color-ripple-color: rgba(0, 0, 0, 0.3);
       }
-

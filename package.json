@@ -1,7 +1,7 @@
 {
   "name": "framework7-website",
-  "releaseVersion": "4.4.3",
-  "releaseDate": "June 4, 2019",
+  "releaseVersion": "5.7.9",
+  "releaseDate": "July 12, 2020",
   "description": "Framework7 Website",
   "cdn": "//cdn.framework7.io",
   "keywords": [
@@ -13,8 +13,20 @@
     "type": "git",
     "url": "https://github.com/framework7io/framework7-website"
   },
+  "browserslist": [
+    "Android >= 7",
+    "IOS >= 11",
+    "Safari >= 11",
+    "Chrome >= 49",
+    "Firefox >= 52",
+    "Samsung >= 6"
+  ],
   "devDependencies": {
-    "dom7": "^2.1.2",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-replace": "^2.3.0",
+    "dom7": "^2.1.5",
     "eslint": "^5.12.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
@@ -25,14 +37,18 @@
     "gulp-less": "^4.0.1",
     "gulp-open": "^3.0.1",
     "gulp-pug": "^4.0.1",
-    "jquery": "^3.3.1",
-    "js-yaml": "^3.12.1",
+    "jquery": "^3.4.0",
+    "js-yaml": "^3.13.1",
     "jsdom": "^13.2.0",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.18.0",
     "pug": "^2.0.3",
-    "rollup": "^1.1.2",
-    "rollup-plugin-buble": "^0.19.6",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "remarkable": "^2.0.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-svelte": "^5.2.2",
+    "rollup-plugin-terser": "^5.2.0",
+    "strip-indent": "^3.0.0",
+    "svelte": "^3.22.3",
     "terser": "^3.14.1",
     "through2": "^3.0.0"
   }

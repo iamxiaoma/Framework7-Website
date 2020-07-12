@@ -1,0 +1,127 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Swipeout Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Swipeout Svelte Component
+    ul.docs-index
+    p Swipeout List is not a separate component, but just a particular case of using <a href="list-view.html">&lt;List&gt;</a>, <a href="list-item.html">&lt;ListItem swipeout&gt;</a> Svelte components and additional Swipeout components.
+    p Swipeout Svelte component represents Framework7's <a href="../docs/swipeout.html">Swipeout</a> component.
+    h2 Swipeout Components
+    p There are following components included:
+    ul
+      li `SwipeoutActions` - wrapper for swipeout buttons
+      li `SwipeoutButton` - single swipeout button
+
+    h2 Swipeout Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;SwipeoutActions&gt; Properties
+        tr
+          td side
+          td string
+          td right
+          td Swipeout actions side
+        tr
+          td right
+          td boolean
+          td
+          td Shortcut for `side="right"` prop
+        tr
+          td left
+          td boolean
+          td
+          td Shortcut for `side="left"` prop
+        tr
+          th(colspan="4") &lt;SwipeoutButton&gt; Properties
+        tr
+          td delete
+          td boolean
+          td false
+          td Will automatically delete swipeout list item on click
+        tr
+          td close
+          td boolean
+          td false
+          td Will automatically close swipeout list item on click
+        tr
+          td overswipe
+          td boolean
+          td false
+          td Will be triggered click automatically if you swipe actions too much - <a href="../docs/swipeout.html#overswipe">overswipe</a>
+        tr
+          td text
+          td string
+          td
+          td Swipeout button text label
+        tr
+          td confirmText
+          td string
+          td
+          td This text will be shown in dialog where user must agree before item delete
+        tr
+          td confirmTitle
+          td string
+          td
+          td This text will be shown as dialog title where user must agree before item delete
+    h2 Swipeout Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;SwipeoutButton&gt; events
+        tr
+          td click
+          td Event will be triggered on swipeout button click
+        tr
+          th(colspan="2") &lt;ListItem&gt; events
+            br
+            small The following events will be available on &lt;ListItem&gt; with `swipeout` enabled
+        tr
+          td swipeout
+          td Event will be triggered while you move swipeout element. <b>event.detail.progress</b> contains current opened progress percentage
+        tr
+          td swipeoutOpen
+          td Event will be triggered when swipeout element starts its opening animation
+        tr
+          td swipeoutOpened
+          td Event will be triggered after swipeout element completes its opening animation
+        tr
+          td swipeoutClose
+          td Event will be triggered when swipeout element starts its closing animation
+        tr
+          td swipeoutClosed
+          td Event will be triggered after swipeout element completes its closing animation
+        tr
+          td swipeoutDelete
+          td Event will be triggered after swipeout element starts its delete animation
+        tr
+          td swipeoutDeleted
+          td Event will be triggered after swipeout element completes its delete animation right before it will be removed from DOM
+        tr
+          td swipeoutOverswipeEnter
+          td Event will be triggered when overswipe enabled
+        tr
+          td swipeoutOverswipeExit
+          td Event will be triggered when overswipe disabled
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/swipeout.html") Examples
+      include:svelteSource ../docs-demos/svelte/swipeout.svelte

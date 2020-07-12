@@ -1,0 +1,94 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Login Screen Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Login Screen Svelte Component
+    ul.docs-index
+    p Login Screen Svelte component represents <a href="../docs/login-screen.html">Login Screen</a> component.
+    h2 Login Screen Components
+    p There are following components included:
+    ul
+      li `LoginScreen` - login screen element
+      li `LoginScreenTitle` - login screen title element
+    h2 Login Screen Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;LoginScreen&gt; properties
+        tr
+          td opened
+          td boolean
+          td false
+          td Allows to open/close Login Screen and set its initial state
+    h2 Login Screen Methods
+    table.methods-table
+      tr
+        th(colspan="2") &lt;LoginScreen&gt; methods
+      tr
+        td .open(<span>animate</span>)
+        td Open login screen
+      tr
+        td .close(<span>animate</span>)
+        td Close login screen
+    h2 Login Screen Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;LoginScreen&gt; events
+        tr
+          td loginScreenOpen
+          td Event will be triggered when Login Screen starts its opening animation
+        tr
+          td loginScreenOpened
+          td Event will be triggered after Login Screen completes its opening animation
+        tr
+          td loginScreenClose
+          td Event will be triggered when Login Screen starts its closing animation
+        tr
+          td loginScreenClosed
+          td Event will be triggered after Login Screen completes its closing animation
+    h2 Open And Close Login Screen
+    p In addition to Login Screen open()/close() methods, you can open and close it:
+    ul
+      li using <a href="../docs/login-screen.html">Login Screen API</a>
+      li by passing `true` or `false` to its `opened` prop
+      li by clicking on <a href="link.html">Link</a> or <a href="button.html">Button</a> with relevant `loginScreenOpen` property (to open it) and `loginScreenClose` property to close it
+    h2 Access To Login Screen Instance
+    p You can access Login Screen initialized instance by calling `.instance()` component's method. For example:
+    ```svelte
+      <LoginScreen bind:this={component}>...</LoginScreen>
+
+      <script>
+        let component;
+
+        // to get instance in some method
+        component.instance()
+      </script>
+    ```
+
+
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/login-screen.html") Examples
+      include:svelteSource ../docs-demos/svelte/login-screen_main.svelte
+
+      h4 Separate Login Screen Page
+      include:svelteSource ../docs-demos/svelte/login-screen_page.svelte

@@ -17,7 +17,7 @@ block content
     h2 Panel Components
     p There are following components included:
     ul
-      li <code><b>Panel</b></code> / <code><b>F7Panel</b></code> - Panel element
+      li `Panel` / `F7Panel` - Panel element
     h2 Panel Properties
     table.params-table
       thead
@@ -31,42 +31,92 @@ block content
           td side
           td string
           td
-          td Panel side. Could be <code>left</code> or <code>right</code>
+          td Panel side. Could be `left` or `right`
         tr
           td left
           td boolean
           td
-          td Shortcut prop for <code>side="left"</code>
+          td Shortcut prop for `side="left"`
         tr
           td right
           td boolean
           td
-          td Shortcut prop for <code>side="right"</code>
+          td Shortcut prop for `side="right"`
         tr
           td effect
           td string
           td
-          td Panel effect. Could be <code>cover</code> or <code>reveal</code>
+          td Panel effect. Could be `cover` or `reveal`
         tr
           td cover
           td boolean
           td
-          td Shortcut prop for <code>effect="cover"</code>
+          td Shortcut prop for `effect="cover"`
         tr
           td reveal
           td boolean
           td
-          td Shortcut prop for <code>effect="reveal"</code>
+          td Shortcut prop for `effect="reveal"`
         tr
-          td opened
-          td boolean
+          td visibleBreakpoint
+          td number
           td
-          td Allows to open/close panel and set its initial state
+          td Minimal app width (in px) when left panel becomes always visible
+        tr
+          td collapsedBreakpoint
+          td number
+          td
+          td Minimal app width (in px) when left panel becomes partially visible (collapsed)
+        tr
+          td swipe
+          td boolean
+          td false
+          td Enable if you want to enable ability to open/close panel with swipe
+        tr
+          td swipeNoFollow
+          td boolean
+          td false
+          td Fallback option for potentially better performance on old/slow devices. If you enable it, then swipe panel will not follow your finger during touch move, it will be automatically opened/closed on swipe left/right.
+        tr
+          td swipeActiveArea
+          td number
+          td 0
+          td Width (in px) of invisible edge from the screen that triggers panel swipe
+        tr
+          td swipeOnlyClose
+          td boolean
+          td false
+          td This parameter allows to close (but not open) panel with swipes. (`swipe` should be also enabled)
+        tr
+          td swipeThreshold
+          td number
+          td 0
+          td Panel will not move with swipe if "touch distance" will be less than this value (in px).
+        tr
+          td backdrop
+          td boolean
+          td true
+          td Enables Panel backdrop (dark semi transparent layer behind)
+        tr
+          td backdropEl
+          td HTMLElement<br>string
+          td
+          td HTML element or string CSS selector of custom backdrop element
+        tr
+          td closeByBackdropClick
+          td boolean
+          td true
+          td Enable/disable ability to close panel by clicking outside of panel
         tr
           td resizable
           td boolean
           td false
           td Enables/disables resizable panel
+        tr
+          td opened
+          td boolean
+          td
+          td Allows to open/close panel and set its initial state
     h2 Panel Methods
     table.methods-table
       tr
@@ -104,16 +154,19 @@ block content
           td panelSwipeOpen
           td Event will be triggered in the very beginning of opening it with swipe
         tr
+          td panelCollapsedBreakpoint
+          td Event will be triggered when it becomes visible/hidden when app width matches its `collapsedBreakpoint`
+        tr
           td panelBreakpoint
-          td Event will be triggered when it becomes visible/hidden when app width matches its breakpoint
+          td Event will be triggered when it becomes visible/hidden when app width matches its `visibleBreakpoint`
     h2 Open And Close Panel
     p You can control panel state, open and closing it:
     ul
       li using <a href="../docs/panel.html">Panel API</a>
-      li by passing <code>true</code> or <code>false</code> to its <code>opened</code> prop
-      li by clicking on <a href="link.html">Link</a> or <a href="button.html">Button</a> with relevant <code>panelOpen</code> property (to open it) and <code>panelClose</code> property to close it
+      li by passing `true` or `false` to its `opened` prop
+      li by clicking on <a href="link.html">Link</a> or <a href="button.html">Button</a> with relevant `panelOpen` property (to open it) and `panelClose` property to close it
     h2 Access To Panel Instance
-    p You can access Panel initialized instance by accessing <code><b>.f7Panel</b></code> component's property.
+    p You can access Panel initialized instance by accessing `.f7Panel` component's property.
     .with-device
       h2(data-device-preview="../docs-demos/react/panel.html") Examples
       :code(lang="css")

@@ -1,0 +1,37 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Preloader / Spinner Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Preloader / Spinner Svelte Component
+    ul.docs-index
+    p Preloader / Spinner Svelte component represents <a href="../docs/preloader.html">Preloader</a> element.
+    h2 Preloader Components
+    p There are following components included:
+    ul
+      li `Preloader`
+    h2 Preloader Properties
+    table.params-table.cols-3
+      thead
+        tr
+          th Prop
+          th Type
+          th Description
+      tbody
+        tr
+          th(colspan="3") &lt;Preloader&gt; properties
+        tr
+          td size
+          td string<br>number
+          td Size of the preloader in px
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/preloader.html") Examples
+      include:svelteSource ../docs-demos/svelte/preloader.svelte

@@ -1,61 +1,121 @@
 diamond:
 platinum:
 gold:
+-
+  title: WFM Buddy - Delighting your Workforce
+  link: https://www.wfmbuddy.com/
+  imageUrl: "/i/sponsors/wfmbuddy.png"
+-
+  title: Privicy - Privacy control for consumers
+  link: https://privicy.com/
+  imageUrl: "/i/sponsors/privicy.png"
+-
+  title: CodersRank - Ultimate Profile For Coders
+  link: https://codersrank.io/?utm_source=partner&utm_medium=referral&utm_campaign=vladimir
+  imageUrl: "/i/sponsors/codersrank.svg"
+-
+  title: Sparheld.de - save shopping online
+  link: https://www.sparheld.de/
+  imageUrl: "/i/sponsors/sparheld.jpg"
 silver:
+-
+  title: Casinot
+  link: https://www.casinot.net
+  imageUrl: "/i/sponsors/casinotnet.png"
+-
+  title: ParasKasino
+  link: https://www.paraskasino.fi
+  imageUrl: "/i/sponsors/paraskasino.png"
+-
+  title: NettiCasinoHEX.com
+  link: https://netticasinohex.com
+  imageUrl: "/i/sponsors/netticasinohex.png"
+-
+  title: CasinoHEX.se
+  link: https://casinohex.se
+  imageUrl: "/i/sponsors/casinohexse.png"
+-
+  title: CasinoHEX.at
+  link: https://casinohex.at
+  imageUrl: "/i/sponsors/casinohexat.png"
+-
+  title: Kasinot.fi
+  link: https://www.kasinot.fi
+  imageUrl: "/i/sponsors/kasinotfi.png"
 -
   title: Thorium Builder - full visual Framework7 app builder
   link: https://www.thoriumbuilder.com/
-  imageUrl: "#{cdn}/i/sponsors/thorium.png"
+  imageUrl: "/i/sponsors/thorium.png"
 -
   title: AppValley
   link: https://app-valley.vip/
-  imageUrl: "#{cdn}/i/sponsors/appvalley.jpg"
+  imageUrl: "/i/sponsors/appvalley.jpg"
 -
   title: Tommy
   link: http://mytommy.com
-  imageUrl: "#{cdn}/i/sponsors/tommy.png"
+  imageUrl: "/i/sponsors/tommy.png"
 -
   title: securCom
   link: https://www.securcom.me/
-  imageUrl: "#{cdn}/i/sponsors/securcom.png"
+  imageUrl: "/i/sponsors/securcom.png"
 topSupporter:
+-
+  title: Paraphrasing tool- rewrite, paraphrase your article
+  link: https://paraphrasetools.com
+  imageUrl: "/i/sponsors/paraphrasetools.png"
+-
+  title: Divi-Discount.com - Divi Discount
+  link: https://divi-discount.com/elegant-themes/
+  imageUrl: "/i/sponsors/divi-discount.png"
+-
+  title: vpn for popcorn time
+  link: https://cooltechzone.com/popcorn-time-vpn
+  imageUrl: "/i/sponsors/cooltechzone.png"
+-
+  title:
+  link: https://www.bonus.com.de/
+  imageUrl: "/i/sponsors/bonusfinder.png"
+-
+  title: Ananya MultiTech Private Limited
+  link: http://ananyamultitech.com/
+  imageUrl: "/i/sponsors/ananya.png"
+-
+  title: Kqapius, INC.
+  link: https://kqapi.us
+  imageUrl: "/i/sponsors/kqapius.png"
+-
+  title: Write My Paper For Me
+  link: https://writersperhour.com/write-my-paper
+  imageUrl: "/i/sponsors/writersperhour.jpg"
+-
+  title: Bid4Papers - Write My Essay
+  link: https://bid4papers.com/write-my-essay.html
+  imageUrl: "/i/sponsors/bid4papers.png"
+-
+  title: COLOGNE WEBDESIGN
+  link: https://www.colognewebdesign.de/
+  imageUrl: "/i/sponsors/colognewebdesign.png"
 -
   title: Rise — Creative Web Development Agency
   link: https://rise.co
-  imageUrl: "#{cdn}/i/sponsors/rise.png"
--
-  title: usave - compare broadband deals on usave.co.uk
-  link: https://usave.co.uk/utilities/broadband
-  imageUrl: "#{cdn}/i/sponsors/usave.png"
--
-  title: Unlikely IT
-  link: https://unlikelyit.com/
-  imageUrl: "#{cdn}/i/sponsors/unlikely-it.png"
+  imageUrl: "/i/sponsors/rise.png"
 -
   title: Kidoverse - App for kids to learn, play, create and explore
   link: https://kidoverse.app/
-  imageUrl: "#{cdn}/i/sponsors/kidoverse.png"
+  imageUrl: "/i/sponsors/kidoverse.png"
 -
   title: CyberBrain IT Services
   link: https://www.cyberbrain.nl/
-  imageUrl: "#{cdn}/i/sponsors/cyberbrain.png"
+  imageUrl: "/i/sponsors/cyberbrain.png"
 -
   title: HICAPPS - Health Informatics Custom APPs
-  link: https://hicapps.cl/web/
-  imageUrl: "#{cdn}/i/sponsors/hicapps.png"
--
-  title: EduBirdie - Professional Essay Writing Service
-  link: https://edubirdie.com/
-  imageUrl: "#{cdn}/i/sponsors/birdie.png"
+  link: https://hicapps.cl
+  imageUrl: "/i/sponsors/hicapps.png"
 -
   title: Blokt - Cryptocurrency News
   link: https://blokt.com/
-  imageUrl: "#{cdn}/i/sponsors/blokt.png"
--
-  title: ActiveWaiter
-  link: https://www.activewaiter.com/
-  imageUrl: "#{cdn}/i/sponsors/activewaiter.png"
+  imageUrl: "/i/sponsors/blokt.png"
 -
   title: Wappler - The Visual Web App Creator
   link: https://wappler.io/
-  imageUrl: "#{cdn}/i/sponsors/wappler.png"
+  imageUrl: "/i/sponsors/wappler.png"

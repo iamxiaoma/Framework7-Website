@@ -18,8 +18,8 @@ block content
     h2 Button Components
     p There are following components included:
     ul
-      li <code><b>Button</b></code> / <code><b>F7Button</b></code> - single button
-      li <code><b>Segmented</b></code> / <code><b>F7Segmented</b></code> - segmented wrapper for buttons
+      li `Button` / `F7Button` - single button
+      li `Segmented` / `F7Segmented` - segmented wrapper for buttons
 
     h2 Button Properties
     p Button component has almost the same properties as the <a href="link.html">Link</a> component but with few additional button-specific properties:
@@ -74,6 +74,26 @@ block content
           td false
           td Makes segmented round only in Aurora theme
         tr
+          td strong
+          td boolean
+          td false
+          td Makes strong segmented
+        tr
+          td strongIos
+          td boolean
+          td false
+          td Makes strong segmented only in iOS theme
+        tr
+          td strongMd
+          td boolean
+          td false
+          td Makes strong segmented only in MD theme
+        tr
+          td strongAurora
+          td boolean
+          td false
+          td Makes strong segmented only in Aurora theme
+        tr
           td tag
           td string
           td div
@@ -84,7 +104,7 @@ block content
           td type
           td string
           td
-          td If it is one of <code>submit</code>, <code>button</code> or <code>reset</code> then it will be rendered as <code>&lt;button&gt;</code> element with same <code>type</code> attribute
+          td If it is one of `submit`, `button` or `reset` then it will be rendered as `<button>` element with same `type` attribute
         tr
           td tabLink
           td string<br>boolean
@@ -99,22 +119,22 @@ block content
           td active
           td boolean
           td false
-          td Makes this button active state when used in Segmented. Must be used instead of <code>tab-link-active</code>
+          td Makes this button active state when used in Segmented. Must be used instead of `tab-link-active`
         tr
           td text
           td string
           td
           td Button text label
         tr
-          td noFastClick
-          td boolean
-          td
-          td Disables fast click
-        tr
           td tooltip
           td string
           td
           td Button <a href="../docs/tooltip.html">tooltip</a> text to show on button hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
         tr
           td round
           td boolean
@@ -335,6 +355,11 @@ block content
             <BlockTitle>Segmented</BlockTitle>
             <Block>
               <Segmented raised tag="p">
+                <Button>Button</Button>
+                <Button>Button</Button>
+                <Button active>Active</Button>
+              </Segmented>
+              <Segmented strong tag="p">
                 <Button>Button</Button>
                 <Button>Button</Button>
                 <Button active>Active</Button>

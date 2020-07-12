@@ -17,7 +17,28 @@ block content
     h2 Badge Components
     p There are following components included:
     ul
-      li <code><b>Badge</b></code> / <code><b>F7Badge</b></code>
+      li `Badge` / `F7Badge`
+    h2 Badge Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;Badge&gt; properties
+        tr
+          td tooltip
+          td string
+          td
+          td <a href="../docs/tooltip.html">tooltip</a> text to show on hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
     .with-device
       h2(data-device-preview="../docs-demos/react/badge.html") Examples
       :code(lang="jsx")
@@ -34,7 +55,7 @@ block content
                 </Navbar>
                 <Toolbar tabbar labels bottom>
                   <Link tabLink="#tab-1" tabLinkActive>
-                    <Icon className="icon-fill" ios="f7:email_fill" aurora="f7:email_fill" md="material:email">
+                    <Icon className="icon-fill" ios="f7:envelope_fill" aurora="f7:envelope_fill" md="material:email">
                       <Badge color="green">5</Badge>
                     </Icon>
                     <span className="tabbar-label">Inbox</span>

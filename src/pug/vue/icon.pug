@@ -12,11 +12,11 @@ block content
     +improveDocsLink
     h1 Icon Vue Component
     ul.docs-index
-    p Icon Vue component represents Icon element. It is ready to be used with custom icons, <a href="../icons/" target="_blank">Framework7 Icons</a>, <a href="https://material.io/icons/" target="_blank">Material Icons</a>, <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>, <a href="http://ionicons.com/" target="_blank">Ionicons</a>.
+    p Icon Vue component represents Icon element. It is ready to be used with custom icons, <a href="../icons/" target="_blank">Framework7 Icons</a> and <a href="https://material.io/icons/" target="_blank">Material Icons</a>.
     h2 Icon Components
     p There are following components included:
     ul
-      li <code><b>f7-icon</b></code>
+      li `f7-icon`
     h2 Icon Properties
     table.params-table.cols-3
       thead
@@ -42,51 +42,42 @@ block content
           td string
           td Name of Material Icons font icon
         tr
-          td fa
-          td string
-          td Name of Font Awesome font icon
-        tr
-          td ion
-          td string
-          td Name of Ionicons font icon
-        tr
           td ios
           td string
-          td Icon to be used in case of iOS theme is used. Consists of icon family and icon name divided by colon, e.g. <code>f7:home</code> or <code>ion:home</code>
+          td Icon to be used in case of iOS theme is used. Consists of icon family and icon name divided by colon, e.g. `f7:house`
         tr
           td md
           td string
-          td Icon to be used in case of Material theme is used. Consists of icon family and icon name divided by colon, e.g. <code>material:home</code> or <code>fa:home</code>
+          td Icon to be used in case of Material theme is used. Consists of icon family and icon name divided by colon, e.g. `material:home`
         tr
           td aurora
           td string
-          td Icon to be used in case of Aurora theme is used. Consists of icon family and icon name divided by colon, e.g. <code>f7:home</code> or <code>ion:home</code>
+          td Icon to be used in case of Aurora theme is used. Consists of icon family and icon name divided by colon, e.g. `f7:house`
         tr
           td tooltip
           td string
           td Icon <a href="../docs/tooltip.html">tooltip</a> text to show on icon hover/press
+        tr
+          td tooltip-trigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
     h2 Examples
     :code(lang="html")
-      &lt;!-- Default back icon --&gt;
-      &lt;f7-icon icon="icon-back"&gt;&lt;/f7-icon&gt;
+      <!-- Default back icon -->
+      <f7-icon icon="icon-back"></f7-icon>
 
-      &lt;!-- Some custom icon --&gt;
-      &lt;f7-icon icon="icon-home"&gt;&lt;/f7-icon&gt;
+      <!-- Some custom icon -->
+      <f7-icon icon="icon-home"></f7-icon>
 
-      &lt;!-- F7 Icons font icon --&gt;
-      &lt;f7-icon f7="home"&gt;&lt;/f7-icon&gt;
+      <!-- F7 Icons font icon -->
+      <f7-icon f7="house"></f7-icon>
 
-      &lt;!-- Material Icons font icon --&gt;
-      &lt;f7-icon material="home"&gt;&lt;/f7-icon&gt;
+      <!-- Material Icons font icon -->
+      <f7-icon material="home"></f7-icon>
 
-      &lt;!-- Font Awesome icons font icon --&gt;
-      &lt;f7-icon fa="home"&gt;&lt;/f7-icon&gt;
+      <!-- F7 icons font icon with custom size and color -->
+      <f7-icon f7="house" size="44px" color="blue"></f7-icon>
 
-      &lt;!-- Ionicons icons font icon --&gt;
-      &lt;f7-icon ion="home"&gt;&lt;/f7-icon&gt;
-
-      &lt;!-- F7 icons font icon with custom size and color --&gt;
-      &lt;f7-icon f7="home" size="44px" color="blue"&gt;&lt;/f7-icon&gt;
-
-      &lt;!-- Conditional icon --&gt;
-      &lt;f7-icon ios="f7:home" aurora="f7:home" md="material:home"&gt;&lt;/f7-icon&gt;
+      <!-- Conditional icon -->
+      <f7-icon ios="f7:house" aurora="f7:house" md="material:home"></f7-icon>

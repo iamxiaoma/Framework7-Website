@@ -1,0 +1,151 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Floating Action Button Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Floating Action Button Svelte Component
+    ul.docs-index
+    p Floating action buttons (FABs) are used for a promoted action. They are distinguished by a circled icon floating above the UI and have motion behaviors that include morphing, launching, and a transferring anchor point.
+    p Floating Action Button Svelte component represents <a href="../docs/floating-action-button.html">Floating Action Button</a> element.
+    h2 FAB Components
+    p There are following components included:
+    ul
+      li `Fab` - main FAB element
+      li `FabButtons` - wrapper for multiple FAB buttons used as Speed Dial FAB
+      li `FabButton` - single FAB Speed Dial button
+      li `FabBackdrop` - FAB backdrop element
+    h2 FAB Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;Fab&gt; properties
+        tr
+          td href
+          td string<br>boolean
+          td
+          td URL of the page to load (if set). Will set `href` attribute on main FAB link. In case of boolean `href="false"` it won't add `href` tag
+        tr
+          td target
+          td string
+          td
+          td Value of link target attribute, e.g. `_blank`, `_self`, etc.
+        tr
+          td position
+          td string
+          td right-bottom
+          td FAB position. Can be one of the following:
+            ul
+              li `right-bottom`
+              li `center-bottom`
+              li `left-bottom`
+              li `right-center`
+              li `center-center`
+              li `left-center`
+              li `right-top`
+              li `center-top`
+              li `left-top`
+        tr
+          td morphTo
+          td string
+          td
+          td String CSS selector of the FAB morph target
+        tr
+          td text
+          td string
+          td
+          td FAB Button text. If specified, then it will be displayed as Extended Fab with text label
+        tr
+          td tooltip
+          td string
+          td
+          td FAB <a href="../docs/tooltip.html">tooltip</a> text to show on button hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
+        tr
+          th(colspan="4") &lt;FabButtons&gt; properties
+        tr
+          td position
+          td string
+          td top
+          td Speed dial buttons position, can be one of the following:
+            ul
+              li `top` - buttons will appear on top of FAB
+              li `right` - buttons will appear on right of FAB
+              li `bottom` - buttons will appear on bottom of FAB
+              li `left` - buttons will appear on left of FAB
+              li `center` - buttons will appear around of FAB
+        tr
+          th(colspan="4") &lt;FabButton&gt; properties
+        tr
+          td fabClose
+          td boolean
+          td false
+          td When enabled then clicking on this button will close the FAB
+        tr
+          td target
+          td string
+          td
+          td Value of link target attribute, e.g. `_blank`, `_self`, etc.
+        tr
+          td label
+          td string
+          td
+          td Button text label
+        tr
+          td tooltip
+          td string
+          td
+          td Button <a href="../docs/tooltip.html">tooltip</a> text to show on button hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
+    h2 FAB Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;Fab&gt; events
+        tr
+          td click
+          td Event will be triggered after click on FAB
+        tr
+          th(colspan="2") &lt;FabButton&gt; events
+        tr
+          td click
+          td Event will be triggered after click on FAB Speed Dial button
+    h2 FAB Slots
+    p FAB Svelte component (`<Fab>`) has additional slots for custom elements:
+    ul
+      li `default` - child element will be inserted inside of the main FAB link `<a>` element. But if the child is `FabButtons`, then it will be inserted in the end of the main FAB element
+      li `link` - child element will be inserted inside of the main FAB link `<a>` element
+      li `root` - child element will be inserted in the end of the main FAB element
+      li `text` - child element will be inserted in the text element of the Extended FAB
+
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/floating-action-button.html") Examples
+      include:svelteSource ../docs-demos/svelte/floating-action-button.svelte
+
+      h4(data-device-preview="../docs-demos/svelte/floating-action-button-backdrop.html") With Backdrop
+      include:svelteSource ../docs-demos/svelte/floating-action-button-backdrop.svelte

@@ -27,10 +27,11 @@ code {
   font-size: 14px;
   color: #333;
   font-weight: normal;
-  background: #f5f5f5;
+  background: rgba(0,0,0,0.05);
   color: #000;
-  display: inline-block;
-  padding: 1px 4px;
+  display: inline-flex;
+  word-break: break-word;
+  padding: 0px 4px;
   border-radius: 4px;
   font-weight: 500;
 }
@@ -119,7 +120,8 @@ code {
     color: @codeYellow;
     font-style: italic;
   }
-  .script {
+  .script,
+  &.svelte .tag .token.language-javascript {
     color: #fff;
   }
   .spread  {

@@ -1,0 +1,44 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Badge Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Badge Svelte Component
+    ul.docs-index
+    p Badge Svelte component represents <a href="../docs/badge.html">Badge</a> element that can be used in lists, links, navigation bars, etc.
+    h2 Badge Components
+    p There are following components included:
+    ul
+      li `Badge`
+    h2 Badge Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;Badge&gt; properties
+        tr
+          td tooltip
+          td string
+          td
+          td <a href="../docs/tooltip.html">tooltip</a> text to show on hover/press
+        tr
+          td tooltipTrigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/badge.html") Examples
+      include:svelteSource ../docs-demos/svelte/badge.svelte

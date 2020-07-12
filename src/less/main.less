@@ -93,9 +93,15 @@ h1, h2, h3, h4, h5 {
 
 // Content
 main {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
   box-sizing: border-box;
+  @media (min-width: 601px) {
+    padding-top: 50px;
+  }
+  @media (min-width: 961px) {
+    padding-top: 40px;
+  }
   img {
     max-width: 100%;
   }
@@ -127,6 +133,7 @@ main {
 .github-buttons {
   font-size: 0;
   line-height: 18px;
+  color: rgba(0, 0 ,0, 0.7);
   i {
     width: 20px;
     height: 20px;
@@ -135,7 +142,7 @@ main {
   }
   a {
     display: inline-block;
-    color: #fff;
+    color: inherit;
     text-decoration: none;
     vertical-align: middle;
     font-size: 12px;
@@ -144,7 +151,7 @@ main {
       font-size: 15px;
     }
     &:hover {
-      opacity: 0.7;
+      text-decoration: underline;
     }
   }
   a:first-child {
@@ -165,7 +172,8 @@ main {
   }
 }
 
-.carbon {
+.carbon,
+.header-sponsor {
   width: 300px;
   font-size: 13px;
   line-height: 1.4;
@@ -185,19 +193,31 @@ main {
     width: 130px;
     height: 100px;
   }
-  .carbon-img {
+  .carbon-img,
+  .header-sponsor-image {
     display: block;
     float: left;
   }
-  .carbon-text {
+  .carbon-text,
+  .header-sponsor-text {
     margin-top: 3px;
     margin-left: 140px;
   }
-  .carbon-poweredby {
+  .header-sponsor-text {
+    line-height: 1.35;
+  }
+  .carbon-poweredby,
+  .header-sponsor-label {
     opacity: 0.8;
     font-size: 12px;
     margin-top: 10px;
     margin-left: 140px;
+  }
+  .header-sponsor-label {
+    display: block;
+    margin-top: 0;
+    font-size: 10px;
+    opacity: 0.5;
   }
 }
 .carbon-placeholder {
@@ -211,41 +231,77 @@ main {
 .f7-demo-icons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   .f7-demo-icon-cell {
     float: left;
-    width: 20%;
+    width: calc(20% - 10px);
     text-align: center;
     margin-bottom: 40px;
   }
   .f7-demo-icon {
     height: 28px;
+    i {
+      cursor: pointer;
+    }
   }
   .f7-demo-icon-label {
     font-size: 11px;
     margin-top: 10px;
+    word-break: break-all;
   }
   @media (max-width: 600px) {
     .f7-demo-icon-cell {
-      width: 100% / 3;
+      width: calc(100% / 3 - 10px)
     }
   }
   @media (max-width: 400px) {
     .f7-demo-icon-cell {
-      width: 100% / 2;
+      width: calc(100% / 2 - 10px)
     }
   }
 }
-
+.f7-demo-icons-toast {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  width: auto;
+  max-width: calc(100% - 30px);
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 50;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.3;
+  background: #222;
+  border-radius: 6px;
+  z-index: 100;
+  animation: f7-demo-icons-toast 2000ms;
+  b {
+    color: #fff;
+  }
+}
+@keyframes f7-demo-icons-toast {
+  0% {
+    transform: translateY(calc(100% + 15px));
+  }
+  10% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(100% + 15px));
+  }
+}
 .patreon-button {
-  color: #fff;
   font-size: 0;
   line-height: 22px;
-  padding: 0 10px;
   display: inline-block;
   border-radius: 11px;
-  font-weight: bold;
-  &:hover {
-    background: @lightBrownColor;
+  font-weight: 500;
+  &:hover .patreon-text {
+    text-decoration: underline;
   }
   .patreon-logo {
     display: inline-block;
@@ -267,7 +323,7 @@ main {
       width: @size * 0.75;
       height: @size * 0.75;
       position: absolute;
-      background: #fff;
+      background: @redColor;
       border-radius: 10px;
       content: '';
       right: 0;

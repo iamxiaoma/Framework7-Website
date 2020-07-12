@@ -18,7 +18,7 @@ block content
     h2 List Button Components
     p There are following components included:
     ul
-      li <code><b>f7-list-button</b></code>
+      li `f7-list-button`
 
     h2 List Button Properties
     table.params-table
@@ -38,7 +38,7 @@ block content
           td text
           td string
           td
-          td Button inner text, same as <code>title</code>
+          td Button inner text, same as `title`
         tr
           td tab-link
           td string/boolean
@@ -50,11 +50,6 @@ block content
           td
           td Makes this tab link active
         tr
-          td no-fast-click
-          td boolean
-          td
-          td Disables fast click
-        tr
           td target
           td string
           td
@@ -64,6 +59,11 @@ block content
           td string
           td
           td List button <a href="../docs/tooltip.html">tooltip</a> text to show on button hover/press
+        tr
+          td tooltip-trigger
+          td string
+          td hover
+          td Defines how to trigger (open) Tooltip. Can be `hover` or `click`. If `hover` tooltip will be toggled on mouse hover on desktop, and with tap and hold on touch devices
         tr
           th(colspan="4") &lt;f7-list-button&gt; navigation/router related properties
         +vueLinkRouterProps

@@ -59,7 +59,7 @@ block content
         </div>
       </div>
     h3 Treeview Item Link
-    p If we need some treeview item to be just a link, we just need to use <code>&lt;a&gt;</code> tag for treeview-item-root element:
+    p If we need some treeview item to be just a link, we just need to use `<a>` tag for treeview-item-root element:
     :code(lang="html")
       <div class="treeview">
         ...
@@ -74,7 +74,7 @@ block content
         ...
       </div>
     h3 Treeview Item Toggle
-    p Instead of toggle (or in addition) button, we can make whole treeview item work like a toggle. In this case we need to add <code>treeview-item-toggle</code> to treeview item root element:
+    p Instead of toggle (or in addition) button, we can make whole treeview item work like a toggle. In this case we need to add `treeview-item-toggle` to treeview item root element:
     :code(lang="html")
       <div class="treeview">
         ...
@@ -94,7 +94,7 @@ block content
         ...
       </div>
     h3 Treeview Selectable Item
-    p We can also make treeview item selectable. In this case we need to add <code>treeview-item-selectable</code> to treeview item root element, and <code>treeview-item-selected</code> to selected item root element:
+    p We can also make treeview item selectable. In this case we need to add `treeview-item-selectable` to treeview item root element, and `treeview-item-selected` to selected item root element:
     :code(lang="html")
       <div class="treeview">
         ...
@@ -174,7 +174,8 @@ block content
         tr
           td treeview:loadchildren
           td Treeview Item Element<span>&lt;div class="treeview-item"&gt;</span>
-          td Event will be triggered on first open of Treeview item with <code>treeview-load-children</code> class. In <code>event.detail</code> it contains function to hide loading preloader.
+          td
+            p Event will be triggered on first open of Treeview item with `treeview-load-children` class. In `event.detail` it contains function to hide loading preloader.
     h3 App Events
     p Treeview also emits events on app instance.
     table.events-table
@@ -198,10 +199,52 @@ block content
           td treeviewLoadChildren
           td <span>(itemEl, done)</span>
           td app
-          td Event will be triggered on first open of Treeview item with <code>treeview-load-children</code> class. As second argument it has function to hide loading preloader.
+          td Event will be triggered on first open of Treeview item with `treeview-load-children` class. As second argument it has function to hide loading preloader.
 
     h2 Load Children
-    p It is also possible to load children on treeview item open. To make it work, we, at first, need to add <code>treeview-load-children</code> class to such treeview item. And then listen for <code>treeview:loadchildren</code> event to proceed with loading. Check the examples below for implementation example.
+    p It is also possible to load children on treeview item open. To make it work, we, at first, need to add `treeview-load-children` class to such treeview item. And then listen for `treeview:loadchildren` event to proceed with loading. Check the examples below for implementation example.
+    ```html
+      <div class="treeview">
+        <div class="treeview-item treeview-load-children">
+          ...
+          <div class="treeview-item-children">
+            ...
+          </div>
+        </div>
+      </div>
+      <script>
+        $('.treeview-load-children').on('treeview:loadchildren', (e) => {
+          loadChildren: function (e) {
+            const done = e.detail;
+            fetch('some-url')
+              .then(() => {
+                // ... update UI and call done
+                done();
+              })
+              .catch((err) => {
+                // in case of error, call done(true) to cancel loading effect
+                done(true);
+              })
+          },
+        })
+
+        //- or
+
+        app.on('treeviewLoadChildren', (itemEl, done) => {
+          loadChildren: function (e) {
+            fetch('some-url')
+              .then(() => {
+                // ... update UI and call done
+                done();
+              })
+              .catch((err) => {
+                // in case of error, call done(true) to cancel loading effect
+                done(true);
+              })
+          },
+        })
+      </script>
+    ```
 
     +cssVars('treeview')
 
@@ -349,7 +392,7 @@ block content
               <div class="treeview-item">
                 <div class="treeview-item-root">
                   <div class="treeview-item-content">
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">avatar.png</div>
                   </div>
                 </div>
@@ -357,7 +400,7 @@ block content
               <div class="treeview-item">
                 <div class="treeview-item-root">
                   <div class="treeview-item-content">
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">background.jpg</div>
                   </div>
                 </div>
@@ -431,7 +474,7 @@ block content
                       <input type="checkbox">
                       <i class="icon-checkbox"></i>
                     </label>
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">avatar.png</div>
                   </div>
                 </div>
@@ -443,7 +486,7 @@ block content
                       <input type="checkbox">
                       <i class="icon-checkbox"></i>
                     </label>
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">background.jpg</div>
                   </div>
                 </div>
@@ -529,7 +572,7 @@ block content
               <div class="treeview-item">
                 <div class="treeview-item-root">
                   <div class="treeview-item-content">
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">avatar.png</div>
                   </div>
                 </div>
@@ -537,7 +580,7 @@ block content
               <div class="treeview-item">
                 <div class="treeview-item-root">
                   <div class="treeview-item-content">
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">background.jpg</div>
                   </div>
                 </div>
@@ -603,7 +646,7 @@ block content
               <div class="treeview-item">
                 <div class="treeview-item-root treeview-item-selectable">
                   <div class="treeview-item-content">
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">avatar.png</div>
                   </div>
                 </div>
@@ -611,7 +654,7 @@ block content
               <div class="treeview-item">
                 <div class="treeview-item-root treeview-item-selectable">
                   <div class="treeview-item-content">
-                    <i class="icon f7-icons">images_fill</i>
+                    <i class="icon f7-icons">photo_fill</i>
                     <div class="treeview-item-label">background.jpg</div>
                   </div>
                 </div>

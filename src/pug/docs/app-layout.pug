@@ -9,7 +9,7 @@ block content
   .docs-content
     +improveDocsLink
     h1 App HTML Layout
-    p First thing we should do for our App is to create <code>index.html</code> file with app's skeleton. Let's look at basic app layout:
+    p First thing we should do for our App is to create `index.html` file with app's skeleton. Let's look at basic app layout:
     :code(lang="html")
       <!DOCTYPE html>
       <html>
@@ -18,7 +18,7 @@ block content
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
           <meta name="apple-mobile-web-app-capable" content="yes">
-          <!-- Color theme for statusbar -->
+          <!-- Color theme for statusbar (Android only) -->
           <meta name="theme-color" content="#2196f3">
           <!-- Your app title -->
           <title>My App</title>
@@ -30,8 +30,6 @@ block content
         <body>
           <!-- App root element -->
           <div id="app">
-            <!-- Statusbar overlay -->
-            <div class="statusbar"></div>
 
             <!-- Your main view, should have "view-main" class -->
             <div class="view view-main">
@@ -40,6 +38,7 @@ block content
 
                 <!-- Top Navbar -->
                 <div class="navbar">
+                  <div class="navbar-bg"></div>
                   <div class="navbar-inner">
                     <div class="title">Awesome App</div>
                   </div>
@@ -69,7 +68,7 @@ block content
           <script type="text/javascript" src="path/to/my-app.js"></script>
         </body>
       </html>
-    p As you may see the layout is pretty simple. The main point is that you should link Framework7's CSS in the <code>&lt;head&gt;</code> and JS files in the end of <code>&lt;body&gt;</code>.
+    p As you may see the layout is pretty simple. The main point is that you should link Framework7's CSS in the `<head>` and JS files in the end of `<body>`.
     p You can read more about statusbar overlay, views, navbar, toolbar, pages, panels and other components in appropriate sections.
     h2 Initialize App
-    p Now when we have basic template, we need to <a href="init-app.html">initialize our app</a> in <code>my-app.js</code>.
+    p Now when we have basic template, we need to <a href="init-app.html">initialize our app</a> in `my-app.js`.

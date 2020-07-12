@@ -21,96 +21,97 @@ block content
       li To present a selectable list of options
     h2 List View Block
     p List block is your list view elements wrapper.
-    p So first of all, all your list view elements should be wrapped with <code>&lt;div class="list"&gt;</code> element:
+    p So first of all, all your list view elements should be wrapped with `<div class="list">` element:
     :code(lang="html")
-         &lt;div class="list"&gt;
-             &lt;ul&gt;
+         <div class="list">
+             <ul>
                  ... list elements here ...
-             &lt;/ul&gt;
-         &lt;/div&gt;
-    p To remove hairlines (thin borders) around list block we need additional <code><b>no-hairlines</b></code> class:
+             </ul>
+         </div>
+    p To remove hairlines (thin borders) around list block we need additional `no-hairlines` class:
     :code(lang="html")
-          &lt;div class="list no-hairlines"&gt;
-              &lt;ul&gt;
+          <div class="list no-hairlines">
+              <ul>
                   ... list elements here ...
-              &lt;/ul&gt;
-          &lt;/div&gt;
-    p To remove hairlines (thin borders) between list items we need additional <code><b>no-hairlines-between</b></code> class:
+              </ul>
+          </div>
+    p To remove hairlines (thin borders) between list items we need additional `no-hairlines-between` class:
     :code(lang="html")
-          &lt;div class="list no-hairlines-between"&gt;
-              &lt;ul&gt;
+          <div class="list no-hairlines-between">
+              <ul>
                   ... list elements here ...
-              &lt;/ul&gt;
-          &lt;/div&gt;
-    p To make list block inset we need additional <code><b>inset</b></code> class:
+              </ul>
+          </div>
+    p To make list block inset we need additional `inset` class:
     :code(lang="html")
-          &lt;div class="list inset"&gt;
-              &lt;ul&gt;
+          <div class="list inset">
+              <ul>
                   ... list elements here ...
-              &lt;/ul&gt;
-          &lt;/div&gt;
-    p To make block inset only on large screens we need to use <code><b>tablet-inset</b></code> class instead:
+              </ul>
+          </div>
+    p To make block inset only on large screens we need to use `medium-inset` (>= 768px) class instead:
     :code(lang="html")
-          &lt;div class="list tablet-inset"&gt;
-              &lt;ul&gt;
+          <div class="list medium-inset">
+              <ul>
                   ... list elements here ...
-              &lt;/ul&gt;
-          &lt;/div&gt;
+              </ul>
+          </div>
+    p For full set of such responsive classes check #[a(href="grid.html#column-sizes") Grid docs]. They are `xsmall-inset`, `small-inset`, `medium-inset`, `large-inset`, `xlarge-inset`.
     h2 List Item
     p Single list element has pretty complex but flexible layout:
     :code(lang="html")
-          &lt;li&gt;
-              &lt;div class="item-content"&gt;
-                  &lt;div class="item-media"&gt;
-                      &lt;i class="icon my-icon"&gt;&lt;/i&gt;
-                  &lt;/div&gt;
-                  &lt;div class="item-inner"&gt;
-                      &lt;div class="item-title"&gt;
+          <li>
+              <div class="item-content">
+                  <div class="item-media">
+                      <i class="icon my-icon"></i>
+                  </div>
+                  <div class="item-inner">
+                      <div class="item-title">
                           List element title
-                      &lt;/div&gt;
-                      &lt;div class="item-after"&gt;
+                      </div>
+                      <div class="item-after">
                           List element label
-                      &lt;/div&gt;
-                  &lt;/div&gt;
-              &lt;/div&gt;
-          &lt;/li&gt;
+                      </div>
+                  </div>
+              </div>
+          </li>
     p Where:
     ul
       li
-        p <code>item-content</code> - main flex wrapper for <code>item-media</code> and <code>item-inner</code>. <strong>Requred</strong> element.
+        p `item-content` - main flex wrapper for `item-media` and `item-inner`. <strong>Requred</strong> element.
       ul
         li
-          p <code>item-media</code> - container for your media element like icon, image, etc. <strong>Optional</strong> element.
+          p `item-media` - container for your media element like icon, image, etc. <strong>Optional</strong> element.
         li
-          p <code>item-inner</code> - main flex wrapper for <code>item-title</code> and <code>item-after</code>. <strong>Requred</strong> element.
+          p `item-inner` - main flex wrapper for `item-title` and `item-after`. <strong>Requred</strong> element.
         ul
           li
-            p <code>item-title</code> - single-line list item title. <strong>Required</strong> element.
+            p `item-title` - single-line list item title. <strong>Required</strong> element.
           li
-            p <code>item-after</code> - list item label. Could countain any additional HTML elements, like label text, or badge, or switch/toggle or button, etc. <strong>Optional</strong> element.
+            p `item-after` - list item label. Could countain any additional HTML elements, like label text, or badge, or switch/toggle or button, etc. <strong>Optional</strong> element.
     .important-note
       ul
         li
-          p Because .item-content is actually CSS flex-box element, note that <strong><code>item-media</code> and <code>item-inner</code> should be direct children of <code>item-content</code></strong>!
+          p Because .item-content is actually CSS flex-box element, note that <strong>`item-media` and `item-inner` should be direct children of `item-content`</strong>!
         li
-          p For the same reason <strong><code>item-title</code> and <code>item-after</code> should be direct children of <code>item-inner</code></strong>!
-    p Also note that if your list item has nothing additional, you can user <code>item-content</code> class on <code>&lt;li&gt;</code> element:
+          p For the same reason <strong>`item-title` and `item-after` should be direct children of `item-inner`</strong>!
+    p Also note that if your list item has nothing additional, you can user `item-content` class on `<li>` element:
     :code(lang="html")
-          &lt;li class="item-content"&gt;
-              &lt;div class="item-media"&gt;
-                  &lt;i class="icon my-icon"&gt;&lt;/i&gt;
-              &lt;/div&gt;
-              &lt;div class="item-inner"&gt;
-                  &lt;div class="item-title"&gt;
+          <li class="item-content">
+              <div class="item-media">
+                  <i class="icon my-icon"></i>
+              </div>
+              <div class="item-inner">
+                  <div class="item-title">
                       List element title
-                  &lt;/div&gt;
-                  &lt;div class="item-after"&gt;
+                  </div>
+                  <div class="item-after">
                       List element label
-                  &lt;/div&gt;
-              &lt;/div&gt;
-          &lt;/li&gt;
+                  </div>
+              </div>
+          </li>
     h2 List Item Header/Footer
-    p If we need to add list item header/footer text in addition to item's title we can use <code>item-header</code> and <code>item-footer</code> elements:
+    p If we need to add list item header/footer text in addition to item's title we can use `item-header` and `item-footer` elements:
     :code(lang="html")
           <li>
             <div class="item-content">
@@ -130,84 +131,86 @@ block content
             </div>
           </li>
     h2 Link Item
-    p Of course in most cases we need to use list view elements as links (&lt;a&gt;) to other pages or data. In this case we need to wrap <code>item-content</code> with <code>&lt;a class="item-link"&gt;</code> element:
+    p Of course in most cases we need to use list view elements as links (&lt;a&gt;) to other pages or data. In this case we need to wrap `item-content` with `<a class="item-link">` element:
     :code(lang="html")
           <li>
-            &lt;a href="#" class="item-link"&gt;
-              &lt;div class="item-content"&gt;
-                &lt;div class="item-media"&gt;...&lt;/div&gt;
-                &lt;div class="item-inner"&gt;...&lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/a&gt;
+            <a href="#" class="item-link">
+              <div class="item-content">
+                <div class="item-media">...</div>
+                <div class="item-inner">...</div>
+              </div>
+            </a>
           </li>
     p If your links contains nothing except "item-content" then we can just use link as "item-content":
     :code(lang="html")
           <li>
-            &lt;a href="#" class="item-link item-content"&gt;
-              &lt;div class="item-media"&gt;...&lt;/div&gt;
-              &lt;div class="item-inner"&gt;...&lt;/div&gt;
-            &lt;/a&gt;
+            <a href="#" class="item-link item-content">
+              <div class="item-media">...</div>
+              <div class="item-inner">...</div>
+            </a>
           </li>
     .important-note
       p
-        strong Note that <code>item-inner</code> has additional right padding and chevron icon when it is in <code>item-link</code>
-      p To remove this chevron icon and extra padding, you can add <code>no-chevron</code> class to link item or to containing list
+        strong Note that `item-inner` has additional right padding and chevron icon when it is in `item-link`
+      p To remove this chevron icon and extra padding, you can add `no-chevron` class to link item or to containing list
     h2 List Button
     p List button is a simplified list link item, usefule in case you need to trigger simple self-explaining actions:
     :code(lang="html")
-          <li>
-            <a class="item-link list-button">List Button 1</a>
-          </li>
-          <li>
-            <a class="item-link list-button">List Button 2</a>
-          </li>
+      <li>
+        <a class="list-button">List Button 1</a>
+      </li>
+      <li>
+        <a class="list-button">List Button 2</a>
+      </li>
 
     h2 List Divider
     p List divider is a simple list element with title to visually divide one list items from another:
     :code(lang="html")
-      &lt;li class="item-divider"&gt;Divider title here&lt;/li&gt;
+      <li class="item-divider">Divider title here</li>
+
     :code(lang="html")
-           &lt;div class="list"&gt;
-             &lt;ul&gt;
-               &lt;!-- List items --&gt;
-               &lt;li class="item-content"&gt;...&lt;/li&gt;
-               &lt;li class="item-content"&gt;...&lt;/li&gt;
+           <div class="list">
+             <ul>
+               <!-- List items -->
+               <li class="item-content">...</li>
+               <li class="item-content">...</li>
 
-               &lt;!-- Divider --&gt;
-               &lt;li class="item-divider"&gt;Divider title here&lt;/li&gt;
+               <!-- Divider -->
+               <li class="item-divider">Divider title here</li>
 
-               &lt;!-- Another list items --&gt;
-               &lt;li class="item-content"&gt;...&lt;/li&gt;
-               &lt;li class="item-content"&gt;...&lt;/li&gt;
-             &lt;/ul&gt;
-           &lt;/div&gt;
+               <!-- Another list items -->
+               <li class="item-content">...</li>
+               <li class="item-content">...</li>
+             </ul>
+           </div>
+
     h2 Grouped Lists
-    p Sometimes we need to group list view elements inside of single list block. In this case we need to additional <code>list-group</code> elements:
+    p Sometimes we need to group list view elements inside of single list block. In this case we need to additional `list-group` elements:
     :code(lang="html")
-           &lt;div class="list"&gt;
-             &lt;!-- First group--&gt;
-             &lt;div class="list-group"&gt;
-               &lt;ul&gt;
-                 &lt;li class="list-group-title"&gt;First group&lt;/li&gt;
-                 &lt;li class="item-content"&gt;...&lt;/li&gt;
-                 &lt;li class="item-content"&gt;...&lt;/li&gt;
+           <div class="list">
+             <!-- First group-->
+             <div class="list-group">
+               <ul>
+                 <li class="list-group-title">First group</li>
+                 <li class="item-content">...</li>
+                 <li class="item-content">...</li>
                  ...
-               &lt;/ul&gt;
-             &lt;/div&gt;
+               </ul>
+             </div>
 
-             &lt;!-- Second group--&gt;
-             &lt;div class="list-group"&gt;
-               &lt;ul&gt;
-                 &lt;li class="list-group-title"&gt;Second Group&lt;/li&gt;
-                 &lt;li class="item-content"&gt;...&lt;/li&gt;
-                 &lt;li class="item-content"&gt;...&lt;/li&gt;
+             <!-- Second group-->
+             <div class="list-group">
+               <ul>
+                 <li class="list-group-title">Second Group</li>
+                 <li class="item-content">...</li>
+                 <li class="item-content">...</li>
                  ...
-               &lt;/ul&gt;
-             &lt;/div&gt;
-           &lt;/div&gt;
+               </ul>
+             </div>
+           </div>
     p You may ask what is the difference from simple dividers? <strong>With list groups, group titles have sticky position during scroll within single group.</strong>
     h2 Simple List
-    p In case we need list with simple items structure that have only titles, we may use Simple List modification. In this case we need additional class <code>simple-list</code> on list block with plain <code>&lt;li&gt;</code> items layout:
+    p In case we need list with simple items structure that have only titles, we may use Simple List modification. In this case we need additional class `simple-list` on list block with plain `<li>` items layout:
     :code(lang="html")
           <div class="list simple-list">
             <ul>
@@ -219,7 +222,7 @@ block content
             </ul>
           </div>
     h2 Links List
-    p In case we need list with simple link items structure that have only titles, we may use Links List modification. In this case we need additional class <code>links-list</code> on list block with plain <code>&lt;li&gt;&lt;a&gt;...&lt;/a&gt;&lt;/li&gt;</code> items layout:
+    p In case we need list with simple link items structure that have only titles, we may use Links List modification. In this case we need additional class `links-list` on list block with plain `<li><a>...</a></li>` items layout:
     :code(lang="html")
           <div class="list links-list">
             <ul>
@@ -236,7 +239,7 @@ block content
             </ul>
           </div>
     h2 Media List
-    p Media list view is extended case of List View indended to display more complex data like products, services, users, etc. In this case we need additional <code><b>media-list</b></code> class on list block.
+    p Media list view is extended case of List View indended to display more complex data like products, services, users, etc. In this case we need additional `media-list` class on list block.
     p And of course it has a bit more complex layout:
     :code(lang="html")
           <!-- Media list block has additional "media-list" class -->
@@ -262,28 +265,28 @@ block content
     p Where:
     ul
       li
-        p <code>item-content</code> - main flex wrapper for <code>item-media</code> and <code>item-inner</code>. <strong>Requred</strong> element.
+        p `item-content` - main flex wrapper for `item-media` and `item-inner`. <strong>Requred</strong> element.
       ul
         li
-          p <code>item-media</code> - container for your media element like icon, image, etc. <strong>Optional</strong> element.
+          p `item-media` - container for your media element like icon, image, etc. <strong>Optional</strong> element.
         li
-          p <code>item-inner</code> - <strong>Requred</strong> element.
+          p `item-inner` - <strong>Requred</strong> element.
         ul
           li
-            p <code>item-title-row</code> - main flex wrapper for <code>item-title</code> and <code>item-after</code>. <strong>Optional</strong> element.
+            p `item-title-row` - main flex wrapper for `item-title` and `item-after`. <strong>Optional</strong> element.
           ul
             li
-              p <code>item-title</code> - single-line list item title. <strong>Optional</strong> element.
+              p `item-title` - single-line list item title. <strong>Optional</strong> element.
             li
-              p <code>item-after</code> - list item label. Could countain any additional HTML elements, like label text, or badge, or switch/toggle or button, etc. <strong>Optional</strong> element.
+              p `item-after` - list item label. Could countain any additional HTML elements, like label text, or badge, or switch/toggle or button, etc. <strong>Optional</strong> element.
           li
-            p <code>item-subtitle</code> - additional single-line title. <strong>Optional</strong> element.
+            p `item-subtitle` - additional single-line title. <strong>Optional</strong> element.
           li
-            p <code>item-text</code> - additional two-lines container for detailed description. <strong>Optional</strong> element.
+            p `item-text` - additional two-lines container for detailed description. <strong>Optional</strong> element.
     .important-note
-      p When you use Link Item (item-link) in media list it will render chevron icon (<code>&gt;</code>) at the level of <code>item-title</code>. If you want to move this chevron to the center of item, then you need to add <code>chevron-center</code> class to this item or to the containing list
+      p When you use Link Item (item-link) in media list it will render chevron icon (`>`) at the level of `item-title`. If you want to move this chevron to the center of item, then you need to add `chevron-center` class to this item or to the containing list
     h2 Custom Table-like Elements
-    p In you case you need some custom list item layout with table-like structure you may use additional list elements <code>item-row</code> and <code>item-cell</code>:
+    p In you case you need some custom list item layout with table-like structure you may use additional list elements `item-row` and `item-cell`:
     :code(lang="html")
           <li class="item-content">
             <div class="item-inner item-cell">
@@ -719,7 +722,7 @@ block content
             </div>
       h4 Tablet inset
       :code(lang="html")
-            <div class="list tablet-inset">
+            <div class="list medium-inset">
               <ul>
                 <li>
                   <a href="#" class="item-link item-content">
@@ -961,13 +964,13 @@ block content
             <div class="list">
               <ul>
                 <li>
-                  <a href="#" class="item-link list-button">Button 1</a>
+                  <a href="#" class="list-button">Button 1</a>
                 </li>
                 <li>
-                  <a href="#" class="item-link list-button">Button 2</a>
+                  <a href="#" class="list-button">Button 2</a>
                 </li>
                 <li>
-                  <a href="#" class="item-link list-button">Button 3</a>
+                  <a href="#" class="list-button">Button 3</a>
                 </li>
               </ul>
             </div>
@@ -976,13 +979,13 @@ block content
             <div class="list inset">
               <ul>
                 <li>
-                  <a href="#" class="item-link list-button">Button 1</a>
+                  <a href="#" class="list-button">Button 1</a>
                 </li>
                 <li>
-                  <a href="#" class="item-link list-button">Button 2</a>
+                  <a href="#" class="list-button">Button 2</a>
                 </li>
                 <li>
-                  <a href="#" class="item-link list-button">Button 3</a>
+                  <a href="#" class="list-button">Button 3</a>
                 </li>
               </ul>
             </div>

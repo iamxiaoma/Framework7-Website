@@ -1,4 +1,24 @@
 -
+  date: October 7, 2019
+  video: false
+  title: "Migration To Framework7 v5"
+  url: https://blog.framework7.io/migration-to-framework7-v5-1374257bb5a7
+  author:
+    name: Vladimir Kharlampidi
+    url: https://twitter.com/nolimits4web
+  badges:
+  - v5
+-
+  date: Aug 21, 2019
+  video: true
+  title: "User Authentication for Framework7 with Firebase"
+  url: https://youtu.be/cYlSZLV5qN4
+  author:
+    name: Timo Ernst
+    url: https://www.timo-ernst.net
+  badges:
+  - v4
+-
   date: May 21, 2019
   video: true
   title: "Get Started with Framework7 in 2019 using CLI Tutorial"

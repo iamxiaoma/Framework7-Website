@@ -1,0 +1,85 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Checkbox Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Checkbox Svelte Component
+    ul.docs-index
+    p Checkbox Svelte component represents <a href="../docs/checkbox.html">Checkbox</a> component.
+    h2 Checkbox Components
+    p There are following components included:
+    ul
+      li `Checkbox`
+    h2 Checkbox Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;Checkbox&gt; properties
+        tr
+          td checked
+          td boolean
+          td
+          td Defines whether the checkbox input is checked or not
+        tr
+          td indeterminate
+          td boolean
+          td
+          td Defines whether the checkbox input is in indeterminate state or not
+        tr
+          td name
+          td string<br>number
+          td
+          td Checkbox input name
+        tr
+          td value
+          td string<br>number<br>boolean
+          td
+          td Checkbox input value
+        tr
+          td disabled
+          td boolean
+          td
+          td Defines whether the checkbox input is disabled
+        tr
+          td readonly
+          td boolean
+          td
+          td Defines whether the checkbox input is readonly
+    h2 Checkbox Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;Checkbox&gt; events
+        tr
+          td change
+          td Event will be triggered when checkbox state changed
+    h2 Checkboxes List
+    p Checkboxes List is not a separate component, but just a particular case of using <a href="list-view.html">`<List>`</a>, <a href="list-item.html">`<ListItem>`</a>.
+    :code(lang="svelte")
+      <List>
+        <!-- Additional "checkbox" prop to enable checkbox list item -->
+        <ListItem checkbox value="check_1" checked title="Checkbox 1" />
+        <ListItem checkbox value="check_2" title="Checkbox 2" />
+      </List>
+
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/checkbox.html") Examples
+      include:svelteSource ../docs-demos/svelte/checkbox.svelte

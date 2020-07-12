@@ -25,8 +25,8 @@ block content
     h2 List Components
     p There are following components included:
     ul
-      li <code><b>f7-list</b></code> - main List View element
-      li <code><b>f7-list-group</b></code> - list group element
+      li `f7-list` - main List View element
+      li `f7-list-group` - list group element
 
     h2 List Properties
     table.params-table
@@ -45,10 +45,30 @@ block content
           td false
           td Makes list block inset
         tr
-          td tablet-inset
+          td xsmall-inset
           td boolean
-          td false
-          td Makes block inset on tablets, but not on phones
+          td
+          td Makes block inset when app width >= 480px
+        tr
+          td small-inset
+          td boolean
+          td
+          td Makes block inset when app width >= 568px
+        tr
+          td medium-inset
+          td boolean
+          td
+          td Makes block inset when app width >= 768px
+        tr
+          td large-inset
+          td boolean
+          td
+          td Makes block inset when app width >= 1024px
+        tr
+          td xlarge-inset
+          td boolean
+          td
+          td Makes block inset when app width >= 1200px
         tr
           td media-list
           td boolean
@@ -70,15 +90,35 @@ block content
           td false
           td Enables <a href="sortable.html">Sortable List</a>
         tr
+          td sortable-opposite
+          td boolean
+          td false
+          td Renders sortable handler on opposite side (on left in LTR)
+        tr
+          td sortable-tap-hold
+          td boolean
+          td false
+          td Makes list items sortable on item tap and hold (long press). In this case app will rely on custom `taphold` event. To make it work correctly, make sure you have also enabled `touch.tapHold: true` #[a(href="app.html#app-parameters" target="_blank") app parameter]
+        tr
           td sortable-enabled
           td boolean
           td false
           td Enables sorting on sortable list
         tr
+          td sortable-move-elements
+          td boolean
+          td
+          td When passed it will overwrite same `sortable.moveElements` global app parameter.
+        tr
           td accordion
           td boolean
           td false
           td Enables <a href="accordion.html#accordion-list">Accordion List</a>
+        tr
+          td accordion-opposite
+          td boolean
+          td false
+          td Renders accordion chevron icon on opposite side (on left in LTR)
         tr
           td contacts-list
           td boolean
@@ -88,7 +128,7 @@ block content
           td form
           td boolean
           td false
-          td Enables <code>&lt;form&gt;</code> tag on list block instead of <code>&lt;div&gt;</code>
+          td Enables `<form>` tag on list block instead of `<div>`
         tr
           td form-store-data
           td boolean
@@ -172,6 +212,11 @@ block content
           td false
           td Enables <a href="sortable.html">Sortable List</a> for this group
         tr
+          td sortable-tap-hold
+          td boolean
+          td false
+          td Makes list items sortable on item tap and hold (long press). In this case app will rely on custom `taphold` event. To make it work correctly, make sure you have also enabled `touch.tapHold: true` #[a(href="app.html#app-parameters" target="_blank") app parameter]
+        tr
           td simple-list
           td boolean
           td false
@@ -194,7 +239,7 @@ block content
           td Event will be triggered when List Block-Tab becomes invisible/inactive
         tr
           td submit
-          td Event will be triggered on list-form submit when list used as form (with enabled <code>form</code> prop)
+          td Event will be triggered on list-form submit when list used as form (with enabled `form` prop)
         tr
           th(colspan="2") &lt;f7-list&gt; Sortable specific events
         tr
@@ -205,7 +250,7 @@ block content
           td Event will be triggered when sortable mode is disabled
         tr
           td sortable:sort
-          td Event will be triggered after user release currently sorting element in new position. <code>event.detail</code> will contain object with <code>from</code> and <code>to</code> properties with start/new index numbers of sorted list item
+          td Event will be triggered after user release currently sorting element in new position. `event.detail` will contain object with `from` and `to` properties with start/new index numbers of sorted list item
         tr
           th(colspan="2") &lt;f7-list&gt; Virtual List specific events
         tr
@@ -221,11 +266,11 @@ block content
           td virtual:beforeclear
           td Event will be triggered before current DOM list will be removed and replaced with new document fragment
     h2 List Slots
-    p List Vue component (<code>&lt;f7-list&gt;</code>) has additional slots for custom elements:
+    p List Vue component (`<f7-list>`) has additional slots for custom elements:
     ul
-      li <code><b>before-list</b></code> - element will be inserted in the beginning of list view and right before <code>&lt;ul&gt;</code> main list
-      li <code><b>after-list</b></code> - element will be inserted in the end of list view and right after <code>&lt;ul&gt;</code> main list
-      li <code><b>list</b></code> - element will be inserted inside of <code>&lt;ul&gt;</code> main list element
+      li `before-list` - element will be inserted in the beginning of list view and right before `<ul>` main list
+      li `after-list` - element will be inserted in the end of list view and right after `<ul>` main list
+      li `list` - element will be inserted inside of `<ul>` main list element
     h2 Virtual List
     p For Virtual List usage and examples check the <a href="virtual-list.html">Virtual List Vue Component</a> documentation.
 
@@ -395,7 +440,7 @@ block content
       h4 Tablet inset
       :code(lang="html")
             <f7-block-title>Tablet inset</f7-block-title>
-            <f7-list tablet-inset>
+            <f7-list medium-inset>
               <f7-list-item link="#" title="Ivan Petrov" after="CEO">
                 <f7-icon slot="media" icon="demo-list-icon"></f7-icon>
               </f7-list-item>

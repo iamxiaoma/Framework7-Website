@@ -1,0 +1,162 @@
+extends ../_docs-template
+
+block vars
+  - var activeLink = 'svelte';
+  - var title = 'Treeview Svelte Component | Framework7 Svelte Documentation';
+
+block content
+  include ../_docs-demo-device
+
+  .docs-nav
+    include ../_docs-menu-svelte
+  .docs-content
+    +improveDocsLink
+    h1 Treeview Svelte Component
+    ul.docs-index
+    p Treeview Svelte component represents Framework7's <a href="/docs/treeview.html">Treeview</a> component.
+
+    h2 Treeview Components
+    p There are following components included:
+    ul
+      li `Treeview` - main treeview container
+      li `TreeviewItem` - treeview item
+
+    h2 Treeview Properties
+    table.params-table
+      thead
+        tr
+          th Prop
+          th Type
+          th Default
+          th Description
+      tbody
+        tr
+          th(colspan="4") &lt;TreeviewItem&gt; properties
+        tr
+          td toggle
+          td boolean
+          td
+          td Enables treeview item toggle button. By default enabled if there are children item
+        tr
+          td itemToggle
+          td boolean
+          td false
+          td Enables whole treeview item as toggle
+        tr
+          td selectable
+          td boolean
+          td false
+          td Makes item selectable
+        tr
+          td selected
+          td boolean
+          td
+          td Makes item selected
+        tr
+          td opened
+          td boolean
+          td false
+          td Defines whether the item opened by default or not
+        tr
+          td label
+          td string
+          td
+          td Item label text
+        tr
+          td loadChildren
+          td boolean
+          td false
+          td Enable when you need to load children items on open.
+        tr
+          td link
+          td string<br>boolean
+          td
+          td Enables link and link URL if specified as string. Same as `href` attribute
+
+        tr
+          th(colspan="4") &lt;TreeviewItem&gt; icon related properties
+        +svelteLinkIconProps
+        tr
+          th(colspan="4") &lt;TreeviewItem&gt; navigation/router related properties
+        +svelteLinkRouterProps
+        tr
+          th(colspan="4") &lt;TreeviewItem&gt; action related properties
+        +svelteLinkActionsProps
+
+    h2 Treeview Events
+    table.events-table
+      thead
+        tr
+          th Event
+          th Description
+      tbody
+        tr
+          th(colspan="2") &lt;TreeviewItem&gt; events
+        tr
+          td click
+          td Event will be triggeres when user clicks on treeview item
+        tr
+          td treeviewOpen
+          td Event will be triggered on item open
+        tr
+          td treeviewClose
+          td Event will be triggered on item close
+        tr
+          td treeviewLoadChildren
+          td Event will be triggered on first open of Treeview item with `loadChildren` prop. In `event.detail` it contains function to hide loading preloader.
+
+    h2 Treeview Item Slots
+    p Treeview Svelte component (`<TreeviewItem>`) has additional slots for custom elements:
+    ul
+      li `root-start` - element will be inserted in the beginning of treeview item element
+      li `root` / `root-end` - element will be inserted in the end of treeview item element
+      li `content-start` - element will be inserted in the beginning of `<div class="treeview-item-content">` element
+      li `content` / `content-end` - element will be inserted in the end of `<div class="treeview-item-content">` element
+      li `children-start` - element will be inserted in the beginning of the `<div class="treeview-item-children">` element
+      li `default` - element will be inserted in the end of the `<div class="treeview-item-children">` element
+      li `media` - element will be inserted before `<div class="treeview-item-label">` element
+      li `label-start` - element will be inserted in the beginning `<div class="treeview-item-label">` element
+      li `label` - element will be inserted in the end of `<div class="treeview-item-label">` element
+    :code(lang="svelte")
+      <TreeviewItem label="Item 1">
+        <img src="path-to-my-image.jpg" slot="media">
+        <div slot="root-start">Root Start</div>
+        <div slot="root">Root End</div>
+        <div slot="content-start">Content Start</div>
+        <div slot="content">Content End</div>
+        <span slot="label-start">Before Label</span>
+        <TreeviewItem label="Sub Item 1" />
+        ...
+      </TreeviewItem>
+
+      <!-- Renders to: -->
+      <div class="treeview-item">
+        <div class="treeview-item-root">
+          <div>Root Start</div>
+          <div class="treeview-toggle"></div>
+          <div class="treeview-item-content">
+            <div>Content Start</div>
+            <img src="path-to-my-image.jpg">
+            <div class="treeview-item-label">
+              <span>Before Label</span>
+              Item 1
+            </div>
+            <div>Content End</div>
+          </div>
+        </div>
+        <div class="treeview-item-children">
+          <div class="treeview-item">
+            <div class="treeview-item-root">
+              <div class="treeview-item-content">
+                <div class="treeview-item-label">Sub Item 1</div>
+              </div>
+            </div>
+          </div>
+          ...
+        </div>
+        <div>Root End</div>
+      </div>
+
+    .with-device
+      h2(data-device-preview="../docs-demos/svelte/treeview.html") Examples
+      include:svelteSource ../docs-demos/svelte/treeview.svelte
