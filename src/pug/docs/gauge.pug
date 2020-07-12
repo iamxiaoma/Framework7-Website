@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Gauge
     ul.docs-index
     p Framework7 comes with Gauge component. It produces nice looking fully responsive SVG gauges.
@@ -276,6 +276,8 @@ block content
           gauge.update({
             value: 0.9,
           });
+
+    +cssVars('gauge')
 
     .with-device
       h2(data-device-preview="../docs-demos/core/gauge.html") Examples

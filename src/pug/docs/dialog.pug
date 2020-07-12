@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Dialog
     ul.docs-index
     p Dialog is a small content pane that pops up over App's main content. Dialogs are usualy used to ask something from a user, or to notify or warn a user. Dialog, as all other modals, is part of so called "Temporary Views".
@@ -590,6 +590,8 @@ block content
           span.parameter color
           |  - <span class="parameter-type">string</span>. Optional. Progressbar color. One of <a href="color-themes.html">default colors</a>
       p.method-returns Method returns created Dialog's instance
+
+    +cssVars('dialog')
 
     .with-device
       h2(data-device-preview="../docs-demos/core/dialog.html") Examples

@@ -7,7 +7,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 View / Router
     ul.docs-index
     p <strong>View</strong> (&lt;div class="view"&gt;) - is a separate visual part of the app with its own settings, navigation and history. So it is some kind of app in app. Such kind of functionality allows you easily manipulate each part of your app.
@@ -170,11 +170,15 @@ block content
           td 0
           td Delay (in ms) after new page will be loaded and inserted to DOM and before it will be transitioned. Can be increased a bit to improve performance. Will have effect only under iOS theme
         tr
-          td materialPageLoadDelay
+          td mdPageLoadDelay
           td number
           td 0
           td Delay (in ms) after new page will be loaded and inserted to DOM and before it will be transitioned. Can be increased a bit to improve performance. Will have effect only under MD theme
         tr
+          td auroraPageLoadDelay
+          td number
+          td 0
+          td Delay (in ms) after new page will be loaded and inserted to DOM and before it will be transitioned. Can be increased a bit to improve performance. Will have effect only under iOS theme
         tr
           td passRouteQueryToRequest
           td boolean
@@ -191,6 +195,18 @@ block content
             p If you have the following route:
             p <code>{ path: '/user/:userId/posts/:postId/', url: 'http://myserver/userpost/' }</code>
             p and you will click link with <b>/user/11/posts/12/</b> url then it will load page from <b>http://myserver/userpost/?userId=11&postId=12</b> url
+        tr
+          th(colspan="4") Master Detail
+        tr
+          td masterDetailBreakpoint
+          td number
+          td 0
+          td Minimum app width to enable Master Detail view for master routes (routes with #[code master: true] parameter)
+        tr
+          td reloadDetail
+          td boolean
+          td false
+          td When enabled it will reload every detail page when navigating
         tr
           th(colspan="4") Routes
         tr
@@ -336,7 +352,31 @@ block content
           td boolean
           td false
           td Enable/disable opacity animation during swipe back action. You can disable it to improve performance. For MD theme
-
+        tr
+          td auroraSwipeBack
+          td boolean
+          td true
+          td Enable/disable ability to swipe back from left edge of screen to get to the previous page. For Aurora theme
+        tr
+          td auroraSwipeBackThreshold
+          td number
+          td 0
+          td Value in px. Swipe back action will start if "touch distance" will be more than this value. For Aurora theme
+        tr
+          td auroraSwipeBackActiveArea
+          td number
+          td 30
+          td Value in px. Width of invisible left edge of the screen that triggers swipe back action. For Aurora theme
+        tr
+          td auroraSwipeBackAnimateShadow
+          td boolean
+          td false
+          td Enable/disable box-shadow animation during swipe back action. You can disable it to improve performance. For Aurora theme
+        tr
+          td auroraSwipeBackAnimateOpacity
+          td boolean
+          td true
+          td Enable/disable opacity animation during swipe back action. You can disable it to improve performance. For Aurora theme
         tr
           th(colspan="4") Push State
         tr
@@ -612,7 +652,7 @@ block content
           td Works mostly like <code>clearPreviousHistory</code> but only removes previous pages from DOM
         tr
           td router.updateCurrentUrl(<span>url</span>)
-          td Updates current route url, and updates `router.currentRoute` properties (query, params, hash, etc.) based on passed url. This method doesn't load or reload any content. It just changes current route url.
+          td Updates current route url, and updates #[code router.currentRoute] properties (query, params, hash, etc.) based on passed url. This method doesn't load or reload any content. It just changes current route url.
         tr
           td router.on(<span>event</span>, <span>handler</span>)
           td Add event handler
@@ -631,37 +671,42 @@ block content
     h2 Linking Between Pages & Views
     p It may be not very comfortable to use router methods all the time to navigate between pages. In many cases we can just use <a href="link.html">links</a> to navigate between pages. And we can pass additional navigation parameters using <code>data-</code> attributes:
     :code(lang="html")
-          <!-- same as router.navigate('/somepage/'); -->
-          <a href="/somepage/">Some Page</a>
+      <!-- same as router.navigate('/somepage/'); -->
+      <a href="/somepage/">Some Page</a>
 
-          <!-- same as router.navigate('/somepage/', {reloadCurrent: true, animate: false}); -->
-          <a href="/somepage/" data-animate="false" data-reload-current="true">Some Page</a>
+      <!-- same as router.navigate('/somepage/', {reloadCurrent: true, animate: false}); -->
+      <a href="/somepage/" data-animate="false" data-reload-current="true">Some Page</a>
 
-          <!-- same as router.back(); -->
-          <a href="#" class="back">Go back</a>
+      <!-- same as router.back(); -->
+      <a href="#" class="back">Go back</a>
 
-          <!-- same as router.back('/home/', {force: true, ignoreCache: true}); -->
-          <a href="/home/" data-force="true" data-ignore-cache="true" class="back">Go back</a>
+      <!-- same as router.back('/home/', {force: true, ignoreCache: true}); -->
+      <a href="/home/" data-force="true" data-ignore-cache="true" class="back">Go back</a>
     p Links default behavior:
     ul
       li If link is in inside of not initialized view then it will load page in main view
       li If link is in inside of initialized view then it will load page in this view (if other view is not specified in view's <code>linksView</code> parameter)
     p But if we need to load page in another view we can specify this view's CSS selector in link's <code>data-view</code> attribute
     :code(lang="html")
-          <!-- left view -->
-          <div class="view view-init view-left" data-name="left">
-            ...
-            <!-- will load "some-page" to main view -->
-            <a href="/some-page/" data-view=".view-main">Some Page</a>
-            ...
-          </div>
-          <!-- main view -->
-          <div class="view view-init view-main">
-            ...
-            <!-- will load "another-page" to left view -->
-            <a href="/another-page/" data-view=".view-left">Another Page</a>
-            ...
-          </div>
+      <!-- left view -->
+      <div class="view view-init view-left" data-name="left">
+        ...
+        <!-- will load "some-page" to main view -->
+        <a href="/some-page/" data-view=".view-main">Some Page</a>
+        ...
+      </div>
+      <!-- main view -->
+      <div class="view view-init view-main">
+        ...
+        <!-- will load "another-page" to left view -->
+        <a href="/another-page/" data-view=".view-left">Another Page</a>
+        ...
+      </div>
+    p If we need to prevent router from handling specific links, we can add #[code prevent-router] class to such links:
+    :code(lang="html")
+      <!-- This link will be ignored by router -->
+      <a href="/some-page/" class="prevent-router">Some Page</a>
+
     h2 Router Events
     p Router has a lot of useful events.
     h3 Router Dom Events
@@ -884,3 +929,41 @@ block content
           })
     p That is all, now on app load, home page content will be loaded from "home.html" file.
 
+    h2 Master Detail
+    p Master-Detail pattern oftenly used on wide enough screens and tablets, and consists of two views:
+    ul
+      li Master - is the area in the UI where you have a list of something.
+      li Detail - is the area that shows the relevant information of a selection in the master.
+    p When collapsed (on narrow screen) navigation between such pages will behave as usual routing.
+    .important-note
+      p Navigation to/from Master-Detail view happens without transition.
+      p When Master page is loaded all other pages will be loaded as Detail pages. To "navigate away" from Master Detail view it is recommended to use #[code reloadAll] navigation parameter.
+    p To enable Master Detail:
+    ul
+      li you need to specify #[code masterDetailBreakpoint] View's parameter
+      li set <a href="routes.html#route-properties">#[code master: true] property</a> on Master route
+      li in addition we can put all detail routes in <a href="routes.html#detail-routes">#[code detailRoutes] property</a> of master route
+    p For example:
+    :code(lang="js")
+      const mainView = app.views.create('.view-main', {
+        // enable master detail
+        masterDetailBreakpoint: 800,
+        routes: [
+          {
+            path: '/',
+            url: './pages/master.html',
+            // specify home route as master route
+            master: true,
+            // detail routes
+            detailRoutes: [
+              {
+                path: '/detail/:id/',
+                url: './pages/detail.html',
+              },
+            ]
+          },
+        ]
+      });
+    p And we should have something like below:
+    p
+      img(src=cdn + "/i/docs/master-detail.gif", style="max-width: 1000px; width: 100%")

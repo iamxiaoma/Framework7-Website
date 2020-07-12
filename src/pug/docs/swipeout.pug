@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Swipeout (Swipeable List)
     ul.docs-index
     p Swipeout is an extension of <a href="list-view.html">list view</a> that allows you to swipe over list elements to reveal hidden menu with  available actions, like swipe-to-delete.
@@ -323,6 +323,9 @@ block content
           td app
           td <span>swipeoutEl</span>
           td Event will be triggered when overswipe disabled
+
+    +cssVars('swipeout')
+
     .with-device
       h2(data-device-preview="../docs-demos/core/swipeout.html") Examples
       :code(lang="js")

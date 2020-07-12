@@ -10,7 +10,7 @@ block content
   .docs-nav
     include ../_docs-menu-react
   .docs-content
-    +improveDocsLink
+
     h1 Swipeout React Component
     ul.docs-index
     p Swipeout List is not a separate component, but just a particular case of using <a href="list-view.html">&lt;List&gt;</a>, <a href="list-item.html">&lt;ListItem swipeout&gt;</a> React components and additional Swipeout components.
@@ -46,7 +46,7 @@ block content
           td left
           td boolean
           td
-          td Shortcut for <code>side="right"</code> prop
+          td Shortcut for <code>side="left"</code> prop
         tr
           th(colspan="4") &lt;SwipeoutButton&gt; Properties
         tr
@@ -74,6 +74,11 @@ block content
           td string
           td
           td This text will be shown in dialog where user must agree before item delete
+        tr
+          td confirmTitle
+          td string
+          td
+          td This text will be shown as dialog title where user must agree before item delete
     h2 Swipeout Events
     table.events-table
       thead

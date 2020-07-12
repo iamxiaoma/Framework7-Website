@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Toggle
     ul.docs-index
     h2 Toggle Layout
@@ -232,6 +232,9 @@ block content
           if (toggle.checked) {
             // do something
           }
+
+    +cssVars('toggle')
+
     .with-device
       h2(data-device-preview="../docs-demos/core/toggle.html") Examples
       :code(lang="html")

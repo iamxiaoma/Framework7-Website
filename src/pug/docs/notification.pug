@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Notification
     ul.docs-index
     p With Notification component you can show required messages that looks like Push (or Local) system notifications.
@@ -295,6 +295,9 @@ block content
           td notificationBeforeDestroy
           td <span>notification</span>
           td app
+
+    +cssVars('notification')
+
     .with-device
       h2(data-device-preview="../docs-demos/core/notification.html") Examples
       :code(lang="html")

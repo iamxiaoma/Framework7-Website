@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Popover
     ul.docs-index
     p Popover compontent is used to manage the presentation of content in a popover. You use popovers to present information temporarily. The popover remains visible until the user taps outside of the popover window or you explicitly dismiss it.
@@ -116,6 +116,11 @@ block content
           td true
           td Enables Popover backdrop (dark semi transparent layer behind)
         tr
+          td backdropEl
+          td HTMLElement<br>string
+          td
+          td HTML element or string CSS selector of custom backdrop element
+        tr
           td closeByBackdropClick
           td boolean
           td true
@@ -125,6 +130,11 @@ block content
           td boolean
           td true
           td When enabled, popover will be closed on when click outside of it
+        tr
+          td closeOnEscape
+          td boolean
+          td false
+          td When enabled, popover will be closed on ESC keyboard key press
         tr
           td animate
           td boolean
@@ -363,6 +373,7 @@ block content
           td <span>popover</span>
           td app
 
+    +cssVars('popover')
 
     .with-device
       h2(data-device-preview="../docs-demos/core/popover.html") Examples

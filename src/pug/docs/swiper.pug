@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Swiper Slider
     ul.docs-index
     p Framework7 comes with powerful and most modern touch slider ever - <a href="http://www.idangero.us/swiper/">Swiper Slider</a> with super flexible configuration and lot, lot of features.
@@ -117,7 +117,7 @@ block content
     p Or we can pass all Swiper parameters in <strong>valid JSON format</strong> in <code>data-swiper</code> attribute:
     :code(lang="html")
           &lt;!-- swiper properties in JSON format in data-swiper attribute --&gt;
-          &lt;div class="swiper-container swiper-init" data-swiper="{'speed':'400', 'spaceBetween':'40'}"&gt;
+          &lt;div class="swiper-container swiper-init" data-swiper='{"speed":"400", "spaceBetween":"40"}'&gt;
               &lt;div class="swiper-wrapper"&gt;
                   &lt;div class="swiper-slide"&gt;Slide 1&lt;/div&gt;
                   &lt;div class="swiper-slide"&gt;Slide 2&lt;/div&gt;
@@ -125,10 +125,13 @@ block content
                   ... other slides ...
               &lt;/div&gt;
           &lt;/div&gt;
+
+    +cssVars('swiper')
+
     .with-device
       h2(data-device-preview="../docs-demos/core/swiper.html") Examples
       :code(lang="css")
-            /* A bit of demo styles */;
+            /* A bit of demo styles */
             .demo-swiper .swiper-slide {
               font-size: 25px;
               font-weight: 300;

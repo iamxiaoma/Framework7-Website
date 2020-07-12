@@ -9,7 +9,7 @@ block content
   .docs-nav
     include ../_docs-menu
   .docs-content
-    +improveDocsLink
+
     h1 Autocomplete
     ul.docs-index
     p Framework7 comes with mobile-friendly and touch optimized Autocomplete component.
@@ -441,6 +441,9 @@ block content
         tr
           td autocompleteBeforeDestroy
           td app
+
+    +cssVars('autocomplete')
+
     .with-device
       h2(data-device-preview="../docs-demos/core/autocomplete.html") Examples
       :code(lang="js")
