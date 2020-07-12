@@ -2,6 +2,7 @@ node_modules/
 *.swp
 *.log
 *.DS_Store
+.idea/*
 public/css/main.css
 public/js/main.js
 public/js/main.js.map
