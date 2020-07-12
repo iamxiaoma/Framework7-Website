@@ -2,6 +2,7 @@ node_modules/
 *.swp
 *.log
 *.DS_Store
+.idea/*
 contribute/index.html
 docs/*.html
 docs-demos/*.html
