@@ -2,6 +2,7 @@
 node_modules/
 *.log
 *.DS_Store
+.idea/*
 apps/index.html
 contribute/index.html
 docs/*.html
