@@ -3,6 +3,7 @@ node_modules/
 *.log
 *.DS_Store
 .idea/*
+public/*
 contribute/index.html
 cli/*.html
 docs/*.html
