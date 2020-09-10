@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gauge | Framework7 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Gauge | Framework7 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7
+            <div class="version">v3</div>
+          </div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 Core / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/react/">Framework7 React</a></li>
+                <li><a href="http://framework7.cn/icons/" target="_blank">Framework7 Icons</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.cn/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.cn/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.cn/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.cn/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="https://jobs.framework7.io" target="_blank">Jobs & Developers</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.cn/contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/framework7io/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/framework7io/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/framework7io/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-demo-device docs-demo-device-ios">
+          <div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+          <div class="docs-demo-device-iframe">
+            <iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+            <div class="fade-overlay"></div>
+          </div>
+          <div class="docs-demo-device-android-buttons">
+            <div class="triangle"></div>
+            <div class="circle"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="kitchen-sink.html">Kitchen Sink</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="elevation.html">Elevation</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button / FAB</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="gauge.html">Gauge</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="tooltip.html">Tooltip</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Lazy Modules</div>
+              <ul>
+                <li><a href="lazy-modules.html">Lazy Modules</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/gauge.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Gauge</h1>
+          <ul class="docs-index"></ul>
+          <p>Framework7 comes with Gauge component. It produces nice looking fully responsive SVG gauges.</p>
+          <h2>Gauge Layout</h2>
+          <p>Because Gauge SVG is generated by JavaScript its HTML layout is as simple as possible:</p><pre><code class="html"><span class="token comment">&lt;!-- Gauge element --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+          <h2>Gauge App Methods</h2>
+          <p>Now we need to create/initialize the Gauge. Let's look at related App methods to work with Gauge:</p>
+          <div class="method-wrap">
+            <p><span class="method">app.gauge.create(<span>parameters</span>)</span>- create Gauge instance</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">parameters</span> - <span class="parameter-type">object</span>. Object with gauge parameters</li>
+            </ul>
+            <p class="method-returns">Method returns created Gauge's instance</p>
+          </div>
+          <div class="method-wrap">
+            <p><span class="method">app.gauge.destroy(<span>el</span>)</span>- destroy Gauge instance</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector) or <span class="parameter-type">object</span>. Gauge element or Gauge instance to destroy.</li>
+            </ul>
+          </div>
+          <div class="method-wrap">
+            <p><span class="method">app.gauge.get(<span>el</span>)</span>- get Gauge instance by HTML element</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">el</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector). Gauge element.</li>
+            </ul>
+            <p class="method-returns">Method returns Gauge's instance</p>
+          </div>
+          <div class="method-wrap">
+            <p><span class="method">app.gauge.update(<span>parameters</span>)</span>- update/rerender Gauge SVG according to passed parameters</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">parameters</span> - <span class="parameter-type">object</span>. Object with gauge parameters</li>
+            </ul>
+            <p class="method-returns">Method returns gauge value</p>
+          </div>
+          <h2>Gauge Parameters</h2>
+          <p>Now let's look at list of available parameters we need to create Gauge:</p>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>el</td>
+                <td>HTMLElement<br>string</td>
+                <td></td>
+                <td>Gauge element. HTMLElement or string with CSS selector of gauge element. Generated SVG will be inserted into this element</td>
+              </tr>
+              <tr>
+                <td>type</td>
+                <td>string</td>
+                <td>circle</td>
+                <td>Gauge type. Can be <code>circle</code> or <code>semicircle</code></td>
+              </tr>
+              <tr>
+                <td>value</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Gauge value/percentage. Must be a number between <code>0</code> and <code>1</code></td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>number</td>
+                <td>200</td>
+                <td>Generated SVG image size (in px)</td>
+              </tr>
+              <tr>
+                <td>bgColor</td>
+                <td>string</td>
+                <td>transparent</td>
+                <td>Gauge background color. Can be any valid color string, e.g. <code>#ff00ff</code>, <code>rgb(0,0,255)</code>, etc.</td>
+              </tr>
+              <tr>
+                <td>borderBgColor</td>
+                <td>string</td>
+                <td>#eeeeee</td>
+                <td>Main border/stroke background color</td>
+              </tr>
+              <tr>
+                <td>borderColor</td>
+                <td>string</td>
+                <td>#000000</td>
+                <td>Main border/stroke color</td>
+              </tr>
+              <tr>
+                <td>borderWidth</td>
+                <td>string</td>
+                <td>10</td>
+                <td>Main border/stroke width</td>
+              </tr>
+              <tr>
+                <td>valueText</td>
+                <td>string</td>
+                <td>null</td>
+                <td>Gauge value text (large text in the center of gauge)</td>
+              </tr>
+              <tr>
+                <td>valueTextColor</td>
+                <td>string</td>
+                <td>#000000</td>
+                <td>Value text color</td>
+              </tr>
+              <tr>
+                <td>valueFontSize</td>
+                <td>string</td>
+                <td>31</td>
+                <td>Value text font size</td>
+              </tr>
+              <tr>
+                <td>valueFontWeight</td>
+                <td>string</td>
+                <td>500</td>
+                <td>Value text font weight</td>
+              </tr>
+              <tr>
+                <td>labelText</td>
+                <td>string</td>
+                <td>null</td>
+                <td>Gauge additional label text</td>
+              </tr>
+              <tr>
+                <td>labelTextColor</td>
+                <td>string</td>
+                <td>#888888</td>
+                <td>Label text color</td>
+              </tr>
+              <tr>
+                <td>labelFontSize</td>
+                <td>string</td>
+                <td>14</td>
+                <td>Label text font size</td>
+              </tr>
+              <tr>
+                <td>labelFontWeight</td>
+                <td>string</td>
+                <td>400</td>
+                <td>Label text font weight</td>
+              </tr>
+              <tr>
+                <td>on</td>
+                <td>object</td>
+                <td></td>
+                <td>
+                  Object with events handlers. For example:<pre><code class="js"><span class="token keyword">var</span> gauge <span class="token operator">=</span> app<span class="token punctuation">.</span>gauge<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token operator">:</span> <span class="token string">'.gauge'</span><span class="token punctuation">,</span>
+  value<span class="token operator">:</span> <span class="token number">33</span><span class="token punctuation">,</span>
+  valueText<span class="token operator">:</span> <span class="token string">'33%'</span><span class="token punctuation">,</span>
+  on<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">beforeDestroy</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Gauge will be destroyed'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre></code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Gauge Methods & Properties</h2>
+          <p>So to create Gauge we have to call:</p><pre><code class="js"><span class="token keyword">var</span> gauge <span class="token operator">=</span> app<span class="token punctuation">.</span>gauge<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* parameters */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
+          <p>After that we have its initialized instance (like <code>gauge</code> variable in example above) with useful methods and properties:</p>
+          <table class="methods-table">
+            <tbody>
+              <tr>
+                <th colspan="2">Properties</th>
+              </tr>
+              <tr>
+                <td>gauge.app</td>
+                <td>Link to global app instance</td>
+              </tr>
+              <tr>
+                <td>gauge.el</td>
+                <td>Gauge HTML element</td>
+              </tr>
+              <tr>
+                <td>gauge.$el</td>
+                <td>Dom7 instance with gauge HTML element</td>
+              </tr>
+              <tr>
+                <td>gauge.gaugeSvgEl</td>
+                <td>Gauge generated SVH HTML element</td>
+              </tr>
+              <tr>
+                <td>gauge.$gaugeSvgEl</td>
+                <td>Dom7 instance with generated SVH HTML element</td>
+              </tr>
+              <tr>
+                <td>gauge.params</td>
+                <td>Gauge parameters</td>
+              </tr>
+              <tr>
+                <th colspan="2">Methods</th>
+              </tr>
+              <tr>
+                <td>gauge.update(<span>parameters</span>)</td>
+                <td>
+                  Update/rerender gauge SVG element according to passed parameters. It accepts object with same parameters required for gauge initialization. You can pass only parameters that needs to be updated, e.g.<pre><code class="js"><span class="token keyword">var</span> gauge <span class="token operator">=</span> app<span class="token punctuation">.</span>gauge<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  value<span class="token operator">:</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// and when we need to update rendered SVG based on new value:</span>
+gauge<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  value<span class="token operator">:</span> <span class="token number">0.6</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
+                </td>
+              </tr>
+              <tr>
+                <td>gauge.destroy()</td>
+                <td>Destroys gauge instance</td>
+              </tr>
+              <tr>
+                <td>gauge.on(<span>event</span>, <span>handler</span>)</td>
+                <td>Add event handler</td>
+              </tr>
+              <tr>
+                <td>gauge.once(<span>event</span>, <span>handler</span>)</td>
+                <td>Add event handler that will be removed after it was fired</td>
+              </tr>
+              <tr>
+                <td>gauge.off(<span>event</span>, <span>handler</span>)</td>
+                <td>Remove event handler</td>
+              </tr>
+              <tr>
+                <td>gauge.off(<span>event</span>)</td>
+                <td>Remove all handlers for specified event</td>
+              </tr>
+              <tr>
+                <td>gauge.emit(<span>event</span>, <span>...args</span>)</td>
+                <td>Fire event on instance</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Gauge Events</h2>
+          <p>Gauge will fire the following DOM events on gauge element and events on app and gauge instance:</p>
+          <h3>DOM Events</h3>
+          <table class="events-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Target</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>gauge:beforedestroy</td>
+                <td>Gauge Element<span>&lt;div class="gauge"&gt;</span></td>
+                <td>Event will be triggered right before Gauge instance will be destroyed</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>App and Gauge Instance Events</h3>
+          <p>Gauge instance emits events on both self instance and app instance. App instance events has same names prefixed with <code>gauge</code>.</p>
+          <table class="events-table double-events-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Arguments</th>
+                <th>Target</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>beforeDestroy</td>
+                <td><span>(gauge)</span></td>
+                <td>gauge</td>
+                <td rowspan="2">Event will be triggered right before Gauge instance will be destroyed. As an argument event handler receives Gauge instance</td>
+              </tr>
+              <tr>
+                <td>gaugeBeforeDestroy</td>
+                <td><span>(gauge)</span></td>
+                <td>app</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Gauge Auto Initialization</h2>
+          <p>If you don't need to use Gauge API and your Gauge is inside of the page and presented in DOM on moment of page initialization then it can be auto initialized with just adding additional <code>gauge-init</code> class, and specifying all parameters with <code>data-</code> attributes:</p><pre><code class="html"><span class="token comment">&lt;!-- Add gauge-init class, and specify parameters in data- attributes --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init my-gauge<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.44<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>44%<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+          <p>In this case if you need to access automatically created Gauge instance you can use the <code>app.gauge.get</code> app method:</p><pre><code class="js"><span class="token keyword">var</span> gauge <span class="token operator">=</span> app<span class="token punctuation">.</span>gauge<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'.my-gauge'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+gauge<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  value<span class="token operator">:</span> <span class="token number">0.9</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre></code>
+          <div class="with-device">
+            <h2 data-device-preview="../docs-demos/core/gauge.html">Examples</h2><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- we will init this gauge in JavaScript --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge demo-gauge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- buttons to change gauge value --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>segmented segmented-raised<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>0%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>25<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>25%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>50%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>75<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>75%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>100%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code><pre><code class="js"><span class="token comment">// Init top demo gauge</span>
+<span class="token keyword">var</span> demoGauge <span class="token operator">=</span> app<span class="token punctuation">.</span>gauge<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token operator">:</span> <span class="token string">'.demo-gauge'</span><span class="token punctuation">,</span>
+  type<span class="token operator">:</span> <span class="token string">'circle'</span><span class="token punctuation">,</span>
+  value<span class="token operator">:</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+  size<span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
+  borderColor<span class="token operator">:</span> <span class="token string">'#2196f3'</span><span class="token punctuation">,</span>
+  borderWidth<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  valueText<span class="token operator">:</span> <span class="token string">'50%'</span><span class="token punctuation">,</span>
+  valueFontSize<span class="token operator">:</span> <span class="token number">41</span><span class="token punctuation">,</span>
+  valueTextColor<span class="token operator">:</span> <span class="token string">'#2196f3'</span><span class="token punctuation">,</span>
+  labelText<span class="token operator">:</span> <span class="token string">'amount of something'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Change demo gauge on button click</span>
+<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> value <span class="token operator">=</span> <span class="token function">$$</span><span class="token punctuation">(</span><span class="token context">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'data-value'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  demoGauge<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    value<span class="token operator">:</span> value <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">,</span>
+    valueText<span class="token operator">:</span> value <span class="token operator">+</span> <span class="token string">'%'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Circle Gauges<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.44<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>44%<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.12<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>$120<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#4caf50<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#4caf50<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>of $1000 budget<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#f44336<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-font-weight</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>700<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Semicircle Gauges<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>semicircle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.3<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>30%<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#f44336<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#f44336<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>semicircle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>30kg<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#e91e63<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#e91e63<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>of 60kg total<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#333<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code><pre><code class="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Customization<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>block block-strong<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.35<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>35%<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#4caf50<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-font-size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>51<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-font-weight</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>700<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#4caf50<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-bg-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffeb3b<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-bg-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffeb3b<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.67<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>$670<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#000<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>of $1000 spent<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#4caf50<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-font-weight</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>800<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-font-size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>12<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>30<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>semicircle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50%<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffeb3b<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-font-size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>41<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value-font-weight</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>700<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffeb3b<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-bg-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>transparent<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col text-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>gauge gauge-init<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>semicircle<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.77<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>$770 spent so far<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-text-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ff9800<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-font-weight</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>800<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-label-font-size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>12<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-border-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre></code>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74282934-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-74282934-6');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

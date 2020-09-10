@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Table | Framework7 v1 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body>
+    <header class="inner-header">
+      <div class="center"><a href="../" class="logo"></a>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+        <div class="title-links">
+          <div class="title">Framework7 v1</div>
+          <div class="links-row">
+            <div class="links"><a href="../docs/" class="active">Docs</a><a href="../vue/">Framework7 Vue</a><a href="../react/">Framework7 React</a><a href="http://forum.framework7.io">Forum</a>
+            </div>
+          </div>
+          <div class="links-row"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="/i/support-badge.png" style="height:20px"></a></div>
+        </div>
+      </div>
+    </header>
+    <div class="content center">
+      <div class="docs-demo-device">
+        <iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+        <div class="fade-overlay"></div>
+      </div>
+      <div class="docs-wrap">
+        <div class="docs-nav">
+          <ul>
+            <li>
+              <div class="title">Core</div>
+              <ul>
+                <li><a href="get-started.html">Get Started</a></li>
+                <li><a href="dom.html">Dom7 - Custom DOM Library</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App / App parameters</a></li>
+                <li><a href="views.html">Views</a></li>
+                <li><a href="pages.html">Pages</a></li>
+                <li><a href="page-callbacks.html">Page Callbacks</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Navigation / Router</div>
+              <ul>
+                <li><a href="router-api.html">API</a></li>
+                <li><a href="pages-ajax.html">Ajax Pages</a></li>
+                <li><a href="pages-dynamic.html">Dynamic Pages</a></li>
+                <li><a href="pages-inline.html">Inline Pages (DOM Cache)</a></li>
+                <li><a href="linking-views.html">Linking Between Views</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="content-block.html">Content Block</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li>
+                  <div class="subtitle">Forms</div>
+                  <ul>
+                    <li><a href="form-elements.html">Form Elements</a></li>
+                    <li><a href="checkboxes-radios.html">Checkboxes and Radios</a></li>
+                    <li><a href="smart-select.html">Smart Select</a></li>
+                    <li><a href="disabled-elements.html">Disabled Elements</a></li>
+                    <li><a href="form-data.html">Form Data</a></li>
+                    <li><a href="form-storage.html">Form Storage</a></li>
+                    <li><a href="form-ajax-submit.html">Ajax Form Submit</a></li>
+                  </ul>
+                </li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="grid.html">Layout Grid</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li>
+                  <div class="subtitle">List View (Table View)</div>
+                  <ul>
+                    <li><a href="list-view.html">List View</a></li>
+                    <li><a href="contacts-list.html">Contacts List</a></li>
+                    <li><a href="media-list-view.html">Media List View</a></li>
+                    <li><a href="swipeout.html">Swipeout</a></li>
+                    <li><a href="sortable-list.html">Sortable List</a></li>
+                    <li><a href="virtual-list.html">Virtual List</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="subtitle">Modals / Overlays</div>
+                  <ul>
+                    <li><a href="modal.html">Modal</a></li>
+                    <li><a href="popup.html">Popup</a></li>
+                    <li><a href="popover.html">Popover</a></li>
+                    <li><a href="action-sheet.html">Action Sheet</a></li>
+                    <li><a href="login-screen.html">Login Screen</a></li>
+                    <li><a href="picker-modal.html">Picker Modal</a></li>
+                  </ul>
+                </li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="messagebar.html">Message Bar</a></li>
+                <li>
+                  <div class="subtitle">Navbars & Toolbars</div>
+                  <ul>
+                    <li><a href="navbar-toolbar-layouts.html">Layout types</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="dynamic-navbar.html">Dynamic Navbar</a></li>
+                    <li><a href="sub-navbar.html">Sub Navbar</a></li>
+                    <li><a href="toolbar.html">Toolbar</a></li>
+                    <li><a href="tabbar.html">Tab Bar</a></li>
+                    <li><a href="hide-bars-on-scroll.html">Hide Bars On Scroll</a></li>
+                  </ul>
+                </li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="preloader.html">Preloader Indicator</a></li>
+                <li><a href="progressbar.html">Progress Bar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="searchbar.html">Search Bar</a></li>
+                <li><a href="side-panels.html">Side Panels</a></li>
+                <li><a href="status-bar.html">Status Bar overlay</a></li>
+                <li><a href="swiper.html">Swiper Slider</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Icons</div>
+              <ul>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Getting Started</a></li>
+                <li><a href="template7-auto-compilation.html">Templates Auto Compilation</a></li>
+                <li><a href="template7-pages.html">Template7 Pages</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (Material)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="device-api.html">Device API</a></li>
+                <li><a href="support-api.html">Support API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="toggle-docs-nav"><span></span></div>
+        </div>
+        <div class="docs-content with-device">
+          <h1>Data Table</h1>
+          <p>Data tables display sets of raw data. They usually appear in desktop enterprise products</p>
+          <h2 data-device-preview="../docs-demos/data-table.html">Data Table Layout</h2>
+          <p>Common Data Table layout could be treat as the following:</p>
+          <pre><code>&lt;div class="data-table"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class="label-cell"&gt;Desert (100g serving)&lt;/th&gt;
+        &lt;th class="numeric-cell"&gt;Calories&lt;/th&gt;
+        ...
+        &lt;th class="tablet-only"&gt;Comment&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+        &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+        ...
+        &lt;td class="tablet-only"&gt;I like it!&lt;/td&gt;
+      &lt;/tr&gt;
+      ...
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+          <p>Within <a href="./cards.jade">Card</a>:</p>
+          <pre><code>&lt;div class="data-table card"&gt;
+  &lt;table&gt;
+    ...
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    ...
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>data-table</code> - main Data Table wrapper. Required
+              <ul>
+                <li><code>table</code> - table itself. Required
+                  <ul>
+                    <li><code>thead</code> - table head</li>
+                    <li><code>tbody</code> - table body. Required</li>
+                    <li><code>label-cell</code> - main label cell (only one such kind of cell per row, usually first cell)</li>
+                    <li><code>numeric-cell</code> - cell to display numeric data (right-aligned)</li>
+                    <li><code>tablet-only</code> - additional class to show this cell/column only on wide tablet devices (iPad)</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <h2 data-device-preview="../docs-demos/data-table-selectable.html">Selectable Rows</h2>
+          <pre><code>&lt;div class="data-table data-table-init card"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class="checkbox-cell"&gt;
+          &lt;label class="form-checkbox"&gt;
+            &lt;input type="checkbox"/&gt;&lt;i&gt;&lt;/i&gt;
+          &lt;/label&gt;
+        &lt;/th&gt;
+        &lt;th class="label-cell"&gt;Desert (100g serving)&lt;/th&gt;
+        &lt;th class="numeric-cell"&gt;Calories&lt;/th&gt;
+        ...
+        &lt;th class="numeric-cell"&gt;Protein (g)&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class="checkbox-cell"&gt;
+          &lt;label class="form-checkbox"&gt;
+            &lt;input type="checkbox"/&gt;&lt;i&gt;&lt;/i&gt;
+          &lt;/label&gt;
+        &lt;/td&gt;
+        &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+        &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+        ...
+        &lt;td class="numeric-cell"&gt;4.0&lt;/td&gt;
+      &lt;/tr&gt;
+      ...
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>data-table-init</code> - additional class to enable JavaScript action required for selectable rows</li>
+            <li>
+              <p>Checkbox cell. Such cell in table header will select/deselect all rows in table body:</p>
+              <pre><code>&lt;td class="checkbox-cell"&gt;
+  &lt;label class="form-checkbox"&gt;
+    &lt;input type="checkbox"/&gt;&lt;i&gt;&lt;/i&gt;
+  &lt;/label&gt;
+&lt;/td&gt;</code></pre>
+            </li>
+          </ul>
+          <h2 data-device-preview="../docs-demos/data-table-title.html">Table Title/Header</h2>
+          <p>When data table is used within <a href="./cards.html">Card</a> it is possible to use additional data table title with actions in card header.</p>
+          <h4>With title and actions</h4>
+          <pre><code>&lt;div class="data-table data-table-init card"&gt;
+  &lt;!-- Card Header --&gt;
+  &lt;div class="card-header"&gt;
+    &lt;!-- Table title --&gt;
+    &lt;div class="data-table-title"&gt;Nutrition&lt;/div&gt;
+    &lt;!-- Table actions --&gt;
+    &lt;div class="data-table-actions"&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;sort&lt;/i&gt;&lt;/a&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;more_vertical_round&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Card Content --&gt;
+  &lt;div class="card-content"&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/th&gt;
+          &lt;th class="label-cell"&gt;Desert (100g serving)&lt;/th&gt;
+          &lt;th class="numeric-cell"&gt;Calories&lt;/th&gt;
+          ...
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/td&gt;
+          &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+          ...
+        &lt;/tr&gt;
+        ...
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>data-table-title</code> - table title</li>
+            <li><code>data-table-actions</code> - main table actions</li>
+          </ul>
+          <h4>Different actions on select</h4>
+          <pre><code>&lt;div class="data-table data-table-init card"&gt;
+  &lt;!-- Card header --&gt;
+  &lt;div class="card-header"&gt;
+    &lt;!-- Default table header --&gt;
+    &lt;div class="data-table-header"&gt;
+      &lt;!-- Default table title --&gt;
+      &lt;div class="data-table-title"&gt;Nutrition&lt;/div&gt;
+      &lt;!-- Default table actions --&gt;
+      &lt;div class="data-table-actions"&gt;
+        &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;sort&lt;/i&gt;&lt;/a&gt;
+        &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;more_vertical_round&lt;/i&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Selected table header --&gt;
+    &lt;div class="data-table-header-selected"&gt;
+      &lt;!-- Selected table title --&gt;
+      &lt;div class="data-table-title-selected"&gt;&lt;span class="data-table-selected-count"&gt;&lt;/span&gt; items selected&lt;/div&gt;
+      &lt;!-- Selected table actions --&gt;
+      &lt;div class="data-table-actions"&gt;
+        &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;trash&lt;/i&gt;&lt;/a&gt;
+        &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;more_vertical_round&lt;/i&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/th&gt;
+          &lt;th class="label-cell"&gt;Desert (100g serving)&lt;/th&gt;
+          &lt;th class="numeric-cell"&gt;Calories&lt;/th&gt;
+          ...
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/td&gt;
+          &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+          ...
+        &lt;/tr&gt;
+        ...
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>data-table-header</code> - default table header. Visible when there are no selected rows</li>
+            <li><code>data-table-header-selected</code> - selected table header. Visible when there are selected rows</li>
+            <li><code>data-table-selected-count</code> - count of selected table rows. Number will be placed here by JavaScript</li>
+          </ul>
+          <h3>Alternate header with row actions</h3>
+          <pre><code>&lt;div class="data-table data-table-init card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;!-- Table links/actions --&gt;
+    &lt;div class="data-table-links"&gt;
+      &lt;a class="link"&gt;Add&lt;/a&gt;
+      &lt;a class="link"&gt;Remove&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- Table actions --&gt;
+    &lt;div class="data-table-actions"&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;sort&lt;/i&gt;&lt;/a&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;more_vertical_round&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/th&gt;
+          &lt;th class="label-cell"&gt;Desert (100g serving)&lt;/th&gt;
+          &lt;th class="numeric-cell"&gt;Calories&lt;/th&gt;
+          ...
+          &lt;th&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/td&gt;
+          &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+          ...
+          &lt;td class="actions-cell"&gt;
+            &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;compose&lt;/i&gt;&lt;/a&gt;
+            &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;trash&lt;/i&gt;&lt;/a&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        ...
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>data-table-links</code> - alternate/additional table actions</li>
+            <li><code>actions-cell</code> - action links/icons cell</li>
+          </ul>
+          <h2 data-device-preview="../docs-demos/data-table-sortable.html">Sortable</h2>
+          <pre><code>&lt;div class="data-table data-table-init card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;div class="data-table-title"&gt;Nutrition&lt;/div&gt;
+    &lt;div class="data-table-actions"&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;sort&lt;/i&gt;&lt;/a&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;more_vertical_round&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/th&gt;
+          &lt;th class="label-cell sortable-cell sortable-active"&gt;Desert (100g serving)&lt;/th&gt;
+          &lt;th class="numeric-cell sortable-cell"&gt;Calories&lt;/th&gt;
+          &lt;th class="numeric-cell sortable-cell"&gt;Fat (g)&lt;/th&gt;
+          &lt;th class="numeric-cell sortable-cell"&gt;Carbs&lt;/th&gt;
+          &lt;th class="numeric-cell sortable-cell"&gt;Protein (g)&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="checkbox-cell"&gt;
+            &lt;label class="form-checkbox"&gt;
+              &lt;input type="checkbox"&gt;&lt;i&gt;&lt;/i&gt;
+            &lt;/label&gt;
+          &lt;/td&gt;
+          &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;6.0&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;24&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;4.0&lt;/td&gt;
+        &lt;/tr&gt;
+        ...
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>sortable-cell</code> - additional class to make cell/column is sortable</li>
+            <li><code>sortable-active</code> - additional class to specify active/default sortable cell/column</li>
+            <li><code>sortable-asc</code> - additional class to specify current sorting as ascending (default)</li>
+            <li><code>sortable-desc</code> - additional class to specify current sorting as descending</li>
+          </ul>
+          <div class="important-note">
+            <p>Note, <b>there is no actual sortable logic</b> provided by framework. Actual sorting logic should be realized manually</p>
+          </div>
+          <h2 data-device-preview="../docs-demos/data-table-collapsible.html">Collapsible</h2>
+          <p>The following table will be collapsed to kind of List View on small screens:</p>
+          <pre><code>&lt;div class="card data-table data-table-collapsible data-table-init"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;div class="data-table-title"&gt;Nutrition&lt;/div&gt;
+    &lt;div class="data-table-actions"&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;sort&lt;/i&gt;&lt;/a&gt;
+      &lt;a class="link icon-only"&gt;&lt;i class="icon f7-icons"&gt;more_vertical_round&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th class="label-cell"&gt;Desert (100g serving)&lt;/th&gt;
+          &lt;th class="numeric-cell"&gt;Calories&lt;/th&gt;
+          ...
+          &lt;th class="numeric-cell"&gt;Protein (g)&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class="label-cell"&gt;Frozen yogurt&lt;/td&gt;
+          &lt;td class="numeric-cell"&gt;159&lt;/td&gt;
+          ...
+          &lt;td class="numeric-cell"&gt;4.0&lt;/td&gt;
+        &lt;/tr&gt;
+        ...
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>Where</p>
+          <ul>
+            <li><code>data-table-collapsible</code> - additional table class to enable collapsible logic. Note that "data-table-init" class is also required for this.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-74282934-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-74282934-3');
+    </script>
+  </body>
+</html>

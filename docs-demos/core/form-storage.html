@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Form Storage</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Just fill up the form below and then go to any other page, or try to close this site, and when you will back here form fields will keep your data.</div>
+            <form class="list form-store-data" id="my-form">
+              <ul>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Name</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="name" placeholder="Your name">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">E-mail</div>
+                      <div class="item-input-wrap">
+                        <input type="email" name="email" placeholder="E-mail">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Ignore from storage</div>
+                      <div class="item-input-wrap">
+                        <input class="no-store-data" type="text" name="text" placeholder="This value won't be stored">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Gender</div>
+                      <div class="item-input-wrap">
+                        <select name="gender">
+                          <option value="male" selected>Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Switch</div>
+                      <div class="item-after">
+                        <label class="toggle">
+                          <input type="checkbox" name="switch" value="yes"><i class="toggle-icon"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>var app = new Framework7();</script>
+  </body>
+</html>

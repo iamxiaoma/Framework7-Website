@@ -1,0 +1,54 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Preloader / Spinner React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Preloader / Spinner React Component
+      p Preloader / Spinner React component represents <a href="../docs/preloader.html">Preloader</a> element.
+      h2 Usage example
+      pre
+        code
+          | &lt;!-- Preloader --&gt;
+          | &lt;Preloader&gt;&lt;/Preloader&gt;
+          | 
+          | &lt;!-- Red preloader --&gt;
+          | &lt;Preloader color="red"&gt;&lt;/Preloader&gt;
+          | 
+          | &lt;!-- Blue with custom size --&gt;
+          | &lt;Preloader color="blue" size="44px"&gt;&lt;/Preloader&gt;
+      p Renders to:
+      pre
+        code
+          | &lt;!-- Preloader --&gt;
+          | &lt;span class="preloader"&gt;&lt;/span&gt;
+          | 
+          | &lt;!-- Red preloader --&gt;
+          | &lt;span class="preloader color-red"&gt;&lt;/span&gt;
+          | 
+          | &lt;!-- Blue with custom size --&gt;
+          | &lt;span class="preloader color-blue" style="width:44px; height:44px"&gt;&lt;/span&gt;
+      h2 Properties
+      table.params-table
+        thead
+          tr
+            th Prop
+            th Type
+            th Default
+            th Description
+        tbody
+          tr
+            td color
+            td string
+            td 
+            td Preloader color. One of <a href="../docs/color-themes.html">default colors</a>
+          tr
+            td size
+            td string/number
+            td 
+            td Size of the preloader in px

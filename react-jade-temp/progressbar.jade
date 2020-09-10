@@ -1,0 +1,71 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Progress Bar React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Progress Bar React Component
+      p Progress Bar React component represents <a href="../docs/progressbar.html">Progress Bar</a> element.
+      h2 Usage example
+      pre
+        code
+          | &lt;!-- Determinate Progress Bar --&gt;
+          | &lt;Progressbar progress={20}&gt;&lt;/Progressbar&gt;
+          | 
+          | &lt;!-- Determinate Red Progress Bar --&gt;
+          | &lt;Progressbar progress={30} color="red"&gt;&lt;/Progressbar&gt;
+          | 
+          | &lt;!-- Infinite Blue Progress Bar --&gt;
+          | &lt;Progressbar infinite color="blue"&gt;&lt;/Progressbar&gt;
+          | 
+          | &lt;!-- Infinite Multi-color Progress Bar --&gt;
+          | &lt;Progressbar infinite color="multi"&gt;&lt;/Progressbar&gt;
+      p Renders to:
+      pre
+        code
+          | &lt;!-- Determinate Progress Bar --&gt;
+          | &lt;span class="progressbar" data-progress="20"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+          | 
+          | &lt;!-- Determinate Red Progress Bar --&gt;
+          | &lt;span class="progressbar color-red" data-progress="30"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+          | 
+          | &lt;!-- Infinite Blue Progress Bar --&gt;
+          | &lt;span class="progressbar progressbar-infinite color-blue"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+          | 
+          | &lt;!-- Infinite Multi-color Progress Bar --&gt;
+          | &lt;span class="progressbar progressbar-infinite color-multi"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+      h2 Properties
+      table.params-table
+        thead
+          tr
+            th Prop
+            th Type
+            th Default
+            th Description
+        tbody
+          tr
+            td color
+            td string
+            td 
+            td Progress bar color. One of <a href="../docs/color-themes.html">default colors</a>
+          tr
+            td progress
+            td number
+            td 
+            td Determinate progress (from 0 to 100)
+          tr
+            td infinite
+            td boolean
+            td 
+            td Whether progress bar is infinite or not (determinate)
+      h2 Methods
+      table.methods-table
+        tr
+          td .set(<span>progress</span>, <span>duration</span>)
+          td set progress bar progress
+        

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar title="Searchbar">
+                    <NavRight>
+                      <Link searchbarEnable=".searchbar-demo" iconIos="f7:search_strong" iconMd="material:search"></Link>
+                    </NavRight>
+                    <Searchbar
+                      className="searchbar-demo"
+                      expandable
+                      searchContainer=".search-list"
+                      searchIn=".item-title"
+                    ></Searchbar>
+                  </Navbar>
+                  <List className="searchbar-not-found">
+                    <ListItem title="Nothing found"></ListItem>
+                  </List>
+                  <List className="search-list searchbar-found">
+                    <ListItem title="Acura"></ListItem>
+                    <ListItem title="Audi"></ListItem>
+                    <ListItem title="BMW"></ListItem>
+                    <ListItem title="Cadillac "></ListItem>
+                    <ListItem title="Chevrolet "></ListItem>
+                    <ListItem title="Chrysler "></ListItem>
+                    <ListItem title="Dodge "></ListItem>
+                    <ListItem title="Ferrari "></ListItem>
+                    <ListItem title="Ford "></ListItem>
+                    <ListItem title="GMC "></ListItem>
+                    <ListItem title="Honda"></ListItem>
+                    <ListItem title="Hummer"></ListItem>
+                    <ListItem title="Hyundai"></ListItem>
+                    <ListItem title="Infiniti "></ListItem>
+                    <ListItem title="Isuzu "></ListItem>
+                    <ListItem title="Jaguar "></ListItem>
+                    <ListItem title="Jeep "></ListItem>
+                    <ListItem title="Kia"></ListItem>
+                    <ListItem title="Lamborghini "></ListItem>
+                    <ListItem title="Land Rover"></ListItem>
+                    <ListItem title="Lexus "></ListItem>
+                    <ListItem title="Lincoln "></ListItem>
+                    <ListItem title="Lotus "></ListItem>
+                    <ListItem title="Mazda"></ListItem>
+                    <ListItem title="Mercedes-Benz"></ListItem>
+                    <ListItem title="Mercury "></ListItem>
+                    <ListItem title="Mitsubishi"></ListItem>
+                    <ListItem title="Nissan "></ListItem>
+                    <ListItem title="Oldsmobile "></ListItem>
+                    <ListItem title="Peugeot "></ListItem>
+                    <ListItem title="Pontiac "></ListItem>
+                    <ListItem title="Porsche"></ListItem>
+                    <ListItem title="Regal"></ListItem>
+                    <ListItem title="Saab "></ListItem>
+                    <ListItem title="Saturn "></ListItem>
+                    <ListItem title="Subaru "></ListItem>
+                    <ListItem title="Suzuki "></ListItem>
+                    <ListItem title="Toyota"></ListItem>
+                    <ListItem title="Volkswagen"></ListItem>
+                    <ListItem title="Volvo"></ListItem>
+                  </List>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+    </script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

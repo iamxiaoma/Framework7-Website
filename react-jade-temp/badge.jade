@@ -1,0 +1,41 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Badge React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Badge React Component
+      p Badge React component represents badge element that can be used in lists, links, navigation bars, etc.
+      h2 Usage example
+      pre
+        code
+          | &lt;Badge&gt;5&lt;/Badge&gt;
+          | &lt;!--
+          | Renders to:
+          | &lt;span class="badge"&gt;5&lt;/Badge&gt;
+          | --&gt;
+          | 
+          | &lt;Badge color="red"&gt;5&lt;/Badge&gt;
+          | &lt;!--
+          | Renders to:
+          | &lt;span class="badge color-red"&gt;5&lt;/Badge&gt;
+          | --&gt;
+      h2 Properties
+      table.params-table
+        thead
+          tr
+            th Prop
+            th Type
+            th Default
+            th Description
+        tbody
+          tr
+            td color
+            td string
+            td 
+            td Badge color. One of <a href="../docs/color-themes.html">default colors</a>

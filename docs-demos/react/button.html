@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar title="Buttons" />
+      
+                  <BlockTitle>Usual Buttons</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>
+                        <Button>Button</Button>
+                      </Col>
+                      <Col>
+                        <Button>Button</Button>
+                      </Col>
+                      <Col>
+                        <Button round>Round</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Fill Buttons</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>
+                        <Button fill>Button</Button>
+                      </Col>
+                      <Col>
+                        <Button fill>Button</Button>
+                      </Col>
+                      <Col>
+                        <Button fill round>Round</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Outline Buttons (MD-theme only)</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>
+                        <Button outline>Button</Button>
+                      </Col>
+                      <Col>
+                        <Button outline>Button</Button>
+                      </Col>
+                      <Col>
+                        <Button outline round>Round</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Raised Buttons (MD-theme only)</BlockTitle>
+                  <Block>
+                    <Row tag="p">
+                      <Col tag="span">
+                        <Button raised>Button</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button raised fill>Fill</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button raised outline>Outline</Button>
+                      </Col>
+                    </Row>
+                    <Row tag="p">
+                      <Col tag="span">
+                        <Button raised round>Round</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button raised fill round>Fill</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button raised outline round>Outline</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Segmented</BlockTitle>
+                  <Block>
+                    <Segmented raised tag="p">
+                      <Button>Button</Button>
+                      <Button>Button</Button>
+                      <Button active>Active</Button>
+                    </Segmented>
+                    <Segmented raised tag="p">
+                      <Button outline>Outline</Button>
+                      <Button outline>Outline</Button>
+                      <Button outline active>Active</Button>
+                    </Segmented>
+                    <Segmented raised round tag="p">
+                      <Button round>Button</Button>
+                      <Button round>Button</Button>
+                      <Button round active>Active</Button>
+                    </Segmented>
+                    <Segmented raised round tag="p">
+                      <Button round outline>Outline</Button>
+                      <Button round outline>Outline</Button>
+                      <Button round outline active>Active</Button>
+                    </Segmented>
+                  </Block>
+      
+                  <BlockTitle>Big Buttons</BlockTitle>
+                  <Block>
+                    <Row tag="p">
+                      <Col tag="span">
+                        <Button big>Button</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button big fill>Fill</Button>
+                      </Col>
+                    </Row>
+                    <Row tag="p">
+                      <Col tag="span">
+                        <Button big raised>Raised</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button big raised fill>Raised Fill</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Small Buttons</BlockTitle>
+                  <Block>
+                    <Row tag="p">
+                      <Col tag="span">
+                        <Button big small>Button</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button big small outline>Outline</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button big small fill>Fill</Button>
+                      </Col>
+                    </Row>
+                    <Row tag="p">
+                      <Col tag="span">
+                        <Button big small round>Button</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button big small outline round>Outline</Button>
+                      </Col>
+                      <Col tag="span">
+                        <Button big small fill round>Fill</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Color Buttons</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>
+                        <Button color="red">Red</Button>
+                      </Col>
+                      <Col>
+                        <Button color="green">Green</Button>
+                      </Col>
+                      <Col>
+                        <Button color="blue">Blue</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Color Fill Buttons</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>
+                        <Button fill color="red">Red</Button>
+                      </Col>
+                      <Col>
+                        <Button fill color="green">Green</Button>
+                      </Col>
+                      <Col>
+                        <Button fill color="blue">Blue</Button>
+                      </Col>
+                    </Row>
+                  </Block>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+    </script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Routes | Framework7 v2 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Routes | Framework7 v2 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/routes.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Routes</h1>
+          <div class="docs-index"></div>
+          <h2>Define Routes</h2>
+          <p>First of all, when we init the Framework7 app we should pass default routes using <code>routes</code> array parameter:</p>
+          <pre><code class="js">var app = new Framework7({
+  routes: [
+    {
+      name: 'about',
+      path: '/about/',
+      url: './pages/about.html',
+    },
+    {
+      name: 'news',
+      path: '/news/',
+      url: './pages/news.html',
+      options: {
+        animate: false,
+      },
+    },
+    {
+      name: 'users',
+      path: '/users/',
+      templateUrl: './pages/users.html',
+      options: {
+        context: {
+          users: ['John Doe', 'Vladimir Kharlampidi', 'Timo Ernst'],
+        },
+      },
+      on: {
+        pageAfterIn: function (e, page) {
+          // do something after page gets into the view
+        },
+        pageInit: function (e, page) {
+          // do something when page initialized
+        },
+      }
+    },
+    // Default route, match to all pages (e.g. 404 page)
+    {
+      path: '(.*)',
+      url: './pages/404.html',
+    },
+  ],
+});</code></pre>
+          <p>Routes defined on app init are default routes, they will be available for any View/Router in the app.</p>
+          <p>If you have a multi-view/router app and you want to have some View/Router to have <b>own strict routes</b> and don't want default routes be available in this <a href="view.html">View</a>, then you may specify the same <code>routes</code> parameter on View init:</p>
+          <pre><code class="js">var view1 = app.views.create('.view-1', {
+  routes: [
+    {
+      path: '/users/',
+      url: './pages/users.html',
+    },
+    {
+      path: '/user/',
+      url: './pages/user.html',
+    },
+  ],
+});</code></pre>
+          <p>If you have a multi-view/router app and you want to have some View/Router to have <b>additional routes</b> and don't want these additional routes are available in other Views, then you may specify the <code>routesAdd</code> parameter on View init:</p>
+          <pre><code class="js">// This view will support all global routes + own additional routes
+var view2 = app.views.create('.view-2', {
+  // These routes are only available in this view
+  routesAdd: [
+    {
+      path: '/blog/',
+      url: './pages/blog.html',
+    },
+    {
+      path: '/post/',
+      url: './pages/post.html',
+    },
+  ],
+})</code></pre>
+          <h2>Route Properties</h2>
+          <p>Ok, now we will see what each route property means:</p>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>Route name, e.g. <code>home</code></td>
+              </tr>
+              <tr>
+                <td>path</td>
+                <td>string</td>
+                <td>Route path. Means this route will be loaded when we click link that match to this path, or can be loaded by this path using API</td>
+              </tr>
+              <tr>
+                <td>options</td>
+                <td>object</td>
+                <td>Object with additional route options (optional)</td>
+              </tr>
+              <tr>
+                <td>routes</td>
+                <td>array</td>
+                <td>Array with nested routes</td>
+              </tr>
+              <tr>
+                <th colspan="4">Content Related Properties<br><small>The following route properties define how (from where/what) content should be loaded</small></th>
+              </tr>
+              <tr>
+                <td>el</td>
+                <td>HTMLElement</td>
+                <td>Load page from DOM by passed HTMLElement</td>
+              </tr>
+              <tr>
+                <td>pageName</td>
+                <td>string</td>
+                <td>Load page from DOM that has same data-name attribute</td>
+              </tr>
+              <tr>
+                <td>content</td>
+                <td>string</td>
+                <td>Creates dynamic page from specified content string</td>
+              </tr>
+              <tr>
+                <td>url</td>
+                <td>string</td>
+                <td>Load page content via Ajax.
+                  <p>Also supports dynamic route params from <a href="#route-path">route path</a> using <code>{{paramName}}</code> expression, e.g.</p>
+                  <pre><code class="js">{
+  path: '/users/:userId/posts/:postId',
+  url: 'http://myapp.com/posts/{{userId}}/{{postId}}'
+}</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>template</td>
+                <td>string<br>function</td>
+                <td>Load page content from passed Template7 template string or function</td>
+              </tr>
+              <tr>
+                <td>templateUrl</td>
+                <td>string</td>
+                <td>Load page content from url via Ajax, and compile it using Template7
+                  <p>Also supports dynamic route params from <a href="#route-path">route path</a> using <code>{{paramName}}</code> expression</p>
+                </td>
+              </tr>
+              <tr>
+                <td>component</td>
+                <td>object</td>
+                <td>Load page from passed Framework7 <a href="router-component.html">Router Component</a></td>
+              </tr>
+              <tr>
+                <td>componentUrl</td>
+                <td>string</td>
+                <td>load pages as a component via Ajax
+                  <p>Also supports dynamic route params from <a href="#route-path">route path</a> using <code>{{paramName}}</code> expression</p>
+                </td>
+              </tr>
+              <tr>
+                <td>async</td>
+                <td>function(routeTo, routeFrom, resolve, reject)</td>
+                <td>Do required asynchronous manipulation and the return required route content and options</td>
+              </tr>
+              <tr>
+                <th colspan="4">Routable Tabs</th>
+              </tr>
+              <tr>
+                <td>tabs</td>
+                <td>array</td>
+                <td>Array with tab routes</td>
+              </tr>
+              <tr>
+                <th colspan="4">Routable Modals</th>
+              </tr>
+              <tr>
+                <td>actions</td>
+                <td>object</td>
+                <td>Action Sheet route</td>
+              </tr>
+              <tr>
+                <td>popup</td>
+                <td>object</td>
+                <td>Popup route</td>
+              </tr>
+              <tr>
+                <td>loginScreen</td>
+                <td>object</td>
+                <td>Login screen route</td>
+              </tr>
+              <tr>
+                <td>popover</td>
+                <td>object</td>
+                <td>Popover route</td>
+              </tr>
+              <tr>
+                <td>sheet</td>
+                <td>object</td>
+                <td>Sheet route</td>
+              </tr>
+              <tr>
+                <th colspan="4">Events</th>
+              </tr>
+              <tr>
+                <td>on</td>
+                <td>object</td>
+                <td>Object with event handlers</td>
+              </tr>
+              <tr>
+                <th colspan="4">Alias & Redirect</th>
+              </tr>
+              <tr>
+                <td>alias</td>
+                <td>string<br>array</td>
+                <td>Route alias, or array with route aliases. We need to specify here alias <b>path</b></td>
+              </tr>
+              <tr>
+                <td>redirect</td>
+                <td>string<br>function(route, resolve, reject)</td>
+                <td>Route redirect. We need to specify here redirect <b>url</b> (not path)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Here is an example for most of the possible options:</p>
+          <pre><code class="js">routes: [
+  // Load via Ajax
+  {
+    path: '/about/',
+    url: './pages/about.html',
+  },
+  // Dynamic page from content
+  {
+    path: '/news/',
+    content: `
+      &lt;div class="page"&gt;
+        &lt;div class="page-content"&gt;
+          &lt;div class="block"&gt;
+            &lt;p&gt;This page created dynamically&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    `,
+  },
+  // By page name (data-name="services") presented in DOM
+  {
+    path: '/services/',
+    pageName: 'services',
+  },
+  // By page HTMLElement
+  {
+    path: '/contacts/',
+    el: document.querySelector('.page[data-name="contacts"]'),
+  },
+  // By template
+  {
+    path: '/template/:name/',
+    template: `
+      &lt;div class="page"&gt;
+        &lt;div class="page-content"&gt;
+          &lt;div class="block"&gt;
+            &lt;p&gt;Hello {{$route.params.name}}&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    `,
+  },
+  // By template URL
+  {
+    path: '/blog/',
+    templateUrl: './pages/blog.html',
+  },
+  // By component
+  {
+    path: '/posts/',
+    component: {
+      // look below
+    },
+  },
+  // By component url
+  {
+    path: '/post/:id/',
+    componentUrl: './pages/component.html',
+  },
+  // Async
+  {
+    path: '/something/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      // Requested route
+      console.log(routeTo);
+      // Get external data and return template7 template
+      app.request.json('http://some-endpoint/', function (data) {
+        resolve(
+          // How and what to load: template
+          {
+            template: '&lt;div class="page"&gt;{{users}}&lt;/div&gt;'
+          },
+          // Custom template context
+          {
+            context: {
+              users: data,
+            },
+          }
+        );
+      });
+    }
+  }
+],</code></pre>
+          <h2>Route Path</h2>
+          <p>As stated above, the route's <code>path</code> property means the path/url that will be displayed in browser window address bar (if <code>pushState</code> enabled) when the following route will be loaded either by api or clicking on a link with same path.</p>
+          <p>There is also support for dynamic paths. So if you have the following path in your route <code>/blog/users/:userId/posts/:postId/</code> and click the link with the with the <code>/blog/users/12/posts/25</code> href then on loaded page we access <code>route.params</code> object containing <code>{ userId: 12, postId: 25 }</code></p>
+          <p>Route path matching is handled by <a href="https://github.com/pillarjs/path-to-regexp" target="_blank">Path To Regexp</a> library, so everything what is supported there is supported in Framework7 as well. For example, if you want to add default route which match all paths, we can use regular expression like:</p>
+          <pre><code class="js">// Default route, match to all pages (e.g. 404 page)
+{
+  path: '(.*)',
+  url: './pages/404.html',
+},
+</code></pre>
+          <h2>Route Options</h2>
+          <p>Lets look at additional route options that can be passed in <code>options</code> property:</p>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tr>
+              <td>animate</td>
+              <td>boolean</td>
+              <td>whether the page should be animated or not (overwrites default router settings)</td>
+            </tr>
+            <tr>
+              <td>history</td>
+              <td>boolean</td>
+              <td>whether the page should be saved in router history</td>
+            </tr>
+            <tr>
+              <td>pushState</td>
+              <td>boolean</td>
+              <td>whether the page should be saved in browser state. In case you are using <code>pushState</code>, then you can pass here <code>false</code> to prevent route getting in browser history</td>
+            </tr>
+            <tr>
+              <td>reloadCurrent</td>
+              <td>boolean</td>
+              <td>replace the current page with the new one from route</td>
+            </tr>
+            <tr>
+              <td>reloadPrevious</td>
+              <td>boolean</td>
+              <td>replace the previous page in history with the new one from route</td>
+            </tr>
+            <tr>
+              <td>reloadAll</td>
+              <td>boolean</td>
+              <td>load new page and remove all previous pages from history and DOM</td>
+            </tr>
+            <tr>
+              <td>context</td>
+              <td>object</td>
+              <td>custom/extended context for Template7/Component page (when route loaded from <code>template</code>, <code>templateUrl</code>, <code>component</code> or <code>componentUrl</code>)</td>
+            </tr>
+          </table>
+          <h2>Async Route</h2>
+          <p><code>async</code> route property is very powerful tool designed to return dynamic route properties. It is a function with the following arguments:</p>
+          <div class="method-wrap">
+            <p class="method">async(<span>routeTo, routeFrom, resolve, reject</span>)</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">routeTo</span> - requested Route</li>
+              <li><span class="parameter">routeFrom</span> - currently active Route</li>
+              <li><span class="parameter">resolve</span> - callback function that you need to call to proceed route loading</li>
+              <li><span class="parameter">reject</span> - callback function that you need to call to abort route loading</li>
+            </ul>
+          </div>
+          <div class="method-wrap">
+            <p><code>resolve</code> callback function accepts two arguments:</p>
+            <p class="method">resolve(<span>parameters, options</span>)</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">parameters</span> <span class="parameter-type">object</span> - object with resolved route content. Must contain one of <code>url</code>, <code>content</code>, <code>template</code>, <code>templateUrl</code>, <code>component</code> or <code>componentUrl</code> properties</li>
+              <li><span class="parameter">options</span> <span class="parameter-type">object</span> - object with <a href="#route-options">Route Options</a></li>
+            </ul>
+          </div>
+          <div class="method-wrap">
+            <p><code>reject</code> callback function doesn't have arguments:</p>
+            <p class="method">reject()</p>
+          </div>
+          <div class="important-note">
+            <p><b>Note that until you call <code>resolve</code> or <code>reject</code> in async method, routing will be blocked!</b></p>
+          </div>
+          <p>For example:</p>
+          <pre><code class="js">routes = [
+  {
+    path: '/foo/',
+    async(routeTo, routeFrom, resolve, reject) {
+      if (userIsLoggedIn) {
+        resolve({ url: 'secured.html' })
+      } else {
+        resolve({ url: 'login.html' })
+      }
+    }
+  }
+]</code></pre>
+          <h2>Route Events</h2>
+          <p>It is possible to add all page events inside of route for this page using <code>on</code> route property. For example:</p>
+          <pre><code class="js">var app = new Framework7({
+  routes: [
+    // ...
+    {
+      path: '/users/',
+      url: './pages/users.html',
+      on: {
+        pageBeforeIn: function (event, page) {
+          // do something before page gets into the view
+        },
+        pageAfterIn: function (event, page) {
+          // do something after page gets into the view
+        },
+        pageInit: function (event, page) {
+          // do something when page initialized
+        },
+        pageBeforeRemove: function (event, page) {
+          // do something before page gets removed from DOM
+        },
+      }
+    },
+    // ...
+  ],
+});</code></pre>
+          <div class="important-note">
+            <p>Please note, that such route events are actually DOM events, so each such handler will accept <code>event</code> as a first argument with the event itself and <code>page</code> as the second argument with <a href="page.html#page-data">page data</a>.</p>
+            <p>Also, context of such event handler (<code>this</code>) will point to related <a href="view.html#router-api-methods-properties">Router instance</a>.</p>
+          </div>
+          <h2>Nested Routes</h2>
+          <p>It is possible to have nested routes (routes in routes) as well:</p>
+          <pre><code class="js">routes = [
+  {
+    path: '/faq/',
+    url: './pages/faq.html',
+  },
+  {
+    path: '/catalog/',
+    url: './pages/catalog.html',
+    routes: [
+      {
+        path: 'computers/',
+        url: './pages/computers.html',
+      },
+      {
+        path: 'monitors/',
+        url: './pages/monitors.html',
+      },
+      ...
+    ],
+  }
+];</code></pre>
+          <p>What does it mean? To get better understanding, actually (under the hood) such routes will be merged into the following ones:</p>
+          <pre><code class="js">routes = [
+  {
+    path: '/faq/',
+    url: './pages/faq.html',
+  },
+  {
+    path: '/catalog/',
+    url: './pages/catalog.html',
+  }
+  {
+    path: '/catalog/computers/',
+    url: './pages/computers.html',
+  },
+  {
+    path: '/catalog/monitors/',
+    url: './pages/monitors.html',
+  },
+];</code></pre>
+          <p>So lets say we are on a <code>/catalog/</code> page and have the following links:</p>
+          <ol>
+            <li>
+              <p><code>&lt;a href="computers/"&gt;Computers</a></code> - will work as expected. Link will be merged with the current route (<code>/catalog/</code> + <code>computers/</code>) and we will have <code>/catalog/computers/</code> which we have in our routes.</p>
+            </li>
+            <li>
+              <p><code>&lt;a href="./computers/"&gt;Computers&lt;/a&gt;</code> - will work the same as case 1 because <code>./</code> in the beginning of path means same sub level.</p>
+            </li>
+            <li>
+              <p><code>&lt;a href="/catalog/computers/"&gt;Computers&lt;/a&gt;</code> - will also work as expected the same as case 1 because <code>/</code> (slash) in the beginning means root. And we have such root route in merged routes.</p>
+            </li>
+            <li>
+              <p><code>&lt;a href="/computers/"&gt;Computers&lt;/a&gt;</code> - <b>won't work</b> as expected because <code>/</code> (slash) in the beginning means root. And we don't have such <code>/computers/</code> root route in our routes.</p>
+            </li>
+          </ol>
+          <h2>Routable Tabs</h2>
+          <p>What routable tabs means and why is it good?</p>
+          <ul>
+            <li>First of all, it provides opportunity to navigate to tabs by usual links instead of so called special tab-links.</li>
+            <li>Second, when navigating to such route you can load a page with required tab opened.</li>
+            <li>Third, with enabled Push State, the same tab will be opened when you navigate back and forward in history.</li>
+            <li>And the last but not least, when using routable tabs you can load tabs content in the same ways as for pages, i.e. using <code>url</code>, <code>content</code>, <code>template</code>, <code>templateUrl</code>, <code>component</code> or <code>componentUrl</code></li>
+          </ul>
+          <p>First of all we need to specify tabs routes in app routes. Lets assume we have a page with routable tabs on /tabs/ route:</p>
+          <pre><code class="js">routes = [
+  {
+    path: '/about-me/',
+    url: './pages/about-me/index.html',
+    // Pass "tabs" property to route
+    tabs: [
+      // First (default) tab has the same url as the page itself
+      {
+        path: '/',
+        id: 'about',
+        // Fill this tab content from content string
+        content: `
+          &lt;div class="block"&gt;
+            &lt;h3&gt;About Me&lt;/h3&gt;
+            &lt;p&gt;...&lt;/p&gt;
+          &lt;/div&gt;
+        `
+      },
+      // Second tab
+      {
+        path: '/contacts/',
+        id: 'contacts',
+        // Fill this tab content via Ajax request
+        url: './pages/about-me/contacts.html',
+      },
+      // Third tab
+      {
+        path: '/cv/',
+        id: 'cv',
+        // Load this tab content as a component via Ajax request
+        componentUrl: './pages/about-me/cv.html',
+      },
+    ],
+  }
+]</code></pre>
+          <p>On the <code>/about-me/</code> page we may have the following structure for example:</p>
+          <pre><code class="html">&lt;div class="page"&gt;
+  &lt;div class="navbar"&gt;
+    &lt;div class="navbar-inner"&gt;
+      &lt;div class="title"&gt;About Me&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="toolbar tabbar"&gt;
+    &lt;div class="toolbar-inner"&gt;
+      &lt;a href="./" class="tab-link" data-route-tab-id="about"&gt;About&lt;/a&gt;
+      &lt;a href="./contacts/" class="tab-link" data-route-tab-id="contacts"&gt;&gt;Contacts&lt;/a&gt;
+      &lt;a href="./cv/" class="tab-link" data-route-tab-id="cv"&gt;&gt;CV&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs tabs-routable"&gt;
+    &lt;div class="tab page-content" id="about"&gt;&lt;/div&gt;
+    &lt;div class="tab page-content" id="contacts"&gt;&lt;/div&gt;
+    &lt;div class="tab page-content" id="cv"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p>Almost the same as with usual <a href="tabs.html">Tabs</a> but with the difference that there is no more <code>tab-link-active</code> and <code>tab-active</code> classes on tab links and tabs. These classes and tabs will be switched by router. And there is a new <code>data-route-tab-id</code> attribute, it is required for tabs switcher to understand which link related to the selected route.</p>
+          <p>You can learn more about Routable Tabs and their additional events in appropriate sections of <a href="tabs.html#routable-tabs">Tabs</a> component page.</p>
+          <h2>Routable Modals</h2>
+          <p>Modals can routable as well. By Modals here we mean the following components: <a href="popup.html">Popup</a>, <a href="popover.html">Popover</a>, <a href="action-sheet.html">Actions Sheet</a>, <a href="login-screen.html">Login Screen</a>, <a href="sheet.html">Sheet</a>. Probably Popup and Login Screen have more use cases here.</p>
+          <p>And same features as for routable tabs and pages:</p>
+          <ul>
+            <li>it provides opportunity to open modals by usual links instead of so called special links or API,</li>
+            <li>with enabled Push State, the same modal will be opened when you refresh browser, navigate back and forward in history,</li>
+            <li>with routable modals you can load modal itself and its content in the same ways as for pages, i.e. using <code>url</code>, <code>content</code>, <code>template</code>, <code>templateUrl</code>, <code>component</code> or <code>componentUrl</code></li>
+          </ul>
+          <pre><code class="js">routes = [
+  ...
+  // Creates popup from passed HTML string
+  {
+    path: '/popup-content/',
+    popup: {
+      content: `
+        &lt;div class="popup"&gt;
+          &lt;div class="view"&gt;
+            &lt;div class="page"&gt;
+              ...
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      `
+    }
+  },
+  // Load Login Screen from file via Ajax
+  {
+    path: '/login-screen-ajax/',
+    loginScreen: {
+      url: './login-screen.html',
+      /* login-screen.html contains:
+        &lt;div class="login-screen"&gt;
+          &lt;div class="view"&gt;
+            &lt;div class="page"&gt;
+              ...
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      */
+    },
+  },
+  // Load Popup from component file
+  {
+    path: '/popup-component/',
+    loginScreen: {
+      componentUrl: './popup-component.html',
+      /* popup-component.html contains:
+        &lt;template&gt;
+          &lt;div class="popup-screen"&gt;
+            &lt;div class="view"&gt;
+              &lt;div class="page"&gt;
+                ...
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+        &lt;style&gt;...&lt;/style&gt;
+        &lt;script&gt;...&lt;/script&gt;
+      */
+    },
+  },
+  // Use async route to check if the user is logged in:
+  {
+    path: '/secured-page/',
+    async(routeTo, routeFrom, resolve, reject) {
+      if (userIsLoggedIn) {
+        resolve({
+          url: 'secured-page.html',
+        });
+      } else {
+        resolve({
+          loginScreen: {
+            url: 'login-screen.html'
+          } ,
+        });
+      }
+    },
+  }
+]</code></pre>
+          <p>According to example above:</p>
+          <ul>
+            <li>when you click on link with <code>/popup-content/</code> href attribute it will open Popup from specified string content,</li>
+            <li>when you click on link with <code>/login-screen-ajax/</code> href attribute it will perform Ajax request to <code>login-screen.html</code> file and open it as a Login Screen,</li>
+            <li>when you click on link with <code>/popup-component/</code> href attribute it will perform Ajax request to <code>popup-component.html</code> file, parse it as a Router Component and open it as a Popup,</li>
+            <li>when you click on link with <code>/secured-content/</code> href attribute it will load page from <code>secured-page.html</code> if user is logged in or open Login Screen from <code>login-screen.html</code> file is user is not logged in.</li>
+          </ul>
+          <h2>Redirect & Alias</h2>
+          <h3>Alias</h3>
+          <p>We can pass route alias using route <code>alias</code> property. Alias in this case basically means that same route can have multiple <b>paths</b> to access:</p>
+          <pre><code class="js">routes = [
+  {
+    path: '/foo/',
+    url: 'somepage.html',
+    alias: '/bar/',
+  },
+  {
+    path: '/foo2/',
+    url: 'anotherpage.html',
+    alias: ['/bar2/', '/baz/', '/baz2/'],
+  }
+]</code></pre>
+          <p>According to the example above:</p>
+          <ul>
+            <li>if we request page by <code>/foo/</code> or <code>/bar/</code> URL then first route will match and we get the page loaded from <code>somepage.html</code></li>
+            <li>if we request page by <code>/foo2/</code> , <code>/bar2/</code>, <code>/baz/</code>, <code>/baz2/</code> URL then second route will match and we the page loaded from <code>anotherpage.html</code></li>
+          </ul>
+          <h3>Redirect</h3>
+          <p>We can pass route redirect using <code>redirect</code> property:</p>
+          <ul>
+            <li>if we pass <code>redirect</code> as a <code>string</code>, we must pass here direct redirect url</li>
+            <li>if we pass <code>redirect</code> as a <code>function</code>, we need to call function's resolve parameter with redirect url</li>
+          </ul>
+          <p>For example:</p>
+          <pre><code class="js">routes = [
+  {
+    path: '/foo/',
+    url: 'somepage.html',
+  },
+  {
+    path: '/bar/',
+    redirect: '/foo/',
+  },
+  {
+    path: '/baz/',
+    redirect: function (route, resolve, reject) {
+      // if we have "user" query parameter
+      if (route.query.user) {
+        // redirect to such url
+        resolve('/foo/?user=' + route.query.user);
+      }
+      // otherwise do nothing
+      else reject();
+    }
+  }
+]</code></pre>
+          <p>Above example means:</p>
+          <ul>
+            <li>when we request <code>/bar/</code> URL then router will redirect to <code>/foo/</code> URL and then search for route that match to this new URL. In this case it will match to the first route with path <code>/foo/</code> and load the page from <code>somepage.html</code></li>
+            <li>when we request <code>/baz/?user=john</code> we will redirect to URL <code>/foo/?user=john</code> that will match to first route</li>
+            <li>when we request <code>/baz/</code> (without query) nothing will happen</li>
+          </ul>
+          <div class="important-note">
+            <p>Note in redirects we pass URL, not the route path like in alias</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

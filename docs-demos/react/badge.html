@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar sliding title="Badge">
+                    <NavRight>
+                      <Link iconOnly>
+                        <Icon ios="f7:person_fill" md="material:person">
+                          <Badge color="red">5</Badge>
+                        </Icon>
+                      </Link>
+                    </NavRight>
+                  </Navbar>
+                  <Toolbar tabbar labels>
+                    <Link tabLink="#tab-1" tabLinkActive>
+                      <Icon className="icon-fill" ios="f7:email_fill" md="material:email">
+                        <Badge color="green">5</Badge>
+                      </Icon>
+                      <span className="tabbar-label">Inbox</span>
+                    </Link>
+                    <Link tabLink="#tab-2">
+                      <Icon ios="f7:today" md="material:today">
+                        <Badge color="red">7</Badge>
+                      </Icon>
+                      <span className="tabbar-label">Calendar</span>
+                    </Link>
+                    <Link tabLink="#tab-3">
+                      <Icon ios="f7:cloud" md="material:file_upload">
+                        <Badge color="red">1</Badge>
+                      </Icon>
+                      <span className="tabbar-label">Upload</span>
+                    </Link>
+                  </Toolbar>
+      
+                  <List>
+                    <ListItem title="Foo Bar" badge="0"/>
+                    <ListItem title="Ivan Petrov" badge="CEO" badgeColor="blue"/>
+                    <ListItem title="John Doe" badge="5" badgeColor="green"/>
+                    <ListItem title="Jane Doe" badge="NEW" badgeColor="orange"/>
+                  </List>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+    </script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

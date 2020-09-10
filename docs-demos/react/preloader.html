@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        openIndicator() {
+          const self = this;
+          self.$f7.preloader.show();
+          setTimeout(() => {
+            self.$f7.preloader.hide();
+          }, 2000);
+        }
+        openDialog() {
+          const self = this;
+          self.$f7.dialog.preloader();
+          setTimeout(() => {
+            self.$f7.dialog.close();
+          }, 2000);
+        }
+        openCustomDialog() {
+          const self = this;
+          self.$f7.dialog.preloader('My text...');
+          setTimeout(() => {
+            self.$f7.dialog.close();
+          }, 2000);
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar title="Preloader"></Navbar>
+                  <Block>
+                    <p>How about an activity indicator? Framework 7 has a nice one. The F7 Preloader is made with SVG and animated with CSS so it can be easily resized.</p>
+                  </Block>
+      
+                  <BlockTitle>Default</BlockTitle>
+                  <Block className="row demo-preloaders align-items-stretch text-align-center">
+                    <Col>
+                      <Preloader></Preloader>
+                    </Col>
+                    <Col style={{background: '#000'}}>
+                      <Preloader color="white"></Preloader>
+                    </Col>
+                    <Col>
+                      <Preloader size={42}></Preloader>
+                    </Col>
+                    <Col style={{background: '#000'}}>
+                      <Preloader size={42} color="white"></Preloader>
+                    </Col>
+                  </Block>
+      
+                  <BlockTitle>Color Preloaders</BlockTitle>
+                  <Block className="row text-align-center">
+                    <Col>
+                      <Preloader color="red"></Preloader>
+                    </Col>
+                    <Col>
+                      <Preloader color="green"></Preloader>
+                    </Col>
+                    <Col>
+                      <Preloader color="orange"></Preloader>
+                    </Col>
+                    <Col>
+                      <Preloader color="blue"></Preloader>
+                    </Col>
+                  </Block>
+      
+                  <BlockTitle>Multi-color (MD-theme only)</BlockTitle>
+                  <Block className="text-align-center">
+                    <Preloader color="multi"></Preloader>
+                  </Block>
+      
+                  <BlockTitle>Preloader Modals</BlockTitle>
+                  <Block>
+                    <p>With <b>app.preloader.show()</b> you can show small overlay with preloader indicator.</p>
+                    <p>
+                      <a className="button button-raised" onClick={this.openIndicator.bind(this)}>Open Small Indicator</a>
+                    </p>
+                    <p>With <b>app.dialog.preloader()</b> you can show dialog modal with preloader indicator.</p>
+                    <p>
+                      <a className="button button-raised" onClick={this.openDialog.bind(this)}>Open Dialog Preloader</a>
+                    </p>
+                    <p>With <b>app.dialog.preloader('My text...')</b> you can show dialog preloader modal with custom title.</p>
+                    <p>
+                      <a className="button button-raised" onClick={this.openCustomDialog.bind(this)}>Open Dialog Preloader</a>
+                    </p>
+                  </Block>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+      
+    </script>
+    <style>
+      .demo-preloaders .col {
+        line-height: 42px;
+      }
+    </style>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

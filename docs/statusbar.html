@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Statusbar | Framework7 v2 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Statusbar | Framework7 v2 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/statusbar.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Statusbar</h1>
+          <div class="docs-index"></div>
+          <p>Framework7 comes with statusbar component that may help to customize app statusbar and its behavior and solve the following problem:</p>
+          <p>iOS 7+ allows you to have make full screen apps. But there could be such problem when statusbar overlap your app:</p>
+          <div class="row">
+            <div class="col-50">
+              <p><strong>Not good!</strong></p><img src="/i/docs/statusbar1.png" width="320">
+            </div>
+            <div class="col-50">
+              <p><strong>Good!</strong></p><img src="/i/docs/statusbar2.png" width="320">
+            </div>
+          </div>
+          <p>Framework7 helps you to solve this issue. It automatically detects if your app in full screen mode, and automatically adds <code><strong>with-statusbar</strong></code> class to <code>&lt;html&gt;</code> element if app is in full screen mode (or removes this class if app is not in full screen mode).</p>
+          <p>With this <code><strong>with-statusbar</strong></code> class (when app in full screen mode) the app root element has additional padding on top to move a whole app's content on size of Statusbar.</p>
+          <h2>Statusbar Layout</h2>
+          <p>Now, when Framework7 did its job on this part, we can control Statusbar behavior, we need to add <code><b>&lt;div class="statusbar"&gt;</b></code> as a direct child of app root element:</p>
+          <pre><code class="html">&lt;body&gt;
+  &lt;!-- App root element --&gt;
+  &lt;div id="app"&gt;
+    &lt;!-- Statusbar overlay element --&gt;
+    &lt;div class="statusbar"&gt;&lt;/div&gt;
+    ...
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+          <p>This <code><strong>statusbar</strong></code> div is always fixed on top of screen and hidden by default. It becomes visible only when app is in full screen mode and <code>html</code> has <code>with-statusbar</code> class.</p>
+          <h2>Statusbar Styling</h2>
+          <p>If we need to change statusbar background color we may use simple CSS rule:</p>
+          <pre><code class="css">.statusbar {
+  background: pink;
+}</code></pre>
+          <p>Such logic allows pretty flexible control over Statusbar background and we can change its background dynamically.</p>
+          <p>For example, we have dark left-side panel with cover effect. We may change Statusbar background to more dark color when panel opened:</p>
+          <pre><code class="css">/* Default Statusbar background */
+.statusbar {
+  background: pink;
+  /* We can add transition for smooth color animation */
+  transition: 400ms;
+}
+
+/* Change Statusbar background when panel opened */
+html.with-panel-left-cover .statusbar {
+  background: #222;
+}</code></pre>
+          <div class="important-note">
+            <ul>
+              <li>
+                <p>On home-screen web apps Statusbar text color is always white. There is no way to change it.</p>
+              </li>
+              <li>
+                <p>In cordova apps Statusbar text color is always black by default. It can be with cordova plugin <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a> and using its api or Framework7 Statusbar API</p>
+              </li>
+            </ul>
+          </div>
+          <h2>Statusbar App Parameters</h2>
+          <p>It is possible to control some default statusbar behavior by passing statusbar related parameters on app init under <code>statusbar</code> property:</p>
+          <pre><code class="js">var app = new Framework7({
+  statusbar: {
+    iosOverlaysWebView: true,
+  },
+});</code></pre>
+          <p>Now let's look at list of all available parameters</p>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>enabled</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enables statusbar handling by Framework7. Disable it if you don't want Framework7 to handle statusbar behavior</td>
+              </tr>
+              <tr>
+                <td>overlay</td>
+                <td>string<br>boolean</td>
+                <td>auto</td>
+                <td>Can be <code>true</code>, <code>false</code>, <code>auto</code>. Defines whether the statusbar overlay should be visible or not. In case of <code>auto</code> Framework7 will detect it automatically depending whether the app is in fullscreen mode or not</td>
+              </tr>
+              <tr>
+                <td>iosBackgroundColor</td>
+                <td>string</td>
+                <td></td>
+                <td>Hex string (<code>#RRGGBB</code>) with background color when iOS theme is active. If passed then it will override CSS value</td>
+              </tr>
+              <tr>
+                <td>materialBackgroundColor</td>
+                <td>string</td>
+                <td></td>
+                <td>Hex string (<code>#RRGGBB</code>) with background color when MD theme is active. If passed then it will override CSS value</td>
+              </tr>
+              <tr>
+                <td>scrollTopOnClick</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>If enabled, then click on statusbar overlay will scroll top page content to the top.
+                  <p class="important-note">This functionality is only available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td>iosOverlaysWebView</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>
+                  <p>Makes the statusbar overlay or not overlay the WebView.</p>
+                  <p class="ios-only">iOS-only feature</p>
+                  <p class="important-note">This functionality is only available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td>iosTextColor</td>
+                <td>string</td>
+                <td>black</td>
+                <td>
+                  <p>Statusbar text color. Can be <code>white</code> or <code>black</code></p>
+                  <p class="ios-only">iOS-only feature</p>
+                  <p class="important-note">This functionality is only available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Statusbar App Methods</h2>
+          <p>After app initialization we can control statusbar by using statusbar related app methods:</p>
+          <table class="methods-table">
+            <tr>
+              <td>app.statusbar.hide()</td>
+              <td>Hide statusbar. In webapp it just hides statusbar overlay, but in cordova app it will hide statusbar at all.
+                <p class="important-note">Hiding device statusbar is available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td>app.statusbar.show()</td>
+              <td>Show statusbar</td>
+            </tr>
+            <tr>
+              <td>app.statusbar.iosOverlaysWebView(<span>overlays</span>)</td>
+              <td>Makes the statusbar overlay or not overlay the WebView
+                <ul class="method-parameters">
+                  <li><span class="parameter">overlays</span> - <span class="parameter-type">boolean</span> - does it overlay or not</li>
+                </ul>
+                <p class="important-note">This functionality is only available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td>app.statusbar.setIosTextColor(<span>color</span>)</td>
+              <td>Set/change statusbar text color.
+                <ul class="method-parameters">
+                  <li><span class="parameter">color</span> - <span class="parameter-type">string</span> - text color, can be <code>white</code> or <code>black</code></li>
+                </ul>
+                <p class="ios-only">iOS-only feature</p>
+                <p class="important-note">This functionality is only available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+              </td>
+            </tr>
+            <tr>
+              <td>app.statusbar.setBackgroundColor(<span>hex</span>)</td>
+              <td>Set/change statusbar background color
+                <ul class="method-parameters">
+                  <li><span class="parameter">hex</span> - <span class="parameter-type">string</span> - Hex string (<code>#RRGGBB</code>) with background color</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>app.statusbar.isVisible()</td>
+              <td>Returns <code>true</code> if system statusbar is visible and <code>false</code> when it is not visible
+                <p class="important-note">This functionality is only available when app is running under cordova/phonegap environment with installed <a href="https://github.com/apache/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Grid React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Grid React Component
+      p Grid React component represents Framework7's <a href="../docs/grid.html">Layout Grid</a>.
+      h2 Usage examples
+      h4 Equal width columns
+      pre
+        code
+          :code
+            <GridRow>
+              <GridCol>Col 1</GridCol>
+              <GridCol>Col 2</GridCol>
+              <GridCol>Col 3</GridCol>
+            </GridRow>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="row">
+              <div class="col-auto"></div>
+              <div class="col-auto"></div>
+              <div class="col-auto"></div>
+            </div>
+      h4 No gutter and fixed size
+      pre
+        code
+          :code
+            <GridRow noGutter>
+              <GridCol width="50">Col 50%</GridCol>
+              <GridCol width="25">Col 25%</GridCol>
+              <GridCol width="25">Col 25%</GridCol>
+            </GridRow>
+
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="row no-gutter">
+              <div class="col-50"></div>
+              <div class="col-25"></div>
+              <div class="col-25"></div>
+            </div>
+      h4 Different columns width on tablet
+      pre
+        code
+          :code
+            <GridRow>
+              <GridCol width="50" tabletWidth="25">Col 1</GridCol>
+              <GridCol width="50" tabletWidth="25">Col 2</GridCol>
+              <GridCol width="50" tabletWidth="25">Col 3</GridCol>
+              <GridCol width="50" tabletWidth="25">Col 4</GridCol>
+            </GridRow>
+
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="row">
+              <div class="col-50 tablet-25">Col 1</div>
+              <div class="col-50 tablet-25">Col 2</div>
+              <div class="col-50 tablet-25">Col 3</div>
+              <div class="col-50 tablet-25">Col 4</div>
+            </div>
+
+      h2 Properties
+      table.params-table
+        thead
+          tr
+            th Prop
+            th Type
+            th Default
+            th Description
+        tbody
+          tr
+            th(colspan="4") &lt;GridRow&gt; properties
+          tr
+            td no-gutter
+            td boolean
+            td 
+            td Removes spacing between columns
+          tr
+            th(colspan="4") &lt;GridCol&gt; properties
+          tr
+            td width
+            td string/number
+            td "auto"
+            td Column width
+          tr
+            td tablet-width
+            td string/number
+            td
+            td Column width for large screen tablets

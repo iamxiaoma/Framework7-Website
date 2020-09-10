@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Collapsible Table</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="card data-table data-table-collapsible data-table-init">
+              <div class="card-header">
+                <div class="data-table-title">Nutrition</div>
+                <div class="data-table-actions"><a class="link icon-only"><i class="icon f7-icons ios-only">sort</i><i class="icon material-icons md-only">sort</i></a><a class="link icon-only"><i class="icon f7-icons ios-only">more_vertical_round</i><i class="icon material-icons md-only">more_vert</i></a></div>
+              </div>
+              <div class="card-content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="label-cell">Desert (100g serving)</th>
+                      <th class="numeric-cell">Calories</th>
+                      <th class="numeric-cell">Fat (g)</th>
+                      <th class="numeric-cell">Carbs</th>
+                      <th class="numeric-cell">Protein (g)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="label-cell">Frozen yogurt</td>
+                      <td class="numeric-cell">159</td>
+                      <td class="numeric-cell">6.0</td>
+                      <td class="numeric-cell">24</td>
+                      <td class="numeric-cell">4.0</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Ice cream sandwich</td>
+                      <td class="numeric-cell">237</td>
+                      <td class="numeric-cell">9.0</td>
+                      <td class="numeric-cell">37</td>
+                      <td class="numeric-cell">4.4</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Eclair</td>
+                      <td class="numeric-cell">262</td>
+                      <td class="numeric-cell">16.0</td>
+                      <td class="numeric-cell">24</td>
+                      <td class="numeric-cell">6.0</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Cupcake</td>
+                      <td class="numeric-cell">305</td>
+                      <td class="numeric-cell">3.7</td>
+                      <td class="numeric-cell">67</td>
+                      <td class="numeric-cell">4.3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>var app = new Framework7();</script>
+  </body>
+</html>

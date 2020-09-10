@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Grid</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content"><div class="block-title">Columns with gap</div>
+<div class="block">
+<div class="row">
+<div class="col">50% (.col)</div>
+<div class="col">50% (.col)</div>
+</div>
+<div class="row">
+<div class="col">25% (.col)</div>
+<div class="col">25% (.col)</div>
+<div class="col">25% (.col)</div>
+<div class="col">25% (.col)</div>
+</div>
+<div class="row">
+<div class="col">33% (.col)</div>
+<div class="col">33% (.col)</div>
+<div class="col">33% (.col)</div>
+</div>
+<div class="row">
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+</div>
+<div class="row">
+<div class="col-33">33% (.col-33)</div>
+<div class="col-66">66% (.col-66)</div>
+</div>
+<div class="row">
+<div class="col-25">25% (.col-25)</div>
+<div class="col-25">25% (.col-25)</div>
+<div class="col-50">50% (.col-50)</div>
+</div>
+<div class="row">
+<div class="col-75">75% (.col-75)</div>
+<div class="col-25">25% (.col-25)</div>
+</div>
+<div class="row">
+<div class="col-80">80% (.col-80)</div>
+<div class="col-20">20% (.col-20)</div>
+</div>
+</div>
+<div class="block-title">No gap between columns</div>
+<div class="block">
+<div class="row no-gap">
+<div class="col">50% (.col)</div>
+<div class="col">50% (.col)</div>
+</div>
+<div class="row no-gap">
+<div class="col">25% (.col)</div>
+<div class="col">25% (.col)</div>
+<div class="col">25% (.col)</div>
+<div class="col">25% (.col)</div>
+</div>
+<div class="row no-gap">
+<div class="col">33% (.col)</div>
+<div class="col">33% (.col)</div>
+<div class="col">33% (.col)</div>
+</div>
+<div class="row no-gap">
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+<div class="col">20% (.col)</div>
+</div>
+<div class="row no-gap">
+<div class="col-33">33% (.col-33)</div>
+<div class="col-66">66% (.col-66)</div>
+</div>
+<div class="row no-gap">
+<div class="col-25">25% (.col-25)</div>
+<div class="col-25">25% (.col-25)</div>
+<div class="col-50">50% (.col-50)</div>
+</div>
+<div class="row no-gap">
+<div class="col-75">75% (.col-75)</div>
+<div class="col-25">25% (.col-25)</div>
+</div>
+<div class="row no-gap">
+<div class="col-80">80% (.col-80)</div>
+<div class="col-20">20% (.col-20)</div>
+</div>
+</div>
+<div class="block-title">Nested</div>
+<div class="block">
+<div class="row">
+<div class="col">50% (.col)
+<div class="row">
+<div class="col">50% (.col)</div>
+<div class="col">50% (.col)</div>
+</div>
+</div>
+<div class="col">50% (.col)
+<div class="row">
+<div class="col-33">33% (.col-33)</div>
+<div class="col-66">66% (.col-66)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block-title">Responsive Grid</div>
+<div class="block">
+<p>Grid cells have different size on Phone/Tablet</p>
+<div class="row">
+<div class="col-100 tablet-50">.col-100.tablet-50</div>
+<div class="col-100 tablet-50">.col-100.tablet-50</div>
+</div>
+<div class="row">
+<div class="col-50 tablet-25">.col-50.tablet-25</div>
+<div class="col-50 tablet-25">.col-50.tablet-25</div>
+<div class="col-50 tablet-25">.col-50.tablet-25</div>
+<div class="col-50 tablet-25">.col-50.tablet-25</div>
+</div>
+<div class="row">
+<div class="col-100 tablet-40">.col-100.tablet-40</div>
+<div class="col-50 tablet-60">.col-50.tablet-60</div>
+<div class="col-50 tablet-66">.col-50.tablet-66</div>
+<div class="col-100 tablet-33">.col-100.tablet-33</div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <style>
+      div[class*="col"] {
+        background: #fff;
+        text-align: center;
+        color: #000;
+        border: 1px solid #ddd;
+        padding: 5px;
+        margin-bottom: 15px;
+        font-size: 12px;
+      }
+    </style>
+    <script>var app = new Framework7();</script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../dist/css/framework7.ios.colors.min.css">
+  </head>
+  <body>
+    <div class="views">
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left"> </div>
+            <div class="center sliding">Different display value</div>
+            <div class="right"> </div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="home" class="page">
+            <div class="page-content">
+              <div class="list-block">
+                <ul>
+                  <li><a href="#" class="item-link smart-select">
+                      <select name="days">
+                        <option value="monday" selected data-display-as="Mon">Monday</option>
+                        <option value="tuesday" data-display-as="Tue">Tuesday</option>
+                        <option value="wednesday" data-display-as="Wed">Wednesday</option>
+                        <option value="thursday" data-display-as="Thu">Thursday</option>
+                        <option value="friday" data-display-as="Fri">Friday</option>
+                        <option value="saturday" data-display-as="Sat">Saturday</option>
+                        <option value="sunday" data-display-as="Sun">Sunday</option>
+                      </select>
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Day</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../dist/js/framework7.min.js"></script>
+    <script>
+      var myApp = new Framework7({
+        animateNavBackIcon:true
+      }); 
+      var mainView = myApp.addView('.view-main', {
+        dynamicNavbar: true,
+      });
+    </script>
+  </body>
+</html>

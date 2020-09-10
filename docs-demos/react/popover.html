@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar title="Popover"></Navbar>
+                  <Toolbar bottomMd>
+                    <Link>Dummy Link</Link>
+                    <Link popoverOpen=".popover-menu">Open Popover</Link>
+                  </Toolbar>
+      
+                  <Block>
+                    <p><Button raised popoverOpen=".popover-menu">Open popover on me</Button></p>
+                    <p>Mauris fermentum neque et luctus venenatis. Vivamus a sem rhoncus, ornare tellus eu, euismod mauris. In porta turpis at semper convallis. Duis adipiscing leo eu nulla lacinia, quis rhoncus metus condimentum. Etiam nec malesuada nibh. Maecenas quis lacinia nisl, vel posuere dolor. Vestibulum condimentum, nisl ac vulputate egestas, neque enim dignissim elit, rhoncus volutpat magna enim a est. Aenean sit amet ligula neque. Cras suscipit rutrum enim. Nam a odio facilisis, elementum tellus non, <Link popoverOpen=".popover-menu">popover</Link> tortor. Pellentesque felis eros, dictum vitae lacinia quis, lobortis vitae ipsum. Cras vehicula bibendum lorem quis imperdiet.</p>
+                    <p>In hac habitasse platea dictumst. Etiam varius, ante vel ornare facilisis, velit massa rutrum dolor, ac porta magna magna lacinia nunc. Curabitur <Link popoverOpen=".popover-menu">popover!</Link> cursus laoreet. Aenean vel tempus augue. Pellentesque in imperdiet nibh. Mauris rhoncus nulla id sem suscipit volutpat. Pellentesque ac arcu in nisi viverra pulvinar. Nullam nulla orci, bibendum sed ligula non, ullamcorper iaculis mi. In hac habitasse platea dictumst. Praesent varius at nisl eu luctus. Cras aliquet porta est. Quisque elementum quis dui et consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sed laoreet purus. Pellentesque eget ante ante.</p>
+                    <p>Duis et ultricies nibh. Sed facilisis turpis urna, ac imperdiet erat venenatis eu. Proin sit amet faucibus tortor, et varius sem. Etiam vitae lacinia neque. Aliquam nisi purus, interdum in arcu sed, ultrices rutrum arcu. Nulla mi turpis, consectetur vel enim quis, facilisis viverra dui. Aliquam quis convallis tortor, quis semper ligula. Morbi ullamcorper <Link popoverOpen=".popover-menu">one more popover</Link> massa at accumsan. Etiam purus odio, posuere in ligula vitae, viverra ultricies justo. Vestibulum nec interdum nisi. Aenean ac consectetur velit, non malesuada magna. Sed pharetra vehicula augue, vel venenatis lectus gravida eget. Curabitur lacus tellus, venenatis eu arcu in, interdum auctor nunc. Nunc non metus neque. Suspendisse viverra lectus sed risus aliquet, vel accumsan dolor feugiat.</p>
+                  </Block>
+                  <Popover className="popover-menu">
+                    <List>
+                      <ListItem link="#" popoverClose title="Dialog" />
+                      <ListItem link="#" popoverClose title="Tabs" />
+                      <ListItem link="#" popoverClose title="Side Panels" />
+                      <ListItem link="#" popoverClose title="List View" />
+                      <ListItem link="#" popoverClose title="Form Inputs" />
+                    </List>
+                  </Popover>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+    </script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Input Vue Component | Framework7 v2 Vue Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Input Vue Component | Framework7 v2 Vue Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+                <li><a href="vue-component-extensions.html">Vue Component Extensions</a></li>
+                <li><a href="navigation-router.html">Navigation / Router</a></li>
+                <li><a href="colors.html">Color Properties</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Vue Components</div>
+              <ul>
+                <li><a href="accordion.html">Accordion</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icon.html">Icon</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-item.html">List Item</a></li>
+                <li><a href="list-button.html">List Button</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable.html">Sortable</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="view.html">View</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/vue/inputs.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Input / Form Elements Vue Components</h1>
+          <div class="docs-index"></div>
+          <p>Form elements allow you to create flexible and beautiful Form layout. Form elements are just well known <a href="../docs/list-view.html">List View</a> (<b><a href="list-view.html">List</a> and <a href="list-item.html">List Item</a> Vue components</b>) but with few additional components.</p>
+          <p>Check out Framework7's <a href="../docs/inputs.html">Inputs / Form Elements</a> for their appearance.</p>
+          <h2>Input Components</h2>
+          <p>There are following components included:</p>
+          <ul>
+            <li><code><b>f7-input</b></code> - input element</li>
+            <li><code><b>f7-label</b></code> - input label element</li>
+          </ul>
+          <h2>Input Properties</h2>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="4">&lt;f7-label&gt; properties</th>
+              </tr>
+              <tr>
+                <td>floating</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Enables floating label (affects MD theme only)</td>
+              </tr>
+              <tr>
+                <td>inline</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Makes label inline</td>
+              </tr>
+              <tr>
+                <th colspan="4">&lt;f7-input&gt; properties</th>
+              </tr>
+              <tr>
+                <td>wrap</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Defines should the input be wraped with "item-input-wrap" element or not. Must be disabled when using outside of List View</td>
+              </tr>
+              <tr>
+                <td>type</td>
+                <td>string</td>
+                <td></td>
+                <td>Input type. All default HTML5 input type, and few special ones:
+                  <ul>
+                    <li><b>textarea</b> - to render textarea element</li>
+                    <li><b>select</b> - to render select element</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>resizable</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Makes textarea resizable</td>
+              </tr>
+              <tr>
+                <td>inputStyle</td>
+                <td>string</td>
+                <td></td>
+                <td>Value if input's "style" attribute, in case you need to pass extra styles</td>
+              </tr>
+              <tr>
+                <td>clear-button</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Adds input clear button that will clear input value on click</td>
+              </tr>
+              <tr>
+                <td>validate</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>When enabled then input value will be validated on change based on passed "pattern" or based on input type</td>
+              </tr>
+              <tr>
+                <td>error-message</td>
+                <td>string</td>
+                <td></td>
+                <td>Custom error message to show when input value is invalid</td>
+              </tr>
+              <tr>
+                <td>info</td>
+                <td>string</td>
+                <td></td>
+                <td>Custom additional text with information about input</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td></td>
+                <td>Input name</td>
+              </tr>
+              <tr>
+                <td>placeholder</td>
+                <td>string</td>
+                <td></td>
+                <td>Input placeholder</td>
+              </tr>
+              <tr>
+                <td>id</td>
+                <td>string</td>
+                <td></td>
+                <td>Input ID attribute</td>
+              </tr>
+              <tr>
+                <td>value</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Input value</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "size" attribute</td>
+              </tr>
+              <tr>
+                <td>pattern</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "pattern" attribute</td>
+              </tr>
+              <tr>
+                <td>accept</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "accept" attribute</td>
+              </tr>
+              <tr>
+                <td>autocomplete</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "autocomplete" attribute</td>
+              </tr>
+              <tr>
+                <td>autofocus</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Value of input's native "autofocus" attribute</td>
+              </tr>
+              <tr>
+                <td>autosave</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "autosave" attribute</td>
+              </tr>
+              <tr>
+                <td>checked</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Marks input as checked</td>
+              </tr>
+              <tr>
+                <td>disabled</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Marks input as disabled</td>
+              </tr>
+              <tr>
+                <td>max</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "max" attribute</td>
+              </tr>
+              <tr>
+                <td>min</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "min" attribute</td>
+              </tr>
+              <tr>
+                <td>step</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "step" attribute</td>
+              </tr>
+              <tr>
+                <td>maxlength</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "maxlength" attribute</td>
+              </tr>
+              <tr>
+                <td>minlength</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "minlength" attribute</td>
+              </tr>
+              <tr>
+                <td>multiple</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Value of input's native "multiple" attribute</td>
+              </tr>
+              <tr>
+                <td>readonly</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Marks input as readonly</td>
+              </tr>
+              <tr>
+                <td>required</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Marks input as required</td>
+              </tr>
+              <tr>
+                <td>tabindex</td>
+                <td>string<br>number</td>
+                <td></td>
+                <td>Value of input's native "tabindex" attribute</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Input Events</h2>
+          <table class="events-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Arguments</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="3">&lt;f7-input&gt; events</th>
+              </tr>
+              <tr>
+                <td>focus</td>
+                <td><span>(event)</span></td>
+                <td>Fired when user focused to input.</td>
+              </tr>
+              <tr>
+                <td>blur</td>
+                <td><span>(event)</span></td>
+                <td>Fired when user lost focus from input.</td>
+              </tr>
+              <tr>
+                <td>input</td>
+                <td><span>(event)</span></td>
+                <td>Fired immediately when input value changed. Note: Input event triggers after beforeinput, keypress, keyup, keydown events.</td>
+              </tr>
+              <tr>
+                <td>change</td>
+                <td><span>(event)</span></td>
+                <td>Fired when blur if value changed.</td>
+              </tr>
+              <tr>
+                <td>input:clear</td>
+                <td><span>(event)</span></td>
+                <td>Fired when input clear button clicked</td>
+              </tr>
+              <tr>
+                <td>textarea:resize</td>
+                <td><span>(event)</span></td>
+                <td>Fired if resizable textarea resized. <code>event.detail</code> will contain object with the <code>initialHeight</code>, <code>currentHeight</code> and <code>scrollHeight</code> properties</td>
+              </tr>
+              <tr>
+                <td>input:empty</td>
+                <td><span>(event)</span></td>
+                <td>Fired when input value becomes empty</td>
+              </tr>
+              <tr>
+                <td>input:notempty</td>
+                <td><span>(event)</span></td>
+                <td>Fired when input value becomes not empty</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Input Slots</h2>
+          <p>Input Vue component (<code>&lt;f7-input&gt;</code>) has additional slots for custom elements:</p>
+          <ul>
+            <li><code><b>default</b></code> - in case of <code>type="select"</code> or <code>type="textarea"</code> - element will be placed inside of <code>select</code> or <code>textarea</code> tags. Otherwise, it will be placed instead of input element</li>
+            <li><code><b>info</b></code> - element will be inserted in <code>&lt;div class="input-info"&gt;</code> element</li>
+          </ul>
+          <h2>Input v-model</h2>
+          <p><code>v-model</code> <b>is not supported</b> on <code>f7-input</code> vue component. Instead, just use the combination of <code>value</code> property and <code>@input</code> event:</p>
+          <pre><code class="html">&lt;template&gt;
+  ...
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" :value="name" @input="name = $event.target.value" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+  ...
+&lt;/template&gt;
+&lt;script&gt;
+  export default {
+    data() {
+      name: '',
+    },
+    ...
+  };
+&lt;/script&gt;</code></pre>
+          <h2>Examples</h2>
+          <h4>Full Layout / Inline Labels</h4>
+          <pre><code class="html">&lt;f7-list inline-labels no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Your name" :value="value" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Password&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;E-mail&lt;/f7-label&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;URL&lt;/f7-label&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Phone&lt;/f7-label&gt;
+    &lt;f7-input type="tel" placeholder="Your phone number" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Gender&lt;/f7-label&gt;
+    &lt;f7-input type="select" placeholder="Please choose..."&gt;
+      &lt;option value="Male"&gt;Male&lt;/option&gt;
+      &lt;option value="Female"&gt;Female&lt;/option&gt;
+    &lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Birthday&lt;/f7-label&gt;
+    &lt;f7-input type="date" value="2014-04-30" placeholder="Please choose..."&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Date time&lt;/f7-label&gt;
+    &lt;f7-input type="datetime-local" placeholder="Please choose..."&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Range&lt;/f7-label&gt;
+    &lt;f7-input type="range" value="50" min="0" max="100" step="1"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Textarea&lt;/f7-label&gt;
+    &lt;f7-input type="textarea" placeholder="Bio"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Resizable&lt;/f7-label&gt;
+    &lt;f7-input type="textarea" resizable placeholder="Bio"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Full Layout / Stacked Labels</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Password&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;E-mail&lt;/f7-label&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;URL&lt;/f7-label&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Phone&lt;/f7-label&gt;
+    &lt;f7-input type="tel" placeholder="Your phone number" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Gender&lt;/f7-label&gt;
+    &lt;f7-input type="select" placeholder="Please choose..."&gt;
+      &lt;option value="Male"&gt;Male&lt;/option&gt;
+      &lt;option value="Female"&gt;Female&lt;/option&gt;
+    &lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Birthday&lt;/f7-label&gt;
+    &lt;f7-input type="date" value="2014-04-30" placeholder="Please choose..."&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Date time&lt;/f7-label&gt;
+    &lt;f7-input type="datetime-local" placeholder="Please choose..."&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Range&lt;/f7-label&gt;
+    &lt;f7-input type="range" value="50" min="0" max="100" step="1"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Textarea&lt;/f7-label&gt;
+    &lt;f7-input type="textarea" placeholder="Bio"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Resizable&lt;/f7-label&gt;
+    &lt;f7-input type="textarea" resizable placeholder="Bio"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Floating Labels (MD-theme only)</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;Password&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;E-mail&lt;/f7-label&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;URL&lt;/f7-label&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;Phone&lt;/f7-label&gt;
+    &lt;f7-input type="tel" placeholder="Your phone number" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;Bio&lt;/f7-label&gt;
+    &lt;f7-input type="textarea" placeholder="Bio" resizable&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Validation + Additional Info</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Your name" info='Default "required" validation' required validate clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Fruit&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Type 'apple' or 'banana'" required validate clear-button&gt;
+      &lt;span slot="info"&gt;Pattern validation (&lt;b&gt;apple|banana&lt;/b&gt;)&lt;/span&gt;
+    &lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;E-mail&lt;/f7-label&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" info='Default e-mail validation' required validate clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;URL&lt;/f7-label&gt;
+    &lt;f7-input type="url" placeholder="Your URL" info='Default URL validation' required validate clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label&gt;Number&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Enter number" info='With custom error message' error-message="Only numbers please!" required validate pattern="[0-9]*" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Icon + Input</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-input type="text" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-icon icon="demo-list-icon" slot="media"&gt;&lt;/f7-icon&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Label + Input</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Password&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;E-mail&lt;/f7-label&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;URL&lt;/f7-label&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Only Inputs</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="text" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Inputs + Additional Info</h4>
+          <pre><code class="html">&lt;f7-list no-hairlines-md&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="text" placeholder="Your name" info="Full name please" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="password" placeholder="Your password" info="8 characters minimum" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" info="Your work e-mail address" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="url" placeholder="URL" info="Your website URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;
+</code></pre>
+          <h4>Only Inputs Inset</h4>
+          <pre><code class="html">&lt;f7-list inset&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="text" placeholder="Your name" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="password" placeholder="Your password" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="email" placeholder="Your e-mail" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="url" placeholder="URL" clear-button&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;</code></pre>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

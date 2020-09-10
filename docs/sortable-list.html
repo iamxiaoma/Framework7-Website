@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sortable List | Framework7 v1 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body>
+    <header class="inner-header">
+      <div class="center"><a href="../" class="logo"></a>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+        <div class="title-links">
+          <div class="title">Framework7 v1</div>
+          <div class="links-row">
+            <div class="links"><a href="../docs/" class="active">Docs</a><a href="../vue/">Framework7 Vue</a><a href="../react/">Framework7 React</a><a href="http://forum.framework7.io">Forum</a>
+            </div>
+          </div>
+          <div class="links-row"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="/i/support-badge.png" style="height:20px"></a></div>
+        </div>
+      </div>
+    </header>
+    <div class="content center">
+      <div class="docs-demo-device">
+        <iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+        <div class="fade-overlay"></div>
+      </div>
+      <div class="docs-wrap">
+        <div class="docs-nav">
+          <ul>
+            <li>
+              <div class="title">Core</div>
+              <ul>
+                <li><a href="get-started.html">Get Started</a></li>
+                <li><a href="dom.html">Dom7 - Custom DOM Library</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App / App parameters</a></li>
+                <li><a href="views.html">Views</a></li>
+                <li><a href="pages.html">Pages</a></li>
+                <li><a href="page-callbacks.html">Page Callbacks</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Navigation / Router</div>
+              <ul>
+                <li><a href="router-api.html">API</a></li>
+                <li><a href="pages-ajax.html">Ajax Pages</a></li>
+                <li><a href="pages-dynamic.html">Dynamic Pages</a></li>
+                <li><a href="pages-inline.html">Inline Pages (DOM Cache)</a></li>
+                <li><a href="linking-views.html">Linking Between Views</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="content-block.html">Content Block</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li>
+                  <div class="subtitle">Forms</div>
+                  <ul>
+                    <li><a href="form-elements.html">Form Elements</a></li>
+                    <li><a href="checkboxes-radios.html">Checkboxes and Radios</a></li>
+                    <li><a href="smart-select.html">Smart Select</a></li>
+                    <li><a href="disabled-elements.html">Disabled Elements</a></li>
+                    <li><a href="form-data.html">Form Data</a></li>
+                    <li><a href="form-storage.html">Form Storage</a></li>
+                    <li><a href="form-ajax-submit.html">Ajax Form Submit</a></li>
+                  </ul>
+                </li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="grid.html">Layout Grid</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li>
+                  <div class="subtitle">List View (Table View)</div>
+                  <ul>
+                    <li><a href="list-view.html">List View</a></li>
+                    <li><a href="contacts-list.html">Contacts List</a></li>
+                    <li><a href="media-list-view.html">Media List View</a></li>
+                    <li><a href="swipeout.html">Swipeout</a></li>
+                    <li><a href="sortable-list.html">Sortable List</a></li>
+                    <li><a href="virtual-list.html">Virtual List</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="subtitle">Modals / Overlays</div>
+                  <ul>
+                    <li><a href="modal.html">Modal</a></li>
+                    <li><a href="popup.html">Popup</a></li>
+                    <li><a href="popover.html">Popover</a></li>
+                    <li><a href="action-sheet.html">Action Sheet</a></li>
+                    <li><a href="login-screen.html">Login Screen</a></li>
+                    <li><a href="picker-modal.html">Picker Modal</a></li>
+                  </ul>
+                </li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="messagebar.html">Message Bar</a></li>
+                <li>
+                  <div class="subtitle">Navbars & Toolbars</div>
+                  <ul>
+                    <li><a href="navbar-toolbar-layouts.html">Layout types</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="dynamic-navbar.html">Dynamic Navbar</a></li>
+                    <li><a href="sub-navbar.html">Sub Navbar</a></li>
+                    <li><a href="toolbar.html">Toolbar</a></li>
+                    <li><a href="tabbar.html">Tab Bar</a></li>
+                    <li><a href="hide-bars-on-scroll.html">Hide Bars On Scroll</a></li>
+                  </ul>
+                </li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="preloader.html">Preloader Indicator</a></li>
+                <li><a href="progressbar.html">Progress Bar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="searchbar.html">Search Bar</a></li>
+                <li><a href="side-panels.html">Side Panels</a></li>
+                <li><a href="status-bar.html">Status Bar overlay</a></li>
+                <li><a href="swiper.html">Swiper Slider</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Icons</div>
+              <ul>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Getting Started</a></li>
+                <li><a href="template7-auto-compilation.html">Templates Auto Compilation</a></li>
+                <li><a href="template7-pages.html">Template7 Pages</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (Material)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="device-api.html">Device API</a></li>
+                <li><a href="support-api.html">Support API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="toggle-docs-nav"><span></span></div>
+        </div>
+        <div class="docs-content with-device">
+          <div class="full-width">
+            <h1>Sortable List</h1>
+            <p>Sortable lists is an extension of <a href="list-view.html">list view</a> that allows you to sort list view elements.</p>
+            <p>Let's look on layout structure of sortable lists in your list views:</p>
+            <pre><code>&lt;!-- Additional "sortable" class on list-block --&gt;
+&lt;div class="list-block sortable"&gt;
+    &lt;li&gt;
+        &lt;div class="item-content"&gt;
+            &lt;div class="item-media"&gt;...&lt;/div&gt;
+            &lt;div class="item-inner"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Sortable handler element --&gt;
+        &lt;div class="sortable-handler"&gt;&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/div&gt; </code></pre>
+            <p>Where:</p>
+            <ul>
+              <li><code>sortable-handler</code> - "draggable" element (hidden by default) that allows you to sort current list view element</li>
+            </ul>
+            <p>As you may see it is pretty simple, all you need is to add "sortable" class to "list-block" and put "sortable-handler" as a direct child of &lt;li&gt;</p>
+          </div>
+          <h2>Enable and diable Sortable</h2>
+          <p>After we have our sortable list we need somehow to enable/disable it.</p>
+          <h3 data-device-preview="../docs-demos/sortable.html">From HTML</h3>
+          <p>It is possible to enable and disable sortable mode using special classes and data attributes on links:</p>
+          <div class="important-note">
+            <ul>
+              <li>
+                <p>To enable sortable mode we need to add <strong>"open-sortable"</strong> class to any HTML element (prefered to link)</p>
+              </li>
+              <li>
+                <p>To disable sortable mode we need to add <strong>"close-sortable"</strong> class to any HTML element (prefered to link)</p>
+              </li>
+              <li>
+                <p>To toggle sortable mode we need to add <strong>"toggle-sortable"</strong> class to any HTML element (prefered to link)</p>
+              </li>
+              <li>
+                <p>If you have more than one sortable list in app, you need to specify appropriate sortable list via additional <strong>data-sortable=".sortable"</strong> attribute on this HTML element with CSS selector of required sortable list</p>
+              </li>
+            </ul>
+          </div>
+          <pre><code>&lt;div class="content-block"&gt;
+    &lt;!-- We specify target sortable list in data-sortable attribute  --&gt;
+    &lt;p&gt;&lt;a href="#" data-sortable=".sortable" class="open-sortable"&gt;Enable sortable&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href="#" data-sortable=".sortable" class="close-sortable"&gt;Disable sortable&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href="#" data-sortable=".sortable" class="toggle-sortable"&gt;Toggle sortable&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- Sortable list  --&gt;
+&lt;div class="list-block sortable"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;div class="item-content"&gt;
+          &lt;div class="item-media"&gt;&lt;i class="icon icon-f7"&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;div class="item-inner"&gt;
+            &lt;div class="item-title"&gt;Item 1&lt;/div&gt;
+            &lt;div class="item-after"&gt;$10&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Sortable handler  --&gt;
+        &lt;div class="sortable-handler"&gt;&lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;div class="item-content"&gt;
+          &lt;div class="item-media"&gt;&lt;i class="icon icon-f7"&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;div class="item-inner"&gt;
+            &lt;div class="item-title"&gt;Item 2&lt;/div&gt;
+            &lt;div class="item-after"&gt;$20&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="sortable-handler"&gt;&lt;/div&gt;
+      &lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          <h3 data-device-preview="../docs-demos/sortable-js.html">Using JavaScript</h3>
+          <p>It is possible using appropriate App methods:</p>
+          <p><span class="method">myApp.sortableOpen(<span>sortableContainer</span>)</span> - enable "sorting" mode on specified sortable container</span></p>
+          <ul class="method-parameters">
+            <li><span class="parameter">sortableContainer</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector) of sortable container (&lt;div class="list-block sortable"&gt;). Optional. If not specified, Framework7 will try to find first &lt;div class="list-block sortable"&gt; element.</li>
+          </ul>
+          <p><span class="method">myApp.sortableClose(<span>sortableContainer</span>)</span> - disable "sorting" mode on specified sortable container</span></p>
+          <ul class="method-parameters">
+            <li><span class="parameter">sortableContainer</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector) of sortable container (&lt;div class="list-block sortable"&gt;). Optional. If not specified, Framework7 will try to find first &lt;div class="list-block sortable"&gt; element.</li>
+          </ul>
+          <p><span class="method">myApp.sortableToggle(<span>sortableContainer</span>)</span> - toggle "sorting" mode on specified sortable container</span></p>
+          <ul class="method-parameters">
+            <li><span class="parameter">sortableContainer</span> - <span class="parameter-type">HTMLElement</span> or <span class="parameter-type">string</span> (with CSS Selector) of sortable container (&lt;div class="list-block sortable"&gt;). Optional. If not specified, Framework7 will try to find first &lt;div class="list-block sortable"&gt; element.</li>
+          </ul>
+          <pre><code>&lt;p&gt;&lt;a href="#" class="open"&gt;Enable sortable&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#" class="close"&gt;Disable sortable&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#" class="toggle"&gt;Toggle sortable&lt;/a&gt;&lt;/p&gt;          </code></pre>
+          <pre><code>var myApp = new Framework7();
+ 
+var $$ = Dom7;
+ 
+$$('.open').on('click', function () {
+  myApp.sortableOpen('.sortable');
+});
+$$('.close').on('click', function () {
+  myApp.sortableClose('.sortable');
+});
+$$('.toggle').on('click', function () {
+  myApp.sortableToggle('.sortable');
+});</code></pre>
+          <div class="full-width">
+            <h2 class="stop-scroll-device">Sortable Events</h2>
+            <table class="events-table">
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Target</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>sortable:open</td>
+                  <td>Sortable Container<span>&lt;div class="list-block sortable"&gt;</span></td>
+                  <td>Event will be triggered when sortable mode is enabled</td>
+                </tr>
+                <tr>
+                  <td>sortable:close</td>
+                  <td>Sortable Container<span>&lt;div class="list-block sortable"&gt;</span></td>
+                  <td>Event will be triggered when sortable mode is disabled</td>
+                </tr>
+                <tr>
+                  <td>sortable:sort</td>
+                  <td>List view element<span>&lt;li&gt;</span></td>
+                  <td>Event will be triggered after user release currently sorting element in new position. <code>event.detail</code> will contain object with <code>startIndex</code> and <code>newIndex</code> properties with start/new index numbers of sorted list item</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-74282934-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-74282934-3');
+    </script>
+  </body>
+</html>

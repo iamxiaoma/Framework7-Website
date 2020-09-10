@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="app-template">
+      <f7-app>
+        <!-- Left Panel with Reveal effect -->
+        <f7-panel left reveal>
+          <f7-view>
+            <f7-page>
+              <f7-block>Left panel content</f7-block>
+          </f7-view>
+        </f7-panel>
+      
+        <!-- Right Panel with Cover effect and dark layout theme -->
+        <f7-panel right theme-dark>
+          <f7-view>
+            <f7-page>
+              <f7-block>Right panel content</f7-block>
+          </f7-view>
+        </f7-panel>
+      
+        <f7-view main>
+          <f7-page>
+            <f7-navbar title="Panel"></f7-navbar>
+      
+            <f7-block class="row">
+              <f7-col>
+                <f7-button raised panel-open="left">Open left panel</f7-button>
+              </f7-col>
+              <f7-col>
+                <f7-button raised panel-open="right">Open right panel</f7-button>
+              </f7-col>
+            </f7-block>
+          </f7-page>
+        </f7-view>
+      </f7-app>
+      
+    </template>
+    <script>var component = {}</script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="../../packages/vue/framework7-vue.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7Vue, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7Vue, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      if (typeof component === 'undefined') {
+        var component = {};
+      }
+      if (typeof routes === 'undefined') {
+        var routes = [];
+      }
+      component.el = '#app';
+      component.template = '#app-template';
+      
+      new Vue(component);
+    </script>
+  </body>
+</html>

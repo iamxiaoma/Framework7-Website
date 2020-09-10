@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Button | Framework7 v2 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Button | Framework7 v2 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-demo-device docs-demo-device-ios">
+          <div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+          <div class="docs-demo-device-iframe">
+            <iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+            <div class="fade-overlay"></div>
+          </div>
+          <div class="docs-demo-device-android-buttons">
+            <div class="triangle"></div>
+            <div class="circle"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/button.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Button</h1>
+          <div class="docs-index"></div>
+          <p>Framework7 comes with a bunch of ready to use buttons. All you need to do is add the appropriate classes to your links or submit/button inputs:</p>
+          <h2>Button Layout</h2>
+          <p>Button layout is pretty simple. Just add <code>button</code> class to links or submit/button inputs:</p>
+          <pre><code class="html">&lt;!-- link as button --&gt;
+&lt;a class="button"&gt;Button&lt;/a&gt;
+
+&lt;!-- &lt;button&gt; as button --&gt;
+&lt;button class="button"&gt;Button&lt;/button&gt;
+
+&lt;!-- &lt;input type="submit"&gt; as button --&gt;
+&lt;input type="submit" class="button" value="Button"&gt;</code></pre>
+          <h2>Button Modifier Classes</h2>
+          <p>There is a variety of different buttons in Framework7. Different button styles achieved by additional modifier classes and their combinations:</p>
+          <table class="props-table">
+            <tbody>
+              <tr>
+                <td>button-fill</td>
+                <td>Filled-style button</td>
+              </tr>
+              <tr>
+                <td>button-fill-ios</td>
+                <td>Button will have filled-style only in iOS theme</td>
+              </tr>
+              <tr>
+                <td>button-fill-md</td>
+                <td>Button will have filled-style only in MD theme</td>
+              </tr>
+              <tr>
+                <td>button-round</td>
+                <td>Rounded button</td>
+              </tr>
+              <tr>
+                <td>button-round-ios</td>
+                <td>Button will be rounded only in iOS theme</td>
+              </tr>
+              <tr>
+                <td>button-round-md</td>
+                <td>Button will be rounded only in MD theme</td>
+              </tr>
+              <tr>
+                <td>button-small</td>
+                <td>Small button</td>
+              </tr>
+              <tr>
+                <td>button-small-ios</td>
+                <td>Button will be small only in iOS theme</td>
+              </tr>
+              <tr>
+                <td>button-small-md</td>
+                <td>Button will be small only in MD theme</td>
+              </tr>
+              <tr>
+                <td>button-big</td>
+                <td>Big button</td>
+              </tr>
+              <tr>
+                <td>button-big-ios</td>
+                <td>Button will be big only in iOS theme</td>
+              </tr>
+              <tr>
+                <td>button-big-md</td>
+                <td>Button will be big only in MD theme</td>
+              </tr>
+              <tr>
+                <td>button-raised</td>
+                <td>Raised button&nbsp;<b class="md-only">This will have effect only in MD theme</b></td>
+              </tr>
+              <tr>
+                <td>button-outline</td>
+                <td>Outline button&nbsp;<b class="md-only">This will have effect only in MD theme</b></td>
+              </tr>
+              <tr>
+                <td>button-active</td>
+                <td>Active/selected button state. For use inside of Segmented</td>
+              </tr>
+              <tr>
+                <td>color-[color]</td>
+                <td>Color button, where <b>[color]</b> is one of the <a href="color-themes.html">default colors</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>And of course we can mix these classes:</p>
+          <pre><code class="html">&lt;!-- rounded button --&gt;
+&lt;a class="button button-round"&gt;Button&lt;/a&gt;
+
+&lt;!-- rounded and filled button --&gt;
+&lt;a class="button button-round button-fill"&gt;Button&lt;/a&gt;
+
+&lt;!-- raised, round, fill, big button --&gt;
+&lt;a class="button button-round button-fill button-raised button-fill"&gt;Button&lt;/a&gt;
+
+&lt;!-- small red button --&gt;
+&lt;a class="button button-small color-red"&gt;Button&lt;/a&gt;</code></pre>
+          <h2>Segmented Control</h2>
+          <p>A segmented control is a linear set of two or more segments (buttons), each of which functions as a mutually exclusive button. Within the control, all buttons are equal in width. Segmented controls are often used to display different views (switch tabs).</p>
+          <h3>Segmented Layout</h3>
+          <p>Segmented control layout is pretty simple, just a <code>&lt;div&gt;</code> with a <code>segmented</code> class around buttons:</p>
+          <pre><code>&lt;div class="segmented"&gt;
+  &lt;a class="button button-active"&gt;Tab 1&lt;/a&gt;
+  &lt;a class="button"&gt;Tab 2&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Segmented Modifier Classes</h3>
+          <p>As well as buttons, segmented also supports few additional classes for styling:</p>
+          <table class="props-table">
+            <tbody>
+              <tr>
+                <td>segmented-round</td>
+                <td>Rounded segmented</td>
+              </tr>
+              <tr>
+                <td>segmented-raised</td>
+                <td>Raised segmented &nbsp;<b class="md-only">This will have effect only in MD theme</b></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="with-device">
+            <h2 data-device-preview="../docs-demos/button.html">Examples</h2>
+            <h4>Usual Buttons</h4>
+            <p>Add <code>button</code> class.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;div class="row"&gt;
+    &lt;button class="button col"&gt;Button&lt;/button&gt;
+    &lt;button class="button col"&gt;Button&lt;/button&gt;
+    &lt;button class="button col button-round"&gt;Round&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Fill Buttons</h4>
+            <p>Add <code>button-fill</code> class.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;div class="row"&gt;
+    &lt;button class="col button button-fill"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-fill"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-fill button-round"&gt;Round&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Outline Buttons</h4>
+            <p>Add <code>button-outline</code> class.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;div class="row"&gt;
+    &lt;button class="col button button-outline"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-outline"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-outline button-round"&gt;Round&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Raised Buttons</h4>
+            <p>Add <code>button-raised</code> class.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-raised"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-raised button-fill"&gt;Fill&lt;/button&gt;
+    &lt;button class="col button button-outline button-raised"&gt;Outline&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-raised button-round"&gt;Round&lt;/button&gt;
+    &lt;button class="col button button-raised button-fill button-round"&gt;Fill&lt;/button&gt;
+    &lt;button class="col button button-outline button-round button-raised"&gt;Outline&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Segmented Buttons</h4>
+            <p>Put buttons inside of <code>segmented</code></p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;p class="segmented segmented-raised"&gt;
+    &lt;button class="button"&gt;Button&lt;/button&gt;
+    &lt;button class="button"&gt;Button&lt;/button&gt;
+    &lt;button class="button button-active"&gt;Active&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="segmented"&gt;
+    &lt;button class="button button-outline"&gt;Outline&lt;/button&gt;
+    &lt;button class="button button-outline"&gt;Outline&lt;/button&gt;
+    &lt;button class="button button-outline button-active"&gt;Active&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="segmented segmented-raised segmented-round"&gt;
+    &lt;button class="button button-round"&gt;Button&lt;/button&gt;
+    &lt;button class="button button-round"&gt;Button&lt;/button&gt;
+    &lt;button class="button button-round button-active"&gt;Active&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="segmented segmented-round"&gt;
+    &lt;button class="button button-round button-outline"&gt;Outline&lt;/button&gt;
+    &lt;button class="button button-round button-outline"&gt;Outline&lt;/button&gt;
+    &lt;button class="button button-round button-outline button-active"&gt;Active&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Big Buttons</h4>
+            <p>Add <code>button-big</code> class.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-big"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-big button-fill"&gt;Fill&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-big button-raised"&gt;Raised&lt;/button&gt;
+    &lt;button class="col button button-big button-raised button-fill"&gt;Raised Fill&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Small Buttons</h4>
+            <p>Add <code>button-small</code> class.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-small"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-small button-outline"&gt;Outline&lt;/button&gt;
+    &lt;button class="col button button-small button-fill"&gt;Fill&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-small button-round"&gt;Button&lt;/button&gt;
+    &lt;button class="col button button-small button-round button-outline"&gt;Outline&lt;/button&gt;
+    &lt;button class="col button button-small button-round button-fill"&gt;Fill&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Color Buttons</h4>
+            <p>Add <code>color-[color]</code> class. Where <b>[color]</b> is one of the <a href="color-themes.html">default colors</a>.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button color-red"&gt;Red&lt;/button&gt;
+    &lt;button class="col button color-green"&gt;Green&lt;/button&gt;
+    &lt;button class="col button color-blue"&gt;Blue&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button color-pink"&gt;Pink&lt;/button&gt;
+    &lt;button class="col button color-yellow"&gt;Yellow&lt;/button&gt;
+    &lt;button class="col button color-orange"&gt;Orange&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button color-gray"&gt;Gray&lt;/button&gt;
+    &lt;button class="col button color-black"&gt;Black&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Color Fill Buttons</h4>
+            <p>Add <code>button-fill</code> and <code>color-[color]</code> class. Where <b>[color]</b> is one of the <a href="color-themes.html">default colors</a>.</p>
+            <pre><code class="html">&lt;div class="block"&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-fill color-red"&gt;Red&lt;/button&gt;
+    &lt;button class="col button button-fill color-green"&gt;Green&lt;/button&gt;
+    &lt;button class="col button button-fill color-blue"&gt;Blue&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-fill color-pink"&gt;Pink&lt;/button&gt;
+    &lt;button class="col button button-fill color-yellow"&gt;Yellow&lt;/button&gt;
+    &lt;button class="col button button-fill color-orange"&gt;Orange&lt;/button&gt;
+  &lt;/p&gt;
+  &lt;p class="row"&gt;
+    &lt;button class="col button button-fill color-gray"&gt;Gray&lt;/button&gt;
+    &lt;button class="col button button-fill color-black"&gt;Black&lt;/button&gt;
+    &lt;button class="col button button-fill color-white text-color-black"&gt;White&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

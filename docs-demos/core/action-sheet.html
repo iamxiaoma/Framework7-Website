@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Action Sheet</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p><a class="ac-1" href="#">One group, three buttons</a></p>
+              <p><a class="ac-2" href="#">One group, title, three buttons</a></p>
+              <p><a class="ac-3" href="#">Two groups</a></p>
+              <p><a class="ac-4" href="#">Three groups</a></p>
+              <p><a class="ac-5" href="#">With callbacks on click</a></p>
+              <p><a class="ac-6" href="#">Actions grid</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>
+      var app = new Framework7();
+      
+      var $$ = Dom7;
+      
+      //- One group, three buttons
+      var ac1 = app.actions.create({
+        buttons: [
+          {
+            text: 'Button1',
+            bold: true
+          },
+          {
+            text: 'Button2'
+          },
+          {
+            text: 'Cancel',
+            color: 'red'
+          },
+        ]
+      })
+      //- One group, title, three buttons
+      var ac2 = app.actions.create({
+        buttons: [
+          {
+            text: 'Do something',
+            label: true
+          },
+          {
+            text: 'Button1',
+            bold: true
+          },
+          {
+            text: 'Button2',
+          },
+          {
+            text: 'Cancel',
+            color: 'red'
+          },
+        ]
+      });
+      //- Two groups
+      var ac3 = app.actions.create({
+        buttons: [
+          // First group
+          [
+            {
+              text: 'Do something',
+              label: true
+            },
+            {
+              text: 'Button1',
+              bold: true
+            },
+            {
+              text: 'Button2',
+            }
+          ],
+          // Second group
+          [
+            {
+              text: 'Cancel',
+              color: 'red'
+            }
+          ]
+        ]
+      });
+      //- Three groups
+      var ac4 = app.actions.create({
+        buttons: [
+          [
+            {
+              text: 'Share',
+              label: true
+            },
+            {
+              text: 'Mail',
+            },
+            {
+              text: 'Messages',
+            }
+          ],
+          [
+            {
+              text: 'Social share',
+              label: true
+            },
+            {
+              text: 'Facebook',
+            },
+            {
+              text: 'Twitter',
+            }
+          ],
+          [
+            {
+              text: 'Cancel',
+              color: 'red'
+            }
+          ]
+        ],
+      });
+      //- With callbacks on click
+      var ac5 = app.actions.create({
+        buttons: [
+          {
+            text: 'Button1',
+            onClick: function () {
+              app.dialog.alert('Button1 clicked')
+            }
+          },
+          {
+            text: 'Button2',
+            onClick: function () {
+              app.dialog.alert('Button2 clicked')
+            }
+          },
+          {
+            text: 'Cancel',
+            color: 'red',
+            onClick: function () {
+              app.dialog.alert('Cancel clicked')
+            }
+          },
+        ]
+      });
+      //- Actions Grid
+      var ac6 = app.actions.create({
+        grid: true,
+        buttons: [
+          [
+            {
+              text: 'Button 1',
+              icon: '<img src="http://lorempixel.com/96/96/people/1" width="48"/>'
+            },
+            {
+              text: 'Button 2',
+              icon: '<img src="http://lorempixel.com/96/96/people/2" width="48">'
+            },
+            {
+              text: 'Button 3',
+              icon: '<img src="http://lorempixel.com/96/96/people/3" width="48">'
+            },
+          ],
+          [
+            {
+              text: 'Button 1',
+              icon: '<img src="http://lorempixel.com/96/96/fashion/4" width="48"/>'
+            },
+            {
+              text: 'Button 2',
+              icon: '<img src="http://lorempixel.com/96/96/fashion/5" width="48">'
+            },
+            {
+              text: 'Button 3',
+              icon: '<img src="http://lorempixel.com/96/96/fashion/6" width="48">'
+            },
+          ]
+        ]
+      });
+      
+      $$('.ac-1').on('click', function () {
+          ac1.open();
+      });
+      $$('.ac-2').on('click', function () {
+          ac2.open();
+      });
+      $$('.ac-3').on('click', function () {
+          ac3.open();
+      });
+      $$('.ac-4').on('click', function () {
+          ac4.open();
+      });
+      $$('.ac-5').on('click', function () {
+          ac5.open();
+      });
+      $$('.ac-6').on('click', function () {
+          ac6.open();
+      });
+    </script>
+  </body>
+</html>

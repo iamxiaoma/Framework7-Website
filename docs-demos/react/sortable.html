@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar title="Sortable List">
+                    <NavRight>
+                      <Link sortableToggle=".sortable">Toggle</Link>
+                    </NavRight>
+                  </Navbar>
+      
+                  <Block>
+                    <p>Just click "Toggle" button on navigation bar to enable/disable sorting</p>
+                  </Block>
+                  <List sortable>
+                    <ListItem
+                      title="1 Jenna Smith"
+                      after="CEO">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                    <ListItem
+                      title="2 John Doe"
+                      after="Director">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                    <ListItem
+                      title="3 John Doe"
+                      after="Developer">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                    <ListItem
+                      title="4 Aaron Darling"
+                      after="Manager">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                    <ListItem
+                      title="5 Calvin Johnson"
+                      after="Accounter">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                    <ListItem
+                      title="6 John Smith"
+                      after="SEO">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                    <ListItem
+                      title="7 Chloe"
+                      after="Manager">
+                      <Icon icon="demo-list-icon" slot="media"></Icon>
+                    </ListItem>
+                  </List>
+                  <List mediaList sortable>
+                    <ListItem
+                      title="Yellow Submarine"
+                      after="$15"
+                      subtitle="Beatles"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus."
+                      >
+                      <img slot="media" src="http://lorempixel.com/160/160/people/1" width="80" />
+                    </ListItem>
+                    <ListItem
+                      title="Don't Stop Me Now"
+                      after="$22"
+                      subtitle="Queen"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus."
+                      >
+                      <img slot="media" src="http://lorempixel.com/160/160/people/2" width="80" />
+                    </ListItem>
+                    <ListItem
+                      title="Billie Jean"
+                      after="$16"
+                      subtitle="Michael Jackson"
+                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus."
+                      >
+                      <img slot="media" src="http://lorempixel.com/160/160/people/3" width="80" />
+                    </ListItem>
+                  </List>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+      
+    </script>
+    <style>
+      .demo-list-icon, .icon-f7 {
+        background: #ccc;
+        display: block;
+        position: relative;
+      }
+      .ios .demo-list-icon, .ios .icon-f7, .ios .icon-vi {
+        width: 29px;
+        height: 29px;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+      .md .demo-list-icon, .md .icon-f7, .md .icon-vi {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+      }
+    </style>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

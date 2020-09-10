@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="app-template">
+      <f7-app>
+        <f7-view main>
+          <f7-page>
+            <f7-navbar title="Progress Bar"></f7-navbar>
+            <f7-block-title>Determinate Progress Bar</f7-block-title>
+            <f7-block strong>
+              <p>When progress bar is determinate it indicates how long an operation will take when the percentage complete is detectable.</p>
+              <p>Inline determinate progress bar:</p>
+              <div>
+                <p><f7-progressbar :progress="10" id="demo-inline-progressbar"></f7-progressbar></p>
+                <f7-segmented raised>
+                  <f7-button @click="setInlineProgress(10)">10%</f7-button>
+                  <f7-button @click="setInlineProgress(30)">30%</f7-button>
+                  <f7-button @click="setInlineProgress(50)">50%</f7-button>
+                  <f7-button @click="setInlineProgress(100)">100%</f7-button>
+                </f7-segmented>
+              </div>
+              <div>
+                <p>Inline determinate load & hide:</p>
+                <p id="demo-determinate-container"></p>
+                <p>
+                  <f7-button raised @click="showDeterminate(true)">Start Loading</f7-button>
+                </p>
+              </div>
+              <div>
+                <p>Overlay with determinate progress bar on top of the app:</p>
+                <p>
+                  <f7-button raised @click="showDeterminate(false)">Start Loading</f7-button>
+                </p>
+              </div>
+            </f7-block>
+            <f7-block-title>Infinite Progress Bar</f7-block-title>
+            <f7-block strong>
+              <p>When progress bar is infinite/indeterminate it requests that the user wait while something finishes when it’s not necessary to indicate how long it will take.</p>
+              <p>Inline infinite progress bar</p>
+              <p>
+                <f7-progressbar infinite></f7-progressbar>
+              </p>
+              <p>Multi-color infinite progress bar</p>
+              <p>
+                <f7-progressbar infinite color="multi"></f7-progressbar>
+              </p>
+              <div>
+                <p>Overlay with infinite progress bar on top of the app</p>
+                <p id="demo-infinite-container"></p>
+                <p>
+                  <f7-button raised @click="showInfinite(false)">Start Loading</f7-button>
+                </p>
+              </div>
+              <div>
+                <p>Overlay with infinite multi-color progress bar on top of the app</p>
+                <p>
+                  <f7-button raised @click="showInfinite(true)">Start Loading</f7-button>
+                </p>
+              </div>
+            </f7-block>
+            <f7-block-title>Colors</f7-block-title>
+            <div class="list simple-list">
+              <ul>
+                <li>
+                  <f7-progressbar color="blue" :progress="10"></f7-progressbar>
+                </li>
+                <li>
+                  <f7-progressbar color="red" :progress="20"></f7-progressbar>
+                </li>
+                <li>
+                  <f7-progressbar color="pink" :progress="30"></f7-progressbar>
+                </li>
+                <li>
+                  <f7-progressbar color="green" :progress="80"></f7-progressbar>
+                </li>
+                <li>
+                  <f7-progressbar color="yellow" :progress="90"></f7-progressbar>
+                </li>
+                <li>
+                  <f7-progressbar color="orange" :progress="100"></f7-progressbar>
+                </li>
+              </ul>
+            </div>
+          </f7-page>
+        </f7-view>
+      </f7-app>
+      
+    </template>
+    <script>
+      var component = {
+        methods: {
+          setInlineProgress(value) {
+            const self = this;
+            const app = self.$f7;
+            app.progressbar.set('#demo-inline-progressbar', value);
+          },
+          showDeterminate(inline) {
+            const self = this;
+            const app = self.$f7;
+            if (self.determinateLoading) return;
+            self.determinateLoading = true;
+            let progressBarEl;
+            if (inline) {
+              progressBarEl = app.progressbar.show('#demo-determinate-container', 0);
+            } else {
+              progressBarEl = app.progressbar.show(0, app.theme === 'md' ? 'yellow' : 'blue');
+            }
+            let progress = 0;
+            function simulateLoading() {
+              setTimeout(() => {
+                const progressBefore = progress;
+                progress += Math.random() * 20;
+                app.progressbar.set(progressBarEl, progress);
+                if (progressBefore < 100) {
+                  simulateLoading(); // keep "loading"
+                } else {
+                  self.determinateLoading = false;
+                  app.progressbar.hide(progressBarEl); // hide
+                }
+              }, Math.random() * 200 + 200);
+            }
+            simulateLoading();
+          },
+          showInfinite(multiColor) {
+            const self = this;
+            const app = self.$f7;
+            if (self.infiniteLoading) return;
+            self.infiniteLoading = true;
+            if (multiColor) {
+              app.progressbar.show('multi');
+            } else {
+              app.progressbar.show(app.theme === 'md' ? 'yellow' : 'blue');
+            }
+            setTimeout(() => {
+              self.infiniteLoading = false;
+              app.progressbar.hide();
+            }, 3000);
+          },
+        },
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="../../packages/vue/framework7-vue.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7Vue, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7Vue, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      if (typeof component === 'undefined') {
+        var component = {};
+      }
+      if (typeof routes === 'undefined') {
+        var routes = [];
+      }
+      component.el = '#app';
+      component.template = '#app-template';
+      
+      new Vue(component);
+    </script>
+  </body>
+</html>

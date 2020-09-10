@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="panel panel-left panel-reveal">
+        <div class="block">
+          <p>Left Panel content here</p>
+          <p><a class="panel-close" href="#">Close me</a></p>
+          <p><a class="panel-open" href="#" data-panel="right">Open Right Panel</a></p>
+        </div>
+      </div>
+      <div class="panel panel-right panel-cover">
+        <div class="block">
+          <p>Right Panel content here</p>
+          <p><a class="panel-close" href="#">Close me</a></p>
+          <p><a class="panel-open" href="#" data-panel="left">Open Left Panel</a></p>
+        </div>
+      </div>
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Panels</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p><a class="panel-open" href="#">Open Left Panel</a></p>
+              <p><a class="panel-open" href="#" data-panel="right">Open Right Panel</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>
+      var app = new Framework7();
+      
+      var $$ = Dom7;
+      
+      // Dom Events
+      $$('.panel-left').on('panel:open', function () {
+        console.log('Panel left: open');
+      });
+      $$('.panel-left').on('panel:opened', function () {
+        console.log('Panel left: opened');
+      });
+      
+      // Instance Events
+      var panelRight = app.panel.right;
+      panelRight.on('open', function () {
+        console.log('Panel right: open');
+      });
+      panelRight.on('opened', function () {
+        console.log('Panel right: opened');
+      });
+      
+      // App Events
+      app.on('panelClose', function (panel) {
+        console.log('Panel ' + panel.side + ': close');
+      });
+      app.on('panelClosed', function (panel) {
+        console.log('Panel ' + panel.side + ': closed');
+      });
+    </script>
+  </body>
+</html>

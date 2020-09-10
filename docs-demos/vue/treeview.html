@@ -1,0 +1,292 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><title>My App</title><link rel="stylesheet" href="../../packages/core/css/framework7.bundle.min.css"><link rel="stylesheet" href="../../css/framework7-icons.css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></head><body><div id="app"></div><template id="app-template"><f7-app>
+  <f7-view main>
+    <f7-page>
+      <f7-navbar title="Treeview"></f7-navbar>
+
+      <f7-block-title>Basic tree view</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item label="Item 1">
+            <f7-treeview-item label="Sub Item 1">
+              <f7-treeview-item label="Sub Sub Item 1"></f7-treeview-item>
+              <f7-treeview-item label="Sub Sub Item 2"></f7-treeview-item>
+            </f7-treeview-item>
+            <f7-treeview-item label="Sub Item 2">
+              <f7-treeview-item label="Sub Sub Item 1"></f7-treeview-item>
+              <f7-treeview-item label="Sub Sub Item 2"></f7-treeview-item>
+            </f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label="Item 2">
+            <f7-treeview-item label="Sub Item 1">
+              <f7-treeview-item label="Sub Sub Item 1"></f7-treeview-item>
+              <f7-treeview-item label="Sub Sub Item 2"></f7-treeview-item>
+            </f7-treeview-item>
+            <f7-treeview-item label="Sub Item 2">
+              <f7-treeview-item label="Sub Sub Item 1"></f7-treeview-item>
+              <f7-treeview-item label="Sub Sub Item 2"></f7-treeview-item>
+            </f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label="Item 3"></f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+
+      <f7-block-title>With icons</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item label="images" icon-f7="folder_fill">
+            <f7-treeview-item label="avatar.png" icon-f7="images_fill"></f7-treeview-item>
+            <f7-treeview-item label="background.jpg" icon-f7="images_fill"></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label="documents" icon-f7="folder_fill">
+            <f7-treeview-item label="cv.docx" icon-f7="document_text_fill"></f7-treeview-item>
+            <f7-treeview-item label="info.docx" icon-f7="document_text_fill"></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label=".gitignore" icon-f7="logo_github"></f7-treeview-item>
+          <f7-treeview-item label="index.html" icon-f7="document_text_fill"></f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+
+      <f7-block-title>With checkboxes</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item label="images" icon-f7="folder_fill">
+            <f7-checkbox slot="content-start"
+              :checked="Object.values(checkboxes.images).indexOf(false) < 0"
+              :indeterminate="Object.values(checkboxes.images).indexOf(false) >= 0 && Object.values(checkboxes.images).indexOf(true) >= 0"
+              @change="(e) => Object.keys(checkboxes.images).forEach(k => checkboxes.images[k] = e.target.checked)"
+            ></f7-checkbox>
+            <f7-treeview-item label="avatar.png" icon-f7="images_fill">
+              <f7-checkbox slot="content-start"
+                :checked="checkboxes.images['avatar.png']"
+                @change="checkboxes.images['avatar.png'] = $event.target.checked"
+              ></f7-checkbox>
+            </f7-treeview-item>
+            <f7-treeview-item label="background.jpg" icon-f7="images_fill">
+              <f7-checkbox slot="content-start"
+                :checked="checkboxes.images['background.jpg']"
+                @change="checkboxes.images['background.jpg'] = $event.target.checked"
+              ></f7-checkbox>
+            </f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label="documents" icon-f7="folder_fill">
+            <f7-checkbox slot="content-start"
+              :checked="Object.values(checkboxes.documents).indexOf(false) < 0"
+              :indeterminate="Object.values(checkboxes.documents).indexOf(false) >= 0 && Object.values(checkboxes.documents).indexOf(true) >= 0"
+              @change="(e) => Object.keys(checkboxes.documents).forEach(k => checkboxes.documents[k] = e.target.checked)"
+            ></f7-checkbox>
+            <f7-treeview-item label="cv.docx" icon-f7="document_text_fill">
+              <f7-checkbox slot="content-start"
+                :checked="checkboxes.documents['cv.docx']"
+                @change="checkboxes.documents['cv.docx'] = $event.target.checked"
+              ></f7-checkbox>
+            </f7-treeview-item>
+            <f7-treeview-item label="info.docx" icon-f7="document_text_fill">
+              <f7-checkbox slot="content-start"
+                :checked="checkboxes.documents['info.docx']"
+                @change="checkboxes.documents['info.docx'] = $event.target.checked"
+              ></f7-checkbox>
+            </f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label=".gitignore" icon-f7="logo_github">
+            <f7-checkbox slot="content-start"
+              :checked="checkboxes['.gitignore']"
+              @change="checkboxes['.gitignore'] = $event.target.checked"
+            ></f7-checkbox>
+          </f7-treeview-item>
+          <f7-treeview-item label="index.html" icon-f7="document_text_fill">
+            <f7-checkbox slot="content-start"
+              :checked="checkboxes['index.html']"
+              @change="checkboxes['index.html'] = $event.target.checked"
+            ></f7-checkbox>
+          </f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+
+      <f7-block-title>Whole item as toggle</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item item-toggle label="images" icon-f7="folder_fill">
+            <f7-treeview-item label="avatar.png" icon-f7="images_fill"></f7-treeview-item>
+            <f7-treeview-item label="background.jpg" icon-f7="images_fill"></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item item-toggle label="documents" icon-f7="folder_fill">
+            <f7-treeview-item label="cv.docx" icon-f7="document_text_fill"></f7-treeview-item>
+            <f7-treeview-item label="info.docx" icon-f7="document_text_fill"></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item label=".gitignore" icon-f7="logo_github"></f7-treeview-item>
+          <f7-treeview-item label="index.html" icon-f7="document_text_fill"></f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+
+      <f7-block-title>Selectable</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item
+            selectable
+            :selected="selectedItem === 'images'"
+            label="images"
+            icon-f7="folder_fill"
+            @click="toggleSelectable($event, 'images')"
+          >
+            <f7-treeview-item
+              selectable
+              :selected="selectedItem === 'avatar.png'"
+              label="avatar.png"
+              icon-f7="images_fill"
+              @click="toggleSelectable($event, 'avatar.png')"
+            ></f7-treeview-item>
+            <f7-treeview-item
+              selectable
+              :selected="selectedItem === 'background.jpg'"
+              label="background.jpg"
+              icon-f7="images_fill"
+              @click="toggleSelectable($event, 'background.jpg')"
+            ></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item
+            selectable
+            :selected="selectedItem === 'documents'"
+            label="documents"
+            icon-f7="folder_fill"
+            @click="toggleSelectable($event, 'documents')"
+          >
+            <f7-treeview-item
+              selectable
+              :selected="selectedItem === 'cv.docx'"
+              label="cv.docx"
+              icon-f7="document_text_fill"
+              @click="toggleSelectable($event, 'cv.docx')"
+            ></f7-treeview-item>
+            <f7-treeview-item
+              selectable
+              :selected="selectedItem === 'info.docx'"
+              label="info.docx"
+              icon-f7="document_text_fill"
+              @click="toggleSelectable($event, 'info.docx')"
+            ></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item
+            selectable
+            :selected="selectedItem === '.gitignore'"
+            label=".gitignore"
+            icon-f7="logo_github"
+            @click="toggleSelectable($event, '.gitignore')"
+          ></f7-treeview-item>
+          <f7-treeview-item
+            selectable
+            :selected="selectedItem === 'index.html'"
+            label="index.html"
+            icon-f7="document_text_fill"
+            @click="toggleSelectable($event, 'index.html')"
+          ></f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+
+      <f7-block-title>Preload children</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item
+            toggle
+            load-children
+            icon-f7="persons"
+            label="Users"
+            @treeview:loadchildren="loadChildren"
+          >
+            <f7-treeview-item
+              v-for="(item, index) in loadedChildren"
+              :key="index"
+              icon-f7="person"
+              :label="item.name"
+            ></f7-treeview-item>
+          </f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+
+      <f7-block-title>With links</f7-block-title>
+      <f7-block strong class="no-padding-horizontal">
+        <f7-treeview>
+          <f7-treeview-item icon-f7="data_fill" item-toggle label="Modals">
+            <f7-treeview-item link="/popup/" icon-f7="link" label="Popup" ></f7-treeview-item>
+            <f7-treeview-item link="/dialog/" icon-f7="link" label="Dialog" ></f7-treeview-item>
+            <f7-treeview-item link="/action-sheet/" icon-f7="link" label="Action Sheet" ></f7-treeview-item>
+          </f7-treeview-item>
+          <f7-treeview-item icon-f7="data_fill" item-toggle label="Navigation Bars">
+            <f7-treeview-item link="/navbar/" icon-f7="link" label="Navbar" ></f7-treeview-item>
+            <f7-treeview-item link="/toolbar-tabbar/" icon-f7="link" label="Toolbar & Tabbar" ></f7-treeview-item>
+          </f7-treeview-item>
+        </f7-treeview>
+      </f7-block>
+    </f7-page>
+  </f7-view>
+</f7-app>
+</template><script>var component = {
+  data: function () {
+    return {
+      checkboxes: {
+        images: {
+          'avatar.png': false,
+          'background.jpg': false,
+        },
+        documents: {
+          'cv.docx': false,
+          'info.docx': false,
+        },
+        '.gitignore': false,
+        '.index.html': false,
+      },
+      selectedItem: null,
+      loadedChildren: [],
+    };
+  },
+  methods: {
+    toggleSelectable: function (e, item) {
+      var self = this;
+      var $ = self.$$;
+      if ($(e.target).is('.treeview-toggle')) return;
+      self.selectedItem = item;
+    },
+    loadChildren: function (e, done) {
+      var self = this;
+      setTimeout(function () {
+        // call done() to hide preloader
+        done();
+        self.loadedChildren = [
+          {
+            name: 'John Doe',
+          },
+          {
+            name: 'Jane Doe',
+          },
+          {
+            name: 'Calvin Johnson',
+          },
+        ];
+      }, 2000);
+    },
+  },
+}</script><script src="https://cdn.jsdelivr.net/npm/vue"></script><script src="../../packages/vue/framework7-vue.bundle.min.js"></script><script src="../../packages/core/js/framework7.bundle.min.js"></script><script>var theme = 'ios';
+if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+if (location.href.indexOf('theme=aurora') >= 0) theme = 'aurora';
+
+if (Framework7.use) Framework7.use(Framework7Vue, { theme: theme });
+else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7Vue, { theme: theme });
+
+var plugin = {
+  params: {
+    theme: theme,
+  }
+};
+
+if (Framework7.use) Framework7.use(plugin);
+else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+
+if (typeof component === 'undefined') {
+  var component = {};
+}
+if (typeof routes === 'undefined') {
+  var routes = [];
+}
+component.el = '#app';
+component.template = '#app-template';
+
+new Vue(component);</script></body></html>

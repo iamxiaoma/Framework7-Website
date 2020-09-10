@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <!-- In data-sheet attribute we specify CSS selector of sheet we need to open-->
+              <div class="title">Sheet Modal</div>
+              <div class="right"><a class="link sheet-open" href="#" data-sheet=".my-sheet">Open Sheet</a></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <!-- In data-sheet attribute we specify CSS selector of sheet we need to open-->
+              <p><a class="link sheet-open" href="#" data-sheet=".my-sheet">Open Sheet</a></p>
+              <!-- Link to close sheet-->
+              <p><a class="link sheet-close" href="#" data-sheet=".my-sheet">Close Sheet</a></p>
+              <p><a class="link dynamic-sheet" href="#">Create Dynamic Sheet</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sheet-modal my-sheet">
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <div class="left"></div>
+            <div class="right"><a class="link sheet-close" href="#">Done</a></div>
+          </div>
+        </div>
+        <div class="sheet-modal-inner">
+          <div class="block">
+            <h4>Info</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>
+      var app = new Framework7();
+      
+      var $$ = Dom7;
+      
+      // DOM events for my-sheet sheet
+      $$('.my-sheet').on('sheet:open', function (e, sheet) {
+        console.log('my-sheet open');
+      });
+      $$('.my-sheet').on('sheet:opened', function (e, sheet) {
+        console.log('my-sheet opened');
+      });
+      
+      // Create dynamic Sheet
+      var dynamicSheet = app.sheet.create({
+        content: '<div class="sheet-modal">'+
+                    '<div class="toolbar">'+
+                      '<div class="toolbar-inner">'+
+                        '<div class="left"></div>'+
+                        '<div class="right">'+
+                          '<a class="link sheet-close">Done</a>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="sheet-modal-inner">'+
+                      '<div class="block">'+
+                        '<p>Sheet created dynamically.</p>'+
+                        '<p><a href="#" class="link sheet-close">Close me</a></p>'+
+                      '</div>'+
+                    '</div>'+
+                  '</div>',
+        // Events
+        on: {
+          open: function (sheet) {
+            console.log('Sheet open');
+          },
+          opened: function (sheet) {
+            console.log('Sheet opened');
+          },
+        }
+      });
+      // Events also can be assigned on instance later
+      dynamicSheet.on('close', function (sheet) {
+        console.log('Sheet close');
+      });
+      dynamicSheet.on('closed', function (sheet) {
+        console.log('Sheet closed');
+      });
+      
+      // Open dynamic sheet
+      $$('.dynamic-sheet').on('click', function () {
+        // Close inline sheet before
+        app.sheet.close('.my-sheet');
+      
+        // Open dynamic sheet
+        dynamicSheet.open();
+      });
+    </script>
+  </body>
+</html>

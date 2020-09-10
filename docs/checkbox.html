@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Checkbox | Framework7 v2 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Checkbox | Framework7 v2 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-demo-device docs-demo-device-ios">
+          <div class="docs-demo-device-buttons"><a class="active" data-theme="ios">iOS</a><a data-theme="md">Android</a></div>
+          <div class="docs-demo-device-iframe">
+            <iframe width="320" height="548" frameborder="0" scrolling="on"></iframe>
+            <div class="fade-overlay"></div>
+          </div>
+          <div class="docs-demo-device-android-buttons">
+            <div class="triangle"></div>
+            <div class="circle"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/checkbox.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Checkbox</h1>
+          <div class="docs-index"></div>
+          <h2>Checkbox Layout</h2>
+          <p>Checkbox layout is pretty simple:</p>
+          <pre><code class="html">&lt;!-- checkbox element --&gt;
+&lt;label class="checkbox"&gt;
+  &lt;!-- checkbox input --&gt;
+  &lt;input type="checkbox"&gt;
+  &lt;!-- checkbox icon --&gt;
+  &lt;i class="icon-checkbox"&gt;&lt;/i&gt;
+&lt;/label&gt;</code></pre>
+          <h2>Checkbox Group/List</h2>
+          <p>To create Checkbox group/list we need to use <a href="list-view.html">List View</a> with few additions:</p>
+          <pre><code class="html">&lt;div class="list"&gt;
+  &lt;ul&gt;
+    &lt;!-- Single checkbox item --&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;!-- Checkbox input --&gt;
+        &lt;input type="checkbox"/&gt;
+        &lt;!-- Checkbox icon --&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;!-- Checkbox Title --&gt;
+          &lt;div class="item-title"&gt;Books&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;!-- Another checkbox item --&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;!-- Checked by default --&gt;
+        &lt;input type="checkbox" checked/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title"&gt;Music&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          <div class="important-note">
+            <ul>
+              <li><code>item-content</code> must be a <code><b>&lt;label&gt;</b></code> element with additional <code><b>item-checkbox</b></code> class</li>
+              <li>Checkbox input (<code>&lt;input type="checkbox"&gt;</code>) must be a first child of <code>item-content</code></li>
+              <li>Checkbox icon must be <b>after</b> checkbox input</li>
+            </ul>
+          </div>
+          <div class="with-device">
+            <h2 data-device-preview="../docs-demos/checkbox.html">Examples</h2>
+            <h4>Inline</h4>
+            <pre><code class="html">&lt;div class="block block-strong"&gt;
+  &lt;p&gt;Lorem &lt;label class="checkbox"&gt;&lt;input type="checkbox"&gt;&lt;i class="icon-checkbox"&gt;&lt;/i&gt;&lt;/label&gt; ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae illo nihil aut eius commodi sint eveniet aliquid eligendi &lt;label class="checkbox"&gt;&lt;input type="checkbox"&gt;&lt;i class="icon-checkbox"&gt;&lt;/i&gt;&lt;/label&gt; ad delectus impedit tempore nemo, enim vel praesentium consequatur nulla mollitia!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <h4>Checkbox Group</h4>
+            <pre><code class="html">&lt;div class="list"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-checkbox" value="Books" checked="checked"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title"&gt;Books&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-checkbox" value="Movies"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title"&gt;Movies&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-checkbox" value="Food"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title"&gt;Food&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-checkbox" value="Drinks"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title"&gt;Drinks&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            <h4>With Media Lists</h4>
+            <pre><code class="html">&lt;div class="list media-list"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-media-checkbox" value="1"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title-row"&gt;
+            &lt;div class="item-title"&gt;Facebook&lt;/div&gt;
+            &lt;div class="item-after"&gt;17:14&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="item-subtitle"&gt;New messages from John Doe&lt;/div&gt;
+          &lt;div class="item-text"&gt;Lorem ipsum...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-media-checkbox" value="2"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title-row"&gt;
+            &lt;div class="item-title"&gt;John Doe (via Twitter)&lt;/div&gt;
+            &lt;div class="item-after"&gt;17:11&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="item-subtitle"&gt;John Doe (@_johndoe) mentioned you on Twitter!&lt;/div&gt;
+          &lt;div class="item-text"&gt;Lorem ipsum...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-media-checkbox" value="3"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title-row"&gt;
+            &lt;div class="item-title"&gt;Facebook&lt;/div&gt;
+            &lt;div class="item-after"&gt;16:48&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="item-subtitle"&gt;New messages from John Doe&lt;/div&gt;
+          &lt;div class="item-text"&gt;Lorem ipsum...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class="item-checkbox item-content"&gt;
+        &lt;input type="checkbox" name="demo-media-checkbox" value="4"/&gt;
+        &lt;i class="icon icon-checkbox"&gt;&lt;/i&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title-row"&gt;
+            &lt;div class="item-title"&gt;John Doe (via Twitter)&lt;/div&gt;
+            &lt;div class="item-after"&gt;15:32&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="item-subtitle"&gt;John Doe (@_johndoe) mentioned you on Twitter!&lt;/div&gt;
+          &lt;div class="item-text"&gt;Lorem ipsum...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

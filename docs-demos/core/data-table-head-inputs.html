@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Data Table</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content"><div class="card data-table">
+<table>
+<thead>
+<tr>
+<th class="input-cell">
+<span class="table-head-label">ID</span>
+<div class="input" style="width: 50px">
+<input type="number" placeholder="Filter">
+</div>
+</th>
+<th class="input-cell">
+<span class="table-head-label">Name</span>
+<div class="input">
+<input type="text" placeholder="Filter">
+</div>
+</th>
+<th class="input-cell">
+<span class="table-head-label">Email</span>
+<div class="input">
+<input type="email" placeholder="Filter">
+</div>
+</th>
+<th class="input-cell">
+<span class="table-head-label">Gender</span>
+<div class="input input-dropdown">
+<select>
+<option value="All">All</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John Doe</td>
+<td>john@doe.com</td>
+<td>Male</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane Doe</td>
+<td>jane@doe.com</td>
+<td>Female</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Vladimir Kharlampidi</td>
+<td>vladimir@google.com</td>
+<td>Male</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jennifer Doe</td>
+<td>jennifer@doe.com</td>
+<td>Female</td>
+</tr>
+</tbody>
+</table>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>var app = new Framework7();</script>
+  </body>
+</html>

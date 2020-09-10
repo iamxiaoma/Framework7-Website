@@ -37,7 +37,7 @@ html
           .release-info MIT Licensed, <b>v#{release.version}</b> released on #{release.date}
           .patreon-github
             include _github-buttons
-            include _patreon
+            //include _patreon
         .phone
           .iframe-wrapper
             iframe(src="kitchen-sink/core/?theme=ios", frameborder="0", scrolling="no")
@@ -63,7 +63,7 @@ html
 
     .home-block.home-block-red
       .center
-        include _carbon
+        //include _carbon
         .text
           p Framework7 - is a <b>free and open source</b> framework to develop mobile, desktop or web apps with <b>native look and feel</b>. It is also an indispensable prototyping tool to show working app prototype as soon as possible in case you need to.
     .home-block.home-block-left
@@ -130,15 +130,15 @@ html
           a(href="/plugins/")
             .link-title Plugins
             .link-text Collection of official and community plugins
-          a(href="https://jobs.framework7.io")
-            .link-title Jobs & Developers
-            .link-text Framework7 jobs & developers portal
-          a(href="https://forum.framework7.io")
-            .link-title Forum
-            .link-text Community forum and support
-          a(href="https://blog.framework7.io")
-            .link-title Blog
-            .link-text Official Framework7 blog
+          //a(href="https://jobs.framework7.io")
+          //  .link-title Jobs & Developers
+          //  .link-text Framework7 jobs & developers portal
+          //a(href="https://forum.framework7.io")
+          //  .link-title Forum
+          //  .link-text Community forum and support
+          //a(href="https://blog.framework7.io")
+          //  .link-title Blog
+          //  .link-text Official Framework7 blog
           a(href="/showcase/")
             .link-title Apps Showcase
             .link-text Showcase of apps made with Framework7
@@ -157,50 +157,50 @@ html
           a(href="/react/") Framework7 React
           a(href="/svelte/") Framework7 Svelte
 
-    .home-block.home-support
-      .center
-        h2 Support Framework7
-        .text
-          p Framework7 is an MIT-licensed open source project with its ongoing development made possible entirely by the support of #[a(href="/sponsors/") sponsors] and  #[a(href="https://github.com/framework7io/framework7/blob/master/BACKERS.md" target="_blank") these awesome backers].
-          p
-            a(href="https://www.patreon.com/vladimirkharlampidi", target="_blank").home-support-button Support Framework7 #[i.f7-icons hand_thumbsup_fill]
-    .home-block.home-sponsors
-      .center
-        h2 Sponsors
-        .home-sponsors-list
-          - var sponsors = getYamlData('sponsors/sponsors.yml');
-          if (sponsors.diamond)
-            each sponsor in sponsors.diamond
-              .home-sponsors-item.home-sponsor-diamond
-                a(href=sponsor.link, target="_blank")
-                  .sponsor-badge.sponsor-badge-diamond(title="Diamond Sponsor")
-                  img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
-            .home-sponsors-separator
-          if (sponsors.platinum)
-            each sponsor in sponsors.platinum
-              .home-sponsors-item.home-sponsor-platinum
-                a(href=sponsor.link, target="_blank")
-                  .sponsor-badge.sponsor-badge-platinum(title="Platinum Sponsor")
-                  img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
-            .home-sponsors-separator
-          if (sponsors.gold)
-            each sponsor in sponsors.gold
-              .home-sponsors-item.home-sponsor-gold
-                a(href=sponsor.link, target="_blank")
-                  img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
-            .home-sponsors-separator
-          if (sponsors.silver)
-            each sponsor in sponsors.silver
-              .home-sponsors-item.home-sponsor-silver
-                a(href=sponsor.link, target="_blank")
-                  img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
-            .home-sponsors-separator
-          if (sponsors.topSupporter)
-            each sponsor in sponsors.topSupporter
-              .home-sponsors-item
-                a(href=sponsor.link, target="_blank")
-                  .sponsor-badge.sponsor-badge-topSupporter(title="Top Supporter")
-                  img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
+    //.home-block.home-support
+    //  .center
+    //    h2 Support Framework7
+    //    .text
+    //      p Framework7 is an MIT-licensed open source project with its ongoing development made possible entirely by the support of #[a(href="/sponsors/") sponsors] and  #[a(href="https://github.com/framework7io/framework7/blob/master/BACKERS.md" target="_blank") these awesome backers].
+    //      p
+    //        a(href="https://www.patreon.com/vladimirkharlampidi", target="_blank").home-support-button Support Framework7 #[i.f7-icons hand_thumbsup_fill]
+    //.home-block.home-sponsors
+    //  .center
+    //    h2 Sponsors
+    //    .home-sponsors-list
+    //      - var sponsors = getYamlData('sponsors/sponsors.yml');
+    //      if (sponsors.diamond)
+    //        each sponsor in sponsors.diamond
+    //          .home-sponsors-item.home-sponsor-diamond
+    //            a(href=sponsor.link, target="_blank")
+    //              .sponsor-badge.sponsor-badge-diamond(title="Diamond Sponsor")
+    //              img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
+    //        .home-sponsors-separator
+    //      if (sponsors.platinum)
+    //        each sponsor in sponsors.platinum
+    //          .home-sponsors-item.home-sponsor-platinum
+    //            a(href=sponsor.link, target="_blank")
+    //              .sponsor-badge.sponsor-badge-platinum(title="Platinum Sponsor")
+    //              img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
+    //        .home-sponsors-separator
+    //      if (sponsors.gold)
+    //        each sponsor in sponsors.gold
+    //          .home-sponsors-item.home-sponsor-gold
+    //            a(href=sponsor.link, target="_blank")
+    //              img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
+    //        .home-sponsors-separator
+    //      if (sponsors.silver)
+    //        each sponsor in sponsors.silver
+    //          .home-sponsors-item.home-sponsor-silver
+    //            a(href=sponsor.link, target="_blank")
+    //              img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
+    //        .home-sponsors-separator
+    //      if (sponsors.topSupporter)
+    //        each sponsor in sponsors.topSupporter
+    //          .home-sponsors-item
+    //            a(href=sponsor.link, target="_blank")
+    //              .sponsor-badge.sponsor-badge-topSupporter(title="Top Supporter")
+    //              img(src=sponsor.imageUrl.replace('#{cdn}', cdn), alt=sponsor.title, title=sponsor.title)
 
     include _footer
     include _footer-scripts

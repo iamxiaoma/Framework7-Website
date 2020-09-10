@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"><a class="link" href="#"><i class="icon icon-back"></i><span class="ios-only">Back</span></a></div>
+              <div class="title">Color Themes</div>
+            </div>
+          </div>
+          <div class="toolbar toolbar-bottom-md">
+            <div class="toolbar-inner"><a class="link" href="#">Left</a><a class="link" href="#">Right</a></div>
+          </div>
+          <div class="page-content">
+            <div class="block">Praesent varius justo odio. Duis in <a href="#">cursus</a> lorem. Suspendisse convallis porta ornare. Vivamus consectetur varius ligula convallis posuere. Proin quis neque eget nisi tempus <a href="#">faucibus</a> at volutpat leo. Suspendisse id erat aliquet, vulputate sem ac, iaculis metus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
+            <div class="block">
+              <p class="segmented"><a class="button button-active" href="#">Button 1</a><a class="button" href="#">Button 2</a><a class="button" href="#">Button 3</a></p>
+              <p><a class="button button-big button-fill" href="#">Fill Button</a></p>
+            </div>
+            <div class="block-title">Choose Color Theme</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="red"><i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Red</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="green"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Green</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="blue" checked><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Blue</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="pink"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Pink</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="yellow"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Yellow</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="orange"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Orange</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="gray"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Gray</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="white"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">White</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="color-radio" value="black"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Black</div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="block-title">Choose Layout Theme</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="layout-radio" value="" checked><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Default</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-content">
+                    <input type="radio" name="layout-radio" value="theme-dark"><i class="icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title">Dark</div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>
+      var app = new Framework7();
+      var $$ = Dom7;
+      $$('input[name="color-radio"]').on('change', function () {
+        if (this.checked) {
+          $$('.view').removeClass('color-theme-pink color-theme-blue color-theme-red color-theme-black color-theme-gray color-theme-orange color-theme-yellow color-theme-green color-theme-white');
+          $$('.view').addClass('color-theme-' + $$(this).val());
+        }
+      });
+      $$('input[name="layout-radio"]').on('change', function () {
+        if (this.checked) {
+          $$('.view').removeClass('theme-white theme-dark');
+          $$('.view').addClass(this.value);
+        }
+      });
+    </script>
+  </body>
+</html>

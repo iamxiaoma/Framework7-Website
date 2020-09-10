@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Form To Data</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <form class="list" id="my-form">
+              <ul>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Name</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="name" placeholder="Your name">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">E-mail</div>
+                      <div class="item-input-wrap">
+                        <input type="email" name="email" placeholder="E-mail">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Gender</div>
+                      <div class="item-input-wrap">
+                        <select name="gender">
+                          <option value="male" selected>Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Toggle</div>
+                      <div class="item-after">
+                        <label class="toggle toggle-init">
+                          <input type="checkbox" name="toggle" value="yes"><i class="toggle-icon"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </form>
+            <div class="block block-strong row">
+              <div class="col"><a class="button convert-form-to-data" href="#">Get Data</a></div>
+              <div class="col"><a class="button fill-form-from-data" href="#">Fill Form</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>
+      var app = new Framework7();
+      
+      var $$ = Dom7;
+      
+      $$('.convert-form-to-data').on('click', function(){
+        var formData = app.form.convertToData('#my-form');
+        alert(JSON.stringify(formData));
+      });
+      
+      $$('.fill-form-from-data').on('click', function(){
+        var formData = {
+          'name': 'John',
+          'email': 'john@doe.com',
+          'gender': 'female',
+          'toggle': ['yes'],
+        }
+        app.form.fillFromData('#my-form', formData);
+      });
+    </script>
+  </body>
+</html>

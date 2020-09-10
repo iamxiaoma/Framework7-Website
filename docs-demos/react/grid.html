@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        constructor() {
+          super();
+      
+          this.state = {
+      
+          };
+        }
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page className="grid-demo">
+                  <Navbar title="Grid / Layout"></Navbar>
+                  <Block>
+                    <p>Columns within a row are automatically set to have equal width. Otherwise you can define your column with pourcentage of screen you want.</p>
+                  </Block>
+                  <BlockTitle>Columns with gap</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>50% (.col)</Col>
+                      <Col>50% (.col)</Col>
+                    </Row>
+                    <Row>
+                      <Col>25% (.col)</Col>
+                      <Col>25% (.col)</Col>
+                      <Col>25% (.col)</Col>
+                      <Col>25% (.col)</Col>
+                    </Row>
+                    <Row>
+                      <Col>33% (.col)</Col>
+                      <Col>33% (.col)</Col>
+                      <Col>33% (.col)</Col>
+                    </Row>
+                    <Row>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                    </Row>
+                    <Row>
+                      <Col width="33">33% (.col-33)</Col>
+                      <Col width="66">66% (.col-66)</Col>
+                    </Row>
+                    <Row>
+                      <Col width="25">25% (.col-25)</Col>
+                      <Col width="25">25% (.col-25)</Col>
+                      <Col width="50">50% (.col-50)</Col>
+                    </Row>
+                    <Row>
+                      <Col width="75">75% (.col-75)</Col>
+                      <Col width="25">25% (.col-25)</Col>
+                    </Row>
+                    <Row>
+                      <Col width="80">80% (.col-80)</Col>
+                      <Col width="20">20% (.col-20)</Col>
+                    </Row>
+                  </Block>
+                  <BlockTitle>No gap between columns</BlockTitle>
+                  <Block>
+                    <Row noGap>
+                      <Col>50% (.col)</Col>
+                      <Col>50% (.col)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col>25% (.col)</Col>
+                      <Col>25% (.col)</Col>
+                      <Col>25% (.col)</Col>
+                      <Col>25% (.col)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col>33% (.col)</Col>
+                      <Col>33% (.col)</Col>
+                      <Col>33% (.col)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                      <Col>20% (.col)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col width="33">33% (.col-33)</Col>
+                      <Col width="66">66% (.col-66)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col width="25">25% (.col-25)</Col>
+                      <Col width="25">25% (.col-25)</Col>
+                      <Col width="50">50% (.col-50)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col width="75">75% (.col-75)</Col>
+                      <Col width="25">25% (.col-25)</Col>
+                    </Row>
+                    <Row noGap>
+                      <Col width="80">80% (.col-80)</Col>
+                      <Col width="20">20% (.col-20)</Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Nested</BlockTitle>
+                  <Block>
+                    <Row>
+                      <Col>50% (.col)
+                        <Row>
+                          <Col>50% (.col)</Col>
+                          <Col>50% (.col)</Col>
+                        </Row>
+                      </Col>
+                      <Col>50% (.col)
+                        <Row>
+                          <Col width="33">33% (.col-33)</Col>
+                          <Col width="66">66% (.col-66)</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Block>
+      
+                  <BlockTitle>Responsive Grid</BlockTitle>
+                  <Block>
+                    <p>Grid cells have different size on Phone/Tablet</p>
+                    <Row>
+                      <Col width="100" tabletWidth="50">.col-100.tablet-50</Col>
+                      <Col width="100" tabletWidth="50">.col-100.tablet-50</Col>
+                    </Row>
+                    <Row>
+                      <Col width="50" tabletWidth="25">.col-50.tablet-25</Col>
+                      <Col width="50" tabletWidth="25">.col-50.tablet-25</Col>
+                      <Col width="50" tabletWidth="25">.col-50.tablet-25</Col>
+                      <Col width="50" tabletWidth="25">.col-50.tablet-25</Col>
+                    </Row>
+                    <Row>
+                      <Col width="100" tabletWidth="40">.col-100.tablet-40</Col>
+                      <Col width="50" tabletWidth="60">.col-50.tablet-60</Col>
+                      <Col width="50" tabletWidth="66">.col-50.tablet-66</Col>
+                      <Col width="100" tabletWidth="33">.col-100.tablet-33</Col>
+                    </Row>
+                  </Block>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+    </script>
+    <style>
+      .grid-demo div[class*="col"] {
+        background: #fff;
+        text-align: center;
+        color: #000;
+        border: 1px solid #ddd;
+        padding: 5px;
+        margin-bottom: 15px;
+        font-size: 12px;
+      }
+    </style>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Navbar React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Swiper React Component
+      p Framework7 comes with powerful and most modern touch slider ever - Swiper Slider with super flexible configuration and lot, lot of features.
+      p Swiper React component represents Framework7's <a href="../docs/swiper.html">Swiper</a> component.
+      h2 Usage examples
+      h4 Minimal layout
+      pre
+        code
+          :code
+            <Swiper>
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+            </Swiper>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+              </div>
+            </div>
+      h4 With all controls
+      pre
+        code
+          :code
+            <Swiper pagination nextButton prevButton scrollbar>
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+            </Swiper>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-scrollbar"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+      h4 With additional parameters
+      p You can pass any additional <a href="http://idangero.us/swiper/api" target="_blank">Swiper API</a> parameters using <code>params</code> property:
+      pre
+        code
+          :code
+            <Swiper nextButton prevButton params={{speed:500, slidesPerView: 3, spaceBetween: 20}}>
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+            </Swiper>
+      h4 With manual initializatiin
+      p In all the examples above Swiper will be initialized automatically. If you don't need it and need to init it manually then pass <code>init: false</code> prop:
+      pre
+        code
+          :code
+            <Swiper init={false}>
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+            </Swiper>
+      h2 Properties
+      table.params-table
+        thead
+          tr
+            th Prop
+            th Type
+            th Default
+            th Description
+        tbody
+          tr
+            th(colspan="4") &lt;Swiper&gt; properties
+          tr
+            td init
+            td boolean
+            td true
+            td Initializes Swiper
+          tr
+            td params
+            td object
+            td
+            td Object with Swiper API parameters
+          tr
+            td pagination
+            td boolean
+            td
+            td Enables pagination
+          tr
+            td scrollbar
+            td boolean
+            td
+            td Enables scrollbar
+          tr
+            td next-button
+            td boolean
+            td
+            td Enables next navigation button
+          tr
+            td prev-button
+            td boolean
+            td
+            td Enables previous navigation button
+          tr
+            th(colspan="4") &lt;SwiperSlide&gt; properties
+          tr
+            td zoom
+            td boolean
+            td
+            td Adds additional slide inner wrapping required for zoom-in functionality (should be also enabled via params on Swiper initialization)
+      h2 Access To Initialized Instance
+      p If you use automatic initalization to init Swiper (with <code>init:true</code> prop) and need to use its <a href="../docs/swiper.html">Methods and Properties</a> you can access its initialized instance by accessing <code><b>.swiper</b></code> component's property.

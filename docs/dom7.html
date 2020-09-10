@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dom7 - Custom DOM Library | Framework7 v2 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="Dom7 - Custom DOM Library | Framework7 v2 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/dom7.pug" target="_blank">Improve this Doc</a></div>
+          <h1>Dom7 - Custom DOM Library</h1>
+          <div class="docs-index"></div>
+          <p>Framework7 doesn't use any third party library, even for DOM manipulation. It has its own custom DOM7 - DOM library that utilizes most edge and high-performance methods for DOM manipulation. You don’t need to learn something new, its usage is very simple because it has the same syntax as well known jQuery library with support of the most popular and widely used methods and jQuery-like chaining.</p>
+          <p>To start use it there is a <code>Dom7</code> global window function, but we recommend to assign it to some local variable with more handy name, like <code>$$</code>, but not to "$" to prevent confilicts with other libraries like jQuery or Zepto:</p>
+          <pre><code>//Export DOM7 to local variable to make it easy accessable
+var $$ = Dom7;</code></pre>
+          <h2>Usage Example</h2>
+          <p>Just everything you already know:</p>
+          <pre><code>$$('.something').on('click', function (e) {
+    $$(this).addClass('hello').attr('title', 'world').insertAfter('.something-else');
+});</code></pre>
+          <h2>Available Methods</h2>
+          <p>All these methods works almost in the same way and with the same arguments as in jQuery or Zepto:</p>
+          <table class="methods-table dom7-table">
+            <tbody>
+              <tr>
+                <th colspan="2">Classes</th>
+              </tr>
+              <tr>
+                <td>.addClass(<span>className</span>)</td>
+                <td>Add class to elements
+                  <pre><code class="js">//Add "intro" class to all paragraphs
+$$('p').addClass('intro');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.removeClass(<span>className</span>)</td>
+                <td>Remove specified class
+                  <pre><code class="js">//Add "big" class from all links with "big" class
+$$('a.big').removeClass('big');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.hasClass(<span>className</span>)</td>
+                <td>Determine whether any of the matched elements are assigned the given class:
+                  <pre><code class="html">&lt;p class="intro"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+                  <pre><code class="js">$$('p').hasClass('intro'); //-> true</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.toggleClass(<span>className</span>)</td>
+                <td>Remove (if class is present) or add (if not) one or more classes from each element in the set of matched elements:
+                  <pre><code class="html">&lt;!-- Before --&gt;
+&lt;h1 class="small"&gt;This is first title&lt;/h1&gt;
+&lt;h2&gt;This is subtitle&lt;/h2&gt;</code></pre>
+                  <pre><code class="js">$$('h1, h2').toggleClass('small');</code></pre>
+                  <pre><code>&lt;!-- After --&gt;
+&lt;h1&gt;This is first title&lt;/h1&gt;
+&lt;h2 class="small"&gt;This is subtitle&lt;/h2&gt;</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Attributes and properties</th>
+              </tr>
+              <tr>
+                <td>.prop(<span>propName</span>)</td>
+                <td>Get property value:
+                  <pre><code>var isChecked = $$('input').prop('checked');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.prop(<span>propName</span>, <span>propValue</span>)</td>
+                <td>Set single property value:
+                  <pre><code>//Make all checkboxes checked
+$$('input[type="checkbox"]').prop('checked', true);</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.prop(<span>propertiesObject</span>)</td>
+                <td>Set multiple properties:
+                  <pre><code class="js">$$('input').prop({
+  checked: false,
+  disabled: true
+})</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.attr(<span>attrName</span>)</td>
+                <td>Get attribute value:
+                  <pre><code>&lt;a href="http://google.com"&gt;Google&lt;/a&gt;</code></pre>
+                  <pre><code class="js">var link = $$('a').attr('href'); //-&gt; http://google.com</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.attr(<span>attrName</span>, <span>attrValue</span>)</td>
+                <td>Set single attribute value:
+                  <pre><code>//Set all links to google
+$$('a').attr('href', 'http://google.com');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.attr(<span>attributesObject</span>)</td>
+                <td>Set multiple attributes:
+                  <pre><code class="js">$$('a').attr({
+  id: 'new-id',
+  title: 'Link to Google',
+  href: 'http://google.com'
+})</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.removeAttr(<span>attrName</span>)</td>
+                <td>Remove specified attribute:
+                  <pre><code class="js">//Remove "src" attribute from all images
+$$('img').removeAttr('src');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.val()</td>
+                <td>Get the current value of the first element in the set of matched elements
+                  <pre><code class="html">&lt;input id="myInput" type="text" value="Lorem ipsum"/&gt;</code></pre>
+                  <pre><code class="js">var inputVal = $$('#myInput').val(); //-> 'Lorem ipsum'</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.val(<span>newValue</span>)</td>
+                <td>Set the value of every matched element
+                  <pre><code>$$('input#myInput').val('New value here');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Data storage</th>
+              </tr>
+              <tr>
+                <td>.data(<span>key</span>, <span>value</span>)</td>
+                <td>Store arbitrary data associated with the matched elements
+                  <pre><code class="js">$$('a').data('user', {
+    id: '123',
+    name: 'John',
+    email: 'john@doe.com'
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.data(<span>key</span>)</td>
+                <td>Return the value at the named data store for the first element in the collection, as set by data(key, value) or by an HTML5 data-* attribute
+                  <pre><code class="js">var user = $$('a').data('user');
+//-> {id: '123', name: 'John', email: 'john@doe.com'}</code></pre>
+                  <p>or</p>
+                  <pre><code class="html">&lt;p data-id="123"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+                  <pre><code class="js">var id = $$('p').data('id'); //-> 123</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.removeData(<span>key</span>)</td>
+                <td>Remove specified data
+                  <pre><code class="js">$$('a').removeData('user')</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Data Set</th>
+              </tr>
+              <tr>
+                <td>.dataset()</td>
+                <td>Returns element's data set (set of data- attributes) as plain Object
+                  <pre><code>&lt;div id="my-div" data-loop="true" data-animate-pages="false" data-index="0" data-hello="world"&gt;
+    ...
+&lt;/div&gt;</code></pre>
+                  <pre><code class="js">var dataset = $$('#my-div').dataset();
+/*
+dataset will contain plain object with camelCase keys and with formatted boolean and number types:
+{
+    loop: true,
+    animatePages: false,
+    index: 0,
+    hello: 'world'
+}
+*/</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">CSS transform, transitions</th>
+              </tr>
+              <tr>
+                <td>.transform(<span>CSSTransformString</span>)</td>
+                <td>Adds prefixed CSS transform property:
+                  <pre><code class="js">$$('a').transform('rotate(90deg)')</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.transition(<span>transitionDuration</span>)</td>
+                <td>Set CSS transition-duration property to collection:
+                  <pre><code class="js">$$('p').transition(300)</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Events</th>
+              </tr>
+              <tr>
+                <td>.on(<span>eventName</span>, <span>handler</span>, <span>useCapture</span>)</td>
+                <td>Add event handler function to one or more events to the selected elements.
+                  <pre><code class="js">$$('a').on('click', function (e) {
+  console.log('clicked');
+});</code></pre>
+                  <pre><code class="js">$$('input[type="text"]').on('keyup keydown change', function (e) {
+  console.log('input value changed');
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.on(<span>eventName</span>, <span>delegatedTarget</span>, <span>handler</span>, <span>useCapture</span>)</td>
+                <td>Live/delegated event handler
+                  <pre><code class="js">$$(document).on('click', 'a', function (e) {
+  console.log('link clicked');
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.once(<span>eventName</span>, <span>handler</span>, <span>useCapture</span>)</td>
+                <td>Add event handler function to one or more events to the selected elements that will be executed only once
+                  <pre><code class="js">$$('a').once('click', function (e) {
+  console.log('clicked');
+});</code></pre>
+                  <pre><code class="js">$$('input[type="text"]').once('keyup keydown change', function (e) {
+  console.log('input value changed');
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.once(<span>eventName</span>, <span>delegatedTarget</span>, <span>handler</span>, <span>useCapture</span>)</td>
+                <td>Live/delegated event handler that will be executed only once
+                  <pre><code class="js">$$(document).once('click', 'a', function (e) {
+  console.log('link clicked');
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.off(<span>eventName</span>, <span>handler</span>, <span>useCapture</span>)</td>
+                <td>Remove event handler
+                  <pre><code class="js">function clickHandler(){
+    console.log('clicked');
+}
+// Add event listener
+$$('a').on('click', clickHandler);
+// Remove event listener
+$$('a').off('click', clickHandler);</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.off(<span>eventName</span>, <span>delegatedTarget</span>, <span>handler</span>, <span>useCapture</span>)</td>
+                <td>Remove live/delegated event handler
+                  <pre><code class="js">function clickHandler(){
+    console.log('clicked');
+}
+// Add event listener
+$$(document).on('click', 'a', clickHandler);
+// Remove event listener
+$$(document).off('click', 'a', clickHandler);</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.trigger(<span>eventName</span>, <span>eventData</span>)</td>
+                <td>Execute all handlers added to the matched elements for the specified event</td>
+                <pre><code class="js">$$(window).trigger('resize');</code></pre>
+              </tr>
+              <tr>
+                <td>.transitionEnd(<span>callback</span>, <span>permanent</span>)</td>
+                <td>Adds prefixed transitionEnd event handler to collection:
+                  <pre><code class="js">$$('a').transitionEnd(function(){ /* do something */ })</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.animationEnd(<span>callback</span>)</td>
+                <td>Adds prefixed animationEnd event handler to collection:
+                  <pre><code class="js">$$('a').animationEnd(function(){ /* do something */ })</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Styles</th>
+              </tr>
+              <tr>
+                <td>.width()</td>
+                <td>Get the current computed width for the first element in the set of matched elements
+                  <pre><code class="js">var boxWidth = $$('div#box').width();</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.outerWidth(<span>[includeMargin]</span>)</td>
+                <td>Get the current computed width for the first element in the set of matched elements, including padding and border, and margin (if includeMargin is <b>true</b>)
+                  <pre><code class="js">var outerWidth = $$('div#box').outerWidth(true);</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.height()</td>
+                <td>Get the current computed height for the first element in the set of matched elements
+                  <pre><code class="js">var boxHeight = $$('div#box').height();</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.outerHeight(<span>[includeMargin]</span>)</td>
+                <td>Get the current computed height for the first element in the set of matched elements, including padding and border, and margin (if includeMargin is <b>true</b>)
+                  <pre><code class="js">var outerHeight = $$('div#box').outerHeight(true);</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.offset()</td>
+                <td>Get the current coordinates of the first element relative to the document
+                  <pre><code class="js">var coords = $$('.content').offset(); //-> {top: 100, left: 200}
+var top = coords.top; //-> 100
+var left = coords.left; //-> 200</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.hide()</td>
+                <td>Set "display:none" to the matched elements
+                  <pre><code class="js">//hide all paragraphs
+$$('p').hide();</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.show()</td>
+                <td>Set "display:block" to the matched elements
+                  <pre><code class="js">//show all paragraphs
+$$('p').show();</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.css(<span>property</span>)</td>
+                <td>Get value of specified CSS property for the first element:
+                  <pre><code class="js">$$('.content').css('left'); //-> 200px</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.css(<span>property</span>, <span>value</span>)</td>
+                <td>Set specified CSS property to the matched elements:
+                  <pre><code class="js">$$('.content').css('left', '100px');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.css(<span>propertiesObject</span>)</td>
+                <td>Set multiple CSS properties to the matched elements:
+                  <pre><code class="js">$$('a').css({
+    left: '100px',
+    top: '200px',
+    color: 'red',
+    width: '300px',
+    marginLeft: '17px',
+    'padding-right': '20px'
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Scroll</th>
+              </tr>
+              <tr>
+                <td>.scrollTop()</td>
+                <td>Get scrollTop position of element</td>
+              </tr>
+              <tr>
+                <td>.scrollTop(<span>position</span>, <span>duration</span>, <span>callback</span>)</td>
+                <td>Set scrollTop "position" with animation during "duration" (in ms). Scroll top position will be set immediately if duration is not specified. If you have specified "callback" function, then it will be executed after scrolling completed</td>
+              </tr>
+              <tr>
+                <td>.scrollLeft()</td>
+                <td>Get scrollLeft position of element</td>
+              </tr>
+              <tr>
+                <td>.scrollLeft(<span>position</span>, <span>duration</span>, <span>callback</span>)</td>
+                <td>Set scrollLeft "position" with animation during "duration" (in ms). Scroll left postion will be set immediately if duration is not specified. If you have specified "callback" function, then it will be executed after scrolling completed</td>
+              </tr>
+              <tr>
+                <td>.scrollTo(<span>left</span>, <span>top</span>, <span>duration</span>, <span>callback</span>)</td>
+                <td>Set scroll left and scroll top with animation during "duration" (in ms). Scroll postion will be set immediately if duration is not specified. If you have specified "callback" function, then it will be executed after scrolling completed</td>
+              </tr>
+              <tr>
+                <th colspan="2">Dom Manipulation</th>
+              </tr>
+              <tr>
+                <td>.add(elements)</td>
+                <td>Create a new Dom7 collection with elements added to the set of matched elements:
+                  <pre><code class="js">var links = $$('a');
+var divs = $$('div');
+links.add('p').addClass('blue');
+links.add(divs).addClass('red');</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.each(<span>callback</span>)</td>
+                <td>Iterate over collection, executing a callback function for each matched element</td>
+              </tr>
+              <tr>
+                <td>.html()</td>
+                <td>Get the HTML contents of the first element in the set of matched elements</td>
+              </tr>
+              <tr>
+                <td>.html(<span>newInnerHTML</span>)</td>
+                <td>Set the HTML contents of every matched element</td>
+              </tr>
+              <tr>
+                <td>.text()</td>
+                <td>Get the text contents of the first element in the set of matched elements</td>
+              </tr>
+              <tr>
+                <td>.text(<span>newTextContent</span>)</td>
+                <td>Set the text contents of every matched element</td>
+              </tr>
+              <tr>
+                <td>.is(<span>CSSSelector</span>)</td>
+                <td>Check the current matched set of elements against CSS selector</td>
+              </tr>
+              <tr>
+                <td>.is(<span>HTMLElement</span>)</td>
+                <td>Check the current matched set of elements against HTML element or Dom7 collection</td>
+              </tr>
+              <tr>
+                <td>.index()</td>
+                <td>Return the position of the first element within the Dom7 collection relative to its sibling elements</td>
+              </tr>
+              <tr>
+                <td>.eq(<span>index</span>)</td>
+                <td>Reduce the set of matched elements to the one at the specified index</td>
+              </tr>
+              <tr>
+                <td>.append(<span>HTMLString</span>)</td>
+                <td>Insert content, specified by the parameter, to the end of each element in the set of matched elements</td>
+              </tr>
+              <tr>
+                <td>.append(<span>HTMLElement</span>)</td>
+                <td>Insert specified HTML element to the end of element in the set of matched elements</td>
+              </tr>
+              <tr>
+                <td>.appendTo(<span>HTMLElement</span>)</td>
+                <td>Insert content/elements, to the end of element specified in parameter</td>
+              </tr>
+              <tr>
+                <td>.prepend(<span>newHTML</span>)</td>
+                <td>Insert content, specified by the parameter, to the beginning of each element in the set of matched elements</td>
+              </tr>
+              <tr>
+                <td>.prepend(<span>HTMLElement</span>)</td>
+                <td>Insert specified HTML element to the beginning of element in the set of matched elements</td>
+              </tr>
+              <tr>
+                <td>.prependTo(<span>HTMLElement</span>)</td>
+                <td>Insert content/elements, to the beginning of element specified in parameter</td>
+              </tr>
+              <tr>
+                <td>.insertBefore(<span>target</span>)</td>
+                <td>Insert every element in the set of matched elements before the target. Target could be specified as CSS selector or HTML element or Dom7 collection</td>
+              </tr>
+              <tr>
+                <td>.insertAfter(<span>target</span>)</td>
+                <td>Insert every element in the set of matched elements after the target. Target could be specified as CSS selector or HTML element or Dom7 collection</td>
+              </tr>
+              <tr>
+                <td>.next(<span>[selector]</span>)</td>
+                <td>Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector</td>
+              </tr>
+              <tr>
+                <td>.nextAll(<span>[selector]</span>)</td>
+                <td>Get all following siblings of each element in the set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.prev(<span>[selector]</span>)</td>
+                <td>Get the immediately preceding sibling of each element in the set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.prevAll(<span>[selector]</span>)</td>
+                <td>Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.siblings(<span>[selector]</span>)</td>
+                <td>Get the siblings of each element in the set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.parent(<span>[selector]</span>)</td>
+                <td>Get the first parent of each element in the current set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.parents(<span>[selector]</span>)</td>
+                <td>Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.closest(<span>[selector]</span>)</td>
+                <td>For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree</td>
+              </tr>
+              <tr>
+                <td>.find(<span>selector</span>)</td>
+                <td>Get the descendants of each element in the current set of matched elements, filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.children(<span>selector</span>)</td>
+                <td>Get the children of each element in the set of matched elements, optionally filtered by a selector</td>
+              </tr>
+              <tr>
+                <td>.filter(<span>callback</span>)</td>
+                <td>Filter collection of elements
+                  <pre><code class="js">var redLinks = $$('a').filter(function(index, el) {
+    return $$(this).hasClass('red');
+})</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>.remove()</td>
+                <td>Remove/detach matched elements from the Dom</td>
+              </tr>
+              <tr>
+                <td>.empty()</td>
+                <td>Remove all child nodes of the set of matched elements from the DOM. Alias for <code>.html('')</code></td>
+              </tr>
+              <tr>
+                <th colspan="2">Shortcuts</th>
+              </tr>
+              <tr>
+                <td>.click()</td>
+                <td>Trigger "click" event on collection</td>
+              </tr>
+              <tr>
+                <td>.click(<span>handler</span>)</td>
+                <td>Add "click" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.blur()</td>
+                <td>Trigger "blur" event on collection</td>
+              </tr>
+              <tr>
+                <td>.blur(<span>handler</span>)</td>
+                <td>Add "blur" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.focus()</td>
+                <td>Trigger "focus" event on collection</td>
+              </tr>
+              <tr>
+                <td>.focus(<span>handler</span>)</td>
+                <td>Add "focus" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.focusin()</td>
+                <td>Trigger "focusin" event on collection</td>
+              </tr>
+              <tr>
+                <td>.focusin(<span>handler</span>)</td>
+                <td>Add "focusin" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.focusout()</td>
+                <td>Trigger "focusout" event on collection</td>
+              </tr>
+              <tr>
+                <td>.focusout(<span>handler</span>)</td>
+                <td>Add "focusout" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.keyup()</td>
+                <td>Trigger "keyup" event on collection</td>
+              </tr>
+              <tr>
+                <td>.keyup(<span>handler</span>)</td>
+                <td>Add "keyup" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.keydown()</td>
+                <td>Trigger "keydown" event on collection</td>
+              </tr>
+              <tr>
+                <td>.keydown(<span>handler</span>)</td>
+                <td>Add "keydown" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.keypress()</td>
+                <td>Trigger "keypress" event on collection</td>
+              </tr>
+              <tr>
+                <td>.keypress(<span>handler</span>)</td>
+                <td>Add "keypress" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.submit()</td>
+                <td>Trigger "submit" event on collection</td>
+              </tr>
+              <tr>
+                <td>.submit(<span>handler</span>)</td>
+                <td>Add "submit" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.change()</td>
+                <td>Trigger "change" event on collection</td>
+              </tr>
+              <tr>
+                <td>.change(<span>handler</span>)</td>
+                <td>Add "change" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mousedown()</td>
+                <td>Trigger "mousedown" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mousedown(<span>handler</span>)</td>
+                <td>Add "mousedown" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mousemove()</td>
+                <td>Trigger "mousemove" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mousemove(<span>handler</span>)</td>
+                <td>Add "mousemove" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mouseup()</td>
+                <td>Trigger "mouseup" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mouseup(<span>handler</span>)</td>
+                <td>Add "mouseup" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mouseenter()</td>
+                <td>Trigger "mouseenter" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mouseenter(<span>handler</span>)</td>
+                <td>Add "mouseenter" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mouseleave()</td>
+                <td>Trigger "mouseleave" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mouseleave(<span>handler</span>)</td>
+                <td>Add "mouseleave" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mouseout()</td>
+                <td>Trigger "mouseout" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mouseout(<span>handler</span>)</td>
+                <td>Add "mouseout" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.mouseover()</td>
+                <td>Trigger "mouseover" event on collection</td>
+              </tr>
+              <tr>
+                <td>.mouseover(<span>handler</span>)</td>
+                <td>Add "mouseover" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.touchstart()</td>
+                <td>Trigger "touchstart" event on collection</td>
+              </tr>
+              <tr>
+                <td>.touchstart(<span>handler</span>)</td>
+                <td>Add "touchstart" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.touchend()</td>
+                <td>Trigger "touchend" event on collection</td>
+              </tr>
+              <tr>
+                <td>.touchend(<span>handler</span>)</td>
+                <td>Add "touchend" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.touchmove()</td>
+                <td>Trigger "touchmove" event on collection</td>
+              </tr>
+              <tr>
+                <td>.touchmove(<span>handler</span>)</td>
+                <td>Add "touchmove" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.resize(<span>handler</span>)</td>
+                <td>Add "resize" event handler to collection</td>
+              </tr>
+              <tr>
+                <td>.scroll(<span>handler</span>)</td>
+                <td>Add "scroll" event handler to collection</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Animation</h2>
+          <div class="method-wrap">
+            <p><span class="method">.animate(<span>properties</span>, <span>parameters</span>)</span><span>- Perform a custom animation of a set of CSS properties</span></p>
+            <ul class="method-parameters">
+              <li><span class="parameter">properties</span> - <span class="parameter-type">object</span> - CSS properties to animate</li>
+              <li><span class="parameter">parameters</span> - <span class="parameter-type">object</span> - animation parameters</li>
+            </ul>
+            <p class="method-returns">returns Dom7 collection</p>
+          </div>
+          <pre><code class="js">$$('#animate-me').animate(
+    /* CSS properties to animate, e.g.: */
+    {
+        'margin-left': 100,
+        'width': 200,
+        'height': 300,
+        'opacity': 0.5
+    },
+    /* Animation parameters */
+    {
+        // Animation duraion in ms, optional (default to 300)
+        duration: 300,
+        // Animation easing, optional (default to 'swing'), can be also 'linear'
+        easing: 'swing',
+        /* Callbacks */
+        // Animation begins, optional
+        begin: function (elements) {
+            console.log('animation began');
+        },
+        // Animation completed, optional
+        complete: function (elements) {
+            console.log('animation completed');
+        },
+        // Animation in progress, optional
+        progress: function (elements, complete, remaining, start) {
+            /* Where
+            complete - The call's completion percentage (as a decimal value)
+            remaining - How much time remains until the call completes (in ms)
+            start - The absolute time at which the call began (in ms)
+            */
+            console.log('animation in progress');
+        }
+    }
+);</code></pre>
+          <p>It also supports chaining que:</p>
+          <pre><code class="js">$$('#animate-me')
+    .animate(
+        {
+            'margin-left': 100,
+            'width': 200,
+            'height': 300,
+            'opacity': 0.5
+        }
+    )
+    .animate(
+        {
+            'width': 50,
+            'height': 50
+        }
+    );</code></pre>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

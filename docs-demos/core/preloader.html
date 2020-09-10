@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Preloader</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content"><div class="block-title">Default</div>
+<div class="block block-strong align-items-stretch text-align-center">
+<div class="row text-align-center">
+<div class="col-25">
+<div class="preloader"></div>
+</div>
+<div class="col-25" style="background: #222">
+<div class="preloader color-white"></div>
+</div>
+<div class="col-25">
+<div class="preloader" style="width: 44px; height: 44px"></div>
+</div>
+<div class="col-25" style="background: #222">
+<div class="preloader color-white" style="width: 44px; height: 44px"></div>
+</div>
+</div>
+</div>
+<div class="block-title">Color Preloaders</div>
+<div class="block block-strong">
+<div class="row">
+<div class="col-25">
+<div class="preloader color-red"></div>
+</div>
+<div class="col-25">
+<div class="preloader color-green"></div>
+</div>
+<div class="col-25">
+<div class="preloader color-orange"></div>
+</div>
+<div class="col-25">
+<div class="preloader color-blue"></div>
+</div>
+</div>
+</div>
+<div class="block-title">Multi-color (MD-theme only)</div>
+<div class="block block-strong text-align-center">
+<div class="preloader color-multi"></div>
+</div>
+<div class="block-title">Preloader Modals</div>
+<div class="block block-strong">
+<p>With <b>app.preloader.show()</b> you can show small overlay with preloader indicator.</p>
+<p>
+<a class="button button-raised open-preloader-indicator">Open Small Indicator</a>
+</p>
+</div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .col-25 {
+          padding:5px;
+          text-align:center;
+        }
+      </style>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <script>
+      var app = new Framework7();
+      
+      var $$ = Dom7;
+      
+      $$('.open-preloader-indicator').on('click', function () {
+        app.preloader.show();
+        setTimeout(function () {
+          app.preloader.hide();
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Accordion React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Accordion React
+      p Accordion React component represents Framework7's <a href="../docs/accordion.html">Accordion</a> component.
+      h2 Usage examples
+      h4 Accordion
+      pre
+        code
+          :code
+            <Accordion>
+              <!-- Item 1 -->
+              <AccordionItem>
+                <AccordionToggle>Item 1</AccordionToggle>
+                <AccordionContent>
+                  Item 1 content...
+                </AccordionContent>
+              </AccordionItem>
+              <!-- Item 2 -->
+              <AccordionItem>
+                <AccordionToggle>Item 2</AccordionToggle>
+                <AccordionContent>
+                  Item 2 content...
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="accordion-list">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <div class="accordion-item-toggle">Item 1</div>
+                <div class="accordion-item-content">
+                  Item 1 content...
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <div class="accordion-item-toggle">Item 2</div>
+                <div class="accordion-item-content">
+                  Item 2 content...
+                </div>
+              </div>
+            </div>
+      h4 Separate Collapsible
+      p If you want to use single separate collapsible element you may just omit "Accordion" wrapper element:
+      pre
+        code
+          :code
+            <!-- Single collapsible element -->
+            <AccordionItem>
+              <AccordionToggle>Item 1</AccordionToggle>
+              <AccordionContent>
+                Item 1 content...
+              </AccordionContent>
+            </AccordionItem>
+
+            <!-- Another separate collapsible element -->
+            <AccordionItem>
+              <AccordionToggle>Item 2</AccordionToggle>
+              <AccordionContent>
+                Item 2 content...
+              </AccordionContent>
+            </AccordionItem>
+      p Renders to:
+      pre
+        code
+          :code
+            <!-- Single collapsible element -->
+            <div class="accordion-item">
+              <div class="accordion-item-toggle">Item 1</div>
+              <div class="accordion-item-content">
+                Item 1 content...
+              </div>
+            </div>
+
+            <!-- Another separate collapsible element -->
+            <div class="accordion-item">
+              <div class="accordion-item-toggle">Item 2</div>
+              <div class="accordion-item-content">
+                Item 2 content...
+              </div>
+            </div>
+      h2 Accordion Item Events
+      table.events-table
+        thead
+          tr
+            th Event
+            th Description
+        tbody
+          tr
+            td accordion:open
+            td Event will be triggered when accordion content starts its opening animation.
+          tr
+            td accordion:opened
+            td Event will be triggered after accordion content completes its opening animation.
+          tr
+            td accordion:close
+            td Event will be triggered when accordion content starts its closing animation.
+          tr
+            td accordion:closed
+            td Event will be triggered after accordion content completes its closing animation.

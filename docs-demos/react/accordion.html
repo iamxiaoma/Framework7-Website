@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="../../packages/react/framework7-react.min.js"></script>
+    <script src="../../packages/core/js/framework7.min.js"></script>
+    <script type="text/babel">
+      class AppComponent extends React.Component {
+        render() {
+          return (
+            <App>
+              <View main>
+                <Page>
+                  <Navbar title="Accordion" />
+                  <BlockTitle>List View Accordion</BlockTitle>
+                  <List accordionList>
+                    <ListItem accordionItem title="Lorem Ipsum">
+                      <AccordionContent>
+                        <Block>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+                          </p>
+                        </Block>
+                      </AccordionContent>
+                    </ListItem>
+                    <ListItem accordionItem title="Nested List">
+                      <AccordionContent>
+                        <List>
+                          <ListItem title="Item 1"></ListItem>
+                          <ListItem title="Item 2"></ListItem>
+                          <ListItem title="Item 3"></ListItem>
+                          <ListItem title="Item 4"></ListItem>
+                        </List>
+                      </AccordionContent>
+                    </ListItem>
+                    <ListItem accordionItem title="Integer semper">
+                      <AccordionContent>
+                        <Block>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+                          </p>
+                        </Block>
+                      </AccordionContent>
+                    </ListItem>
+                  </List>
+      
+                  <BlockTitle>Inset Accordion</BlockTitle>
+                  <List accordionList inset>
+                    <ListItem accordionItem title="Lorem Ipsum">
+                      <AccordionContent>
+                        <Block>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+                          </p>
+                        </Block>
+                      </AccordionContent>
+                    </ListItem>
+                    <ListItem accordionItem title="Nested List">
+                      <AccordionContent>
+                        <List>
+                          <ListItem title="Item 1"></ListItem>
+                          <ListItem title="Item 2"></ListItem>
+                          <ListItem title="Item 3"></ListItem>
+                          <ListItem title="Item 4"></ListItem>
+                        </List>
+                      </AccordionContent>
+                    </ListItem>
+                    <ListItem accordionItem title="Integer semper">
+                      <AccordionContent>
+                        <Block>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+                          </p>
+                        </Block>
+                      </AccordionContent>
+                    </ListItem>
+                  </List>
+      
+                  <BlockTitle>Custom Collapsible</BlockTitle>
+                  <Block inner accordionList>
+                    {Array.from(Array(3).keys()).map(n => (
+                      <AccordionItem key={n}>
+                        <AccordionToggle><b>Item {n + 1}</b></AccordionToggle>
+                        <AccordionContent>Content {n + 1}</AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Block>
+                </Page>
+              </View>
+            </App>
+          )
+        }
+      }
+    </script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      
+      if (Framework7.use) Framework7.use(Framework7React, { theme: theme });
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(Framework7React, { theme: theme });
+      
+      var plugin = {
+        params: {
+          theme: theme,
+        }
+      };
+      
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+      window.onload = function () {
+        if (typeof AppComponent !== 'undefined') {
+          ReactDOM.render(
+            React.createElement(AppComponent),
+            document.getElementById('app')
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+extends ../src/jade/_internal-template
+
+block vars
+  - var activeLink = 'react';
+  - var title = 'Swipeout List React Component | Framework7 React Documentation';
+
+block content
+  .docs-wrap
+    .docs-nav
+      include ./_docs-react-menu
+    .docs-content
+      h1 Swipeout List React Component
+      p Swipeout List is not a separate component, but just a particular case of using <a href="list.html">&lt;List&gt;</a>, <a href="list-item.html">&lt;ListItem&gt;</a> React components and special Framework7's <a href="../docs/swipeout.html">Swipeout</a> component.
+      h2 Usage example
+      h4 Swipe To Delete
+      pre
+        code
+          :code
+            <List>
+              <ListItem swipeout title="Item 1" onSwipeoutDeleted={onSwipeoutDeleted}>
+                <ListItemSwipeoutActions>
+                  <ListItemSwipeoutButton delete>Delete</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+              <ListItem swipeout title="Item 2" onSwipeoutDeleted={onSwipeoutDeleted}>
+                <ListItemSwipeoutActions>
+                  <ListItemSwipeoutButton delete>Delete</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+            </List>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="list-block">
+              <ul>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 1</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-delete">Delete</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 2</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-delete">Delete</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      h4 With Additional Actions
+      pre
+        code
+          :code
+            <List>
+              <ListItem swipeout title="Item 1" onSwipeoutDeleted={onSwipeoutDeleted}>
+                <ListItemSwipeoutActions>
+                  <ListItemSwipeoutButton close color="blue">Reply</ListItemSwipeoutButton>
+                  <ListItemSwipeoutButton delete>Delete</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+              <ListItem swipeout title="Item 2" onSwipeoutDeleted={onSwipeoutDeleted}>
+                <ListItemSwipeoutActions>
+                  <ListItemSwipeoutButton close color="blue">Reply</ListItemSwipeoutButton>
+                  <ListItemSwipeoutButton delete>Delete</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+            </List>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="list-block">
+              <ul>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 1</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-close color-blue">Reply</a>
+                    <a href="#" class="swipeout-delete">Delete</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 2</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-close color-blue">Reply</a>
+                    <a href="#" class="swipeout-delete">Delete</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      h4 With Actions On Left
+      pre
+        code
+          :code
+            <List>
+              <ListItem swipeout title="Item 1">
+                <ListItemSwipeoutActions left>
+                  <ListItemSwipeoutButton close color="orange">Mark</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+              <ListItem swipeout title="Item 2">
+                <ListItemSwipeoutActions left>
+                  <ListItemSwipeoutButton close color="orange">Mark</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+            </List>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="list-block">
+              <ul>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 1</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-left">
+                    <a href="#" class="swipeout-close color-orange">Mark</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 2</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-close color-orange">Mark</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      h4 With Actions On Both Sides
+      pre
+        code
+          :code
+            <List>
+              <ListItem swipeout title="Item 1">
+                <ListItemSwipeoutActions left>
+                  <ListItemSwipeoutButton close color="orange">Mark</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+                <ListItemSwipeoutActions right>
+                  <ListItemSwipeoutButton delete>Delete</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+              <ListItem swipeout title="Item 2">
+                <ListItemSwipeoutActions left>
+                  <ListItemSwipeoutButton close color="orange">Mark</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+                <ListItemSwipeoutActions right>
+                  <ListItemSwipeoutButton delete>Delete</ListItemSwipeoutButton>
+                </ListItemSwipeoutActions>
+              </ListItem>
+            </List>
+      p Renders to:
+      pre
+        code
+          :code
+            <div class="list-block">
+              <ul>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 1</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-left">
+                    <a href="#" class="swipeout-close color-orange">Mark</a>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-delete">Delete</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Item 2</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-close color-orange">Mark</a>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="swipeout-delete">Delete</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      h2 Properties
+      table.params-table
+        thead
+          tr
+            th Prop
+            th Type
+            th Default
+            th Description
+        tbody
+          tr
+            th(colspan="4") &lt;ListItemSwipeoutActions&gt; Properties
+          tr
+            td side
+            td string
+            td "right"
+            td Swipeout actions side
+          tr
+            td right
+            td boolean
+            td
+            td Shortcut for <b>side: "right"</b> prop
+          tr
+            td left
+            td boolean
+            td
+            td Shortcut for <b>side: "right"</b> prop
+          tr
+            th(colspan="4") &lt;ListItemSwipeoutButton&gt; Properties
+          tr
+            td delete
+            td boolean
+            td
+            td Will automatically delete swipeout list item on click
+          tr
+            td close
+            td boolean
+            td
+            td Will automatically close swipeout list item on click
+          tr
+            td overswipe
+            td boolean
+            td
+            td Will be triggered click automatically if you swipe actions too much. <a href="../docs/swipeout.html#overswipe">Overswipe</a>
+          tr
+            td color
+            td string
+            td
+            td Button color. One of <a href="../docs/color-themes.html">default colors</a>
+      h2 Event Properties
+      p The following events are avialiable on <b>&lt;ListItem&gt;</b> component whith enable <b>swipeout</b>:
+      table.events-table
+        thead
+          tr
+            th Event
+            th Description
+        tbody
+          tr
+            td swipeout
+            td Event will be triggered while you move swipeout element. <b>event.detail.progress</b> contains current opened progress percentage
+          tr
+            td swipeout:open
+            td Event will be triggered when swipeout element starts its opening animation
+          tr
+            td swipeout:opened
+            td Event will be triggered after swipeout element completes its opening animation
+          tr
+            td swipeout:close
+            td Event will be triggered when swipeout element starts its closing animation
+          tr
+            td swipeout:closed
+            td Event will be triggered after swipeout element completes its closing animation 
+          tr
+            td swipeout:delete
+            td Event will be triggered after swipeout element starts its delete animation 
+          tr
+            td swipeout:deleted
+            td Event will be triggered after swipeout element completes its delete animation right before it will be removed from DOM

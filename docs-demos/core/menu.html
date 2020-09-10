@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><title>My App</title><link rel="stylesheet" href="../../packages/core/css/framework7.bundle.min.css"><link rel="stylesheet" href="../../css/framework7-icons.css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></head><body><div id="app"><div class="view view-main view-init"><div class="page"><div class="navbar"><div class="navbar-inner"><div class="title">Menu</div></div></div><div class="page-content"><div class="block-title">Plain Links</div><div class="menu">
+<div class="menu-inner">
+<a href="#" class="menu-item">
+<div class="menu-item-content">Item 1</div>
+</a>
+<a href="#" class="menu-item">
+<div class="menu-item-content">Item 2</div>
+</a>
+<a href="#" class="menu-item icon-only">
+<div class="menu-item-content">
+<i class="f7-icons">edit</i>
+</div>
+</a>
+<a href="#" class="menu-item icon-only">
+<div class="menu-item-content">
+<i class="f7-icons">share</i>
+</div>
+</a>
+</div>
+</div><div class="block-title">Dropdowns</div><div class="menu">
+<div class="menu-inner">
+<div class="menu-item menu-item-dropdown">
+<div class="menu-item-content">Left</div>
+<div class="menu-dropdown menu-dropdown-left">
+<div class="menu-dropdown-content">
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 1</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 2</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 3</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 4</a>
+<div class="menu-dropdown-divider"></div>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 5</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 6</a>
+</div>
+</div>
+</div>
+<div class="menu-item menu-item-dropdown">
+<div class="menu-item-content">Center</div>
+<div class="menu-dropdown menu-dropdown-center">
+<div class="menu-dropdown-content" style="height: 200px">
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 1</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 2</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 3</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 4</a>
+<div class="menu-dropdown-divider"></div>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 5</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 6</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 7</a>
+<div class="menu-dropdown-divider"></div>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 8</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 9</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 10</a>
+</div>
+</div>
+</div>
+<div class="menu-item menu-item-dropdown">
+<div class="menu-item-content">Right</div>
+<div class="menu-dropdown menu-dropdown-right">
+<div class="menu-dropdown-content">
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 1</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 2</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 3</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 4</a>
+<div class="menu-dropdown-divider"></div>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 5</a>
+<a href="#" class="menu-dropdown-link menu-close">Menu Item 6</a>
+</div>
+</div>
+</div>
+<div style="margin-left: auto" class="menu-item menu-item-dropdown">
+<div class="menu-item-content icon-only">
+<div class="menu-item-content">
+<i class="f7-icons">share</i>
+</div>
+</div>
+<div class="menu-dropdown menu-dropdown-right">
+<div class="menu-dropdown-content">
+<a href="#" class="menu-dropdown-link menu-close">
+<span>Share on Facebook</span>
+<i class="f7-icons margin-left">logo_facebook</i>
+</a>
+<a href="#" class="menu-dropdown-link menu-close">
+<span>Share on Twitter</span>
+<i class="f7-icons margin-left">logo_twitter</i>
+</a>
+</div>
+</div>
+</div>
+<a href="#" class="menu-item icon-only">
+<div class="menu-item-content">
+<i class="f7-icons">edit</i>
+</div>
+</a>
+</div>
+</div></div></div></div></div><script type="text/javascript" src="../../packages/core/js/framework7.bundle.min.js"></script><script>var theme = 'ios';
+if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+if (location.href.indexOf('theme=aurora') >= 0) theme = 'aurora';
+var plugin = {
+  params: {
+    theme: theme,
+    root: '#app',
+  }
+};
+if (Framework7.use) Framework7.use(plugin);
+else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+</script><script>var app = new Framework7();</script></body></html>

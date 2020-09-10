@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>View / Router | Framework7 v2 Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@framework7io">
+    <meta name="twitter:creator" content="@framework7io">
+    <meta name="twitter:title" content="View / Router | Framework7 v2 Documentation">
+    <meta name="twitter:image" content="https://avatars0.githubusercontent.com/u/31954178?s=200&amp;v=4">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/i/favicon.png">
+    <script src="/js/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body class="body-docs">
+    <header class="internal-header">
+      <div class="center">
+        <div class="logo-holder"><a class="logo" href="/"></a></div>
+        <div class="header-content">
+          <div class="title">Framework7 v2</div>
+          <ul class="nav">
+            <li><a href="/docs/">Docs</a>
+              <ul>
+                <li><a href="/docs/introduction.html">Getting Started</a></li>
+                <li><a href="/docs/">Framework7 / API</a></li>
+                <li><a href="/vue/">Framework7 Vue</a></li>
+                <li><a href="/docs/dom7.html">Dom7</a></li>
+                <li><a href="http://idangero.us/template7/" target="_blank">Template7</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="http://forum.framework7.io" target="_blank">Community Forum</a></li>
+                <li><a href="http://framework7.io/tutorials/" target="_blank">Tutorials</a></li>
+                <li><a href="http://framework7.io/templates/" target="_blank">Templates</a></li>
+                <li><a href="http://framework7.io/plugins/" target="_blank">Plugins</a></li>
+                <li><a href="http://framework7.io/showcase/" target="_blank">Apps Showcase</a></li>
+                <li><a href="http://framework7.io/icons/" target="_blank">Framework7 Icons</a></li>
+              </ul>
+            </li>
+            <li><a href="http://blog.framework7.io" target="_blank">Blog</a></li>
+            <li><a href="http://framework7.io//contribute/" target="_blank">Contribute</a></li>
+          </ul>
+          <div class="patreon-github"><a class="patreon-button" href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><span class="patreon-logo"></span><span class="patreon-text">Support Framework7</span></a>
+            <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="/i/gh-logo.png"></a><a class="gh-stars" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> stars</a><a class="gh-forks" href="https://github.com/nolimits4web/framework7/" target="_blank"><span></span> forks</a></div>
+          </div>
+        </div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+      </div>
+    </header>
+    <div class="bsa-cpc"></div>
+    <main>
+      <div class="center">
+        <div class="docs-nav">
+          <div class="docs-nav-toggle"><span></span><span></span><span></span></div>
+          <ul>
+            <li>
+              <div class="title">Get Started</div>
+              <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li><a href="app-layout.html">App HTML Layout</a></li>
+                <li><a href="rtl-layout.html">RTL Layout</a></li>
+                <li><a href="init-app.html">Initialize App</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Events</div>
+              <ul>
+                <li><a href="events.html">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Router / Navigation</div>
+              <ul>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="router-component.html">Router Component</a></li>
+                <li><a href="view.html#router-api-methods-properties">Router API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Components</div>
+              <ul>
+                <li><a href="app.html">App / Core</a></li>
+                <li><a href="accordion.html">Accordion / Collapsible</a></li>
+                <li><a href="action-sheet.html">Action Sheet / Actions</a></li>
+                <li><a href="autocomplete.html">Autocomplete</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="block.html">Block / Content Block</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="calendar.html">Calendar / Datepicker</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="checkbox.html">Checkbox</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="contacts-list.html">Contacts List</a></li>
+                <li><a href="data-table.html">Data Table</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
+                <li><a href="floating-action-button.html">Floating Action Button</a></li>
+                <li><a href="form.html">Form Data / Storage</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="infinite-scroll.html">Infinite Scroll</a></li>
+                <li><a href="inputs.html">Inputs / Form Inputs</a></li>
+                <li><a href="lazy-load.html">Lazy Load</a></li>
+                <li><a href="link.html">Link</a></li>
+                <li><a href="list-view.html">List View</a></li>
+                <li><a href="list-index.html">List Index</a></li>
+                <li><a href="login-screen.html">Login Screen</a></li>
+                <li><a href="messagebar.html">Messagebar</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="navbar.html">Navbar</a></li>
+                <li><a href="notification.html">Notification</a></li>
+                <li><a href="page.html">Page</a></li>
+                <li><a href="panel.html">Panel / Side Panels</a></li>
+                <li><a href="photo-browser.html">Photo Browser</a></li>
+                <li><a href="picker.html">Picker</a></li>
+                <li><a href="popover.html">Popover</a></li>
+                <li><a href="popup.html">Popup</a></li>
+                <li><a href="preloader.html">Preloader</a></li>
+                <li><a href="progressbar.html">Progressbar</a></li>
+                <li><a href="pull-to-refresh.html">Pull to Refresh</a></li>
+                <li><a href="radio.html">Radio</a></li>
+                <li><a href="range-slider.html">Range Slider</a></li>
+                <li><a href="searchbar.html">Searchbar</a></li>
+                <li><a href="sheet-modal.html">Sheet Modal</a></li>
+                <li><a href="smart-select.html">Smart Select</a></li>
+                <li><a href="sortable-list.html">Sortable List</a></li>
+                <li><a href="statusbar.html">Statusbar</a></li>
+                <li><a href="stepper.html">Stepper</a></li>
+                <li><a href="subnavbar.html">Subnavbar</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="swipeout.html">Swipeout</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="toast.html">Toast</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="toolbar-tabbar.html">Toolbar / Tabbar</a></li>
+                <li><a href="vi.html">Video Intelligence (vi)</a></li>
+                <li><a href="view.html">View / Router</a></li>
+                <li><a href="virtual-list.html">Virtual List</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Framework7 Icons</div>
+              <ul>
+                <li><a href="http://framework7.io/icons/">Framework7 Icons Cheatsheet</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Styling</div>
+              <ul>
+                <li><a href="iphone-x.html">iPhone X</a></li>
+                <li><a href="color-themes.html">Color Themes</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="hairlines.html">Hairlines</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Dom7</div>
+              <ul>
+                <li><a href="dom7.html">Dom7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Template7</div>
+              <ul>
+                <li><a href="template7.html">Template7</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Fast Clicks</div>
+              <ul>
+                <li><a href="fast-clicks.html">Fast Clicks</a></li>
+                <li><a href="active-state.html">Active State</a></li>
+                <li><a href="tap-hold.html">Tap Hold Event (Long Tap)</a></li>
+                <li><a href="touch-ripple.html">Touch Ripple (MD Theme)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Utilities</div>
+              <ul>
+                <li><a href="request.html">Request / Ajax</a></li>
+                <li><a href="utils.html">Utils</a></li>
+                <li><a href="device.html">Device</a></li>
+                <li><a href="support.html">Support</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Plugins API</div>
+              <ul>
+                <li><a href="plugins-api.html">Plugins API</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Custom Build</div>
+              <ul>
+                <li><a href="custom-build.html">Custom Build</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="docs-content">
+          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/docs/view.pug" target="_blank">Improve this Doc</a></div>
+          <h1>View / Router</h1>
+          <div class="docs-index"></div>
+          <p><strong>View</strong> (&lt;div class="view"&gt;) - is a separate visual part of the app with its own settings, navigation and history. So it is some kind of app in app. Such kind of functionality allows you easily manipulate each part of your app.</p>
+          <h2>View Layout</h2>
+          <p>Let's look at view HTML structure:</p>
+          <pre><code class="html">&lt;body&gt;
+  &lt;!-- app root --&gt;
+  &lt;div id="app"&gt;
+    &lt;!-- view inside of panel --&gt;
+    &lt;div class="panel panel-left panel-cover"&gt;
+      &lt;div class="view panel-view"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Your main view --&gt;
+    &lt;div class="view view-main"&gt;
+      &lt;!-- View related pages --&gt;
+      ...
+    &lt;/div&gt;
+    &lt;div class="popup"&gt;
+      &lt;div class="view popup-view"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+          <p>As you see <strong>View</strong> may be almost in any part of your app.</p>
+          <h4>Main View</h4>
+          <p>Your main view should have additional <strong>view-main</strong> class. Why we need main view? By default all links (which is not in any initialized view) will load pages in main view. Also if you use <code>pushState</code> hash navigation then it works only for main view's navigation.</p>
+          <h2>Multiple Views Layout</h2>
+          <p>In case we have the app with multiple views in app root, so called "Tabbed Views" app, we must wrap our views with additional <code>&lt;div class="views"&gt;</code> element.</p>
+          <div class="important-note">
+            <p>Only one "Views" element is allowed!</p>
+          </div>
+          <pre><code class="html">&lt;body&gt;
+  &lt;!-- app root --&gt;
+  &lt;div id="app"&gt;
+    &lt;!-- view inside of panel --&gt;
+    &lt;div class="panel panel-left panel-cover"&gt;
+      &lt;div class="view panel-view"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Views container --&gt;
+    &lt;div class="views tabs"&gt;
+      &lt;!-- Your main view --&gt;
+      &lt;div class="view view-main tab tab-active" id="view-1"&gt;
+        &lt;!-- View related pages --&gt;
+        ...
+      &lt;/div&gt;
+      &lt;!-- Another view --&gt;
+      &lt;div class="view tab" id="view-2"&gt;
+        &lt;!-- View related pages --&gt;
+        ...
+      &lt;/div&gt;
+      ...
+    &lt;/div&gt;
+    &lt;div class="popup"&gt;
+      &lt;div class="view popup-view"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+          <h2>View App Methods</h2>
+          <p>When we already have required views in HTML and our app is already <a href="init-app.html">initialized</a>, now we need to initialize our views. Let's look at available app methods to work with Views:</p>
+          <div class="method-wrap">
+            <p><span class="method">app.views.create(<span>viewEl, parameters</span>)</span> - initialize View</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">viewEl</span> - <span class="parameter-type">string</span> or <span class="parameter-type">HTMLElement</span>. If string - CSS selector of View element</li>
+              <li><span class="parameter">parameters</span> - <span class="parameter-type">object</span>. Object with View parameters</li>
+              <li class="method-returns">Method returns object with just created View instance.</li>
+            </ul>
+          </div>
+          <div class="method-wrap">
+            <p><span class="method">app.views.get(<span>viewEl</span>)</span> - get View instance by HTML element</p>
+            <ul class="method-parameters">
+              <li><span class="parameter">viewEl</span> - <span class="parameter-type">string</span> or <span class="parameter-type">HTMLElement</span>. If string - CSS selector of View element</li>
+              <li class="method-returns">Method returns object with just created View instance.</li>
+            </ul>
+          </div>
+          <div class="method-wrap">
+            <p>There could be situation when we need to get currently active View, because instead of main app view we may also have view in opened popup, popover, opened panel, tabs, etc. This method allows to get the View instance of currently active/visible/"most-top" view.</p>
+            <p>For example, if you have initilized View in panel, and panel is currently opened, then this method will return panel's view. Or, if you use app with tab bar layout, where each tab is view, then this method will return currently active/visible tab-view</p>
+            <p><span class="method">app.views.current</span> - get currently active/visible View instance.</p>
+            <ul class="method-parameters">
+              <li class="method-returns">Method returns object with just created View instance.</li>
+            </ul>
+          </div>
+          <h2>View Parameters</h2>
+          <p>Now let's look at list of available parameters we need to create View:</p>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td></td>
+                <td>View name. If view was created with name, then it may be accessed via <code>app.views.[name]</code></td>
+              </tr>
+              <tr>
+                <td>main</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Specify whether this is View is main or not. If not passed then will be determined based on whether its element has <code>view-main</code> class or not</td>
+              </tr>
+              <tr>
+                <td>router</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Set to false to disable view router</td>
+              </tr>
+              <tr>
+                <td>url</td>
+                <td>string</td>
+                <td></td>
+                <td>Default (initial) View's url. If not specified, then it is equal to document url</td>
+              </tr>
+              <tr>
+                <td>stackPages</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If enabled then all previous pages in navigation chain will not be removed from DOM when you navigate deeper and deeper. It could be useful, for example, if you have some Form from 5 steps (5 pages) and when you are on last 5th page you need access to form that was on 1st page.</td>
+              </tr>
+              <tr>
+                <td>linksView</td>
+                <td>string<br>object</td>
+                <td></td>
+                <td>CSS Selector of another view or object with initialized View instance. By defaul all links in initialized (only) view will load pages in this view. This tell links to load pages in other view.</td>
+              </tr>
+              <tr>
+                <td>uniqueHistory</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Set to true and App will keep View's navigation history unique, it will also remove duplicated pages. By default, equal to the same App's parameter.</td>
+              </tr>
+              <tr>
+                <td>uniqueHistoryIgnoreGetParameters</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Use this parameter in addition to <code>uniqueHistory</code>. Set to <code>true</code> and App will ignore URL GET parameters when cheking its uniqueness. So the URLs like "page.html" and "page.html?id=3" will be treated as the same. By default, equal to the same App's parameter.</td>
+              </tr>
+              <tr>
+                <td>allowDuplicateUrls</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>You may enable this parameter to allow loading of new pages that have same url as currently "active" page in View.</td>
+              </tr>
+              <tr>
+                <td>animate</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enables transitions between pages</td>
+              </tr>
+              <tr>
+                <td>preloadPreviousPage</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enable/disable preloading of previous page when you go deep in navigation. Should be enabled for correct work of "swipe back page" feature.</td>
+              </tr>
+              <tr>
+                <td>reloadPages</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>When enabled, View will always reload currently active page without loading new one</td>
+              </tr>
+              <tr>
+                <td>restoreScrollTopOnBack</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>When enabled it will restore page scroll top when you get back to this page</td>
+              </tr>
+              <tr>
+                <td>iosPageLoadDelay</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Delay (in ms) after new page will be loaded and inserted to DOM and before it will be transitioned. Can be increased a bit to improve performance. Will have effect only under iOS theme</td>
+              </tr>
+              <tr>
+                <td>materialPageLoadDelay</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Delay (in ms) after new page will be loaded and inserted to DOM and before it will be transitioned. Can be increased a bit to improve performance. Will have effect only under MD theme</td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td>passRouteQueryToRequest</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>When enabled then router will pass route url query to request url query (for <code>url</code>, <code>templateUrl</code> and <code>componentUrl</code> <a href="routes.html#route-properties">route properties</a>)
+                  <p>If you have the following route:</p>
+                  <p><code>{ path: '/somepage/', url: 'http://myserver/page/' }</code></p>
+                  <p>and you will click link with <b>/somepage/?foo=bar</b> url then it will load page from <b>http://myserver/page/?foo=bar</b> url</p>
+                </td>
+              </tr>
+              <tr>
+                <td>passRouteParamsToRequest</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>When enabled then router will pass current route parameters to request url query (for <code>url</code>, <code>templateUrl</code> and <code>componentUrl</code> <a href="routes.html#route-properties">route properties</a>)
+                  <p>If you have the following route:</p>
+                  <p><code>{ path: '/user/:userId/posts/:postId/', url: 'http://myserver/userpost/' }</code></p>
+                  <p>and you will click link with <b>/user/11/posts/12/</b> url then it will load page from <b>http://myserver/userpost/?userId=11&postId=12</b> url</p>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="4">Routes</th>
+              </tr>
+              <tr>
+                <td>routes</td>
+                <td>array</td>
+                <td></td>
+                <td>Array with current View <a href="routes.html">routes</a>. In case if specified then will overwrite global app routes and routes only specified here will be available for the current View</td>
+              </tr>
+              <tr>
+                <td>routesAdd</td>
+                <td>array</td>
+                <td></td>
+                <td>Array with additional <a href="routes.html">routes</a> that will extend global app routes. This additional routes will only be available for the current View</td>
+              </tr>
+              <tr>
+                <th colspan="4">Elements Removal</th>
+              </tr>
+              <tr>
+                <td>removeElements</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>During page transitions Router may remove unused Page and Navbar elements from DOM. Useful to be disabled in case you want to handle elements removal manually or using other library, e.g. Vue or React</td>
+              </tr>
+              <tr>
+                <td>removeElementsWithTimeout</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>When enabled then Router will remove elements after timeout</td>
+              </tr>
+              <tr>
+                <td>removeElementsTimeout</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Timeout to remove elements (in case of <code>removeElementsWithTimeout: true</code>)</td>
+              </tr>
+              <tr>
+                <td>unloadTabContent</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Unloads routable tab content (removes tab inner content) when tab becomes visible. Only for routable tabs</td>
+              </tr>
+              <tr>
+                <th colspan="4">XHR Cache</th>
+              </tr>
+              <tr>
+                <td>xhrCache</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>As Router can use Ajax to load HTML content for pages it is good to use caching, especially if your content in those pages updates not very often.</td>
+              </tr>
+              <tr>
+                <td>xhrCacheIgnore</td>
+                <td>boolean</td>
+                <td>[]</td>
+                <td>Array of URLs (string) that should not be cached</td>
+              </tr>
+              <tr>
+                <td>xhrCacheIgnoreGetParameters</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If "true" then URLs like "about.html?id=2" and "about.html?id=3" will be treated and cached like single "about.html" page</td>
+              </tr>
+              <tr>
+                <td>xhrCacheDuration</td>
+                <td>boolean</td>
+                <td>1000 * 60 * 10</td>
+                <td>Duration in ms (milliseconds) while app will use cache instead of loading page with another Ajax request. By default it takes 10 minutes.</td>
+              </tr>
+              <tr>
+                <th colspan="4">iOS Dynamic Navbar</th>
+              </tr>
+              <tr>
+                <td>iosDynamicNavbar</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enables dynamic navbar for iOS theme</td>
+              </tr>
+              <tr>
+                <td>iosSeparateDynamicNavbar</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>When enabled will extract dynamic navbar HTML element from page element and put it as a child of Views element. It improves dynamic navbar transition appearance, but in case you need dynamic navbar to be always as a page's child, then disable this parameter</td>
+              </tr>
+              <tr>
+                <td>iosAnimateNavbarBackIcon</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>This option (when enabled) gives more native look for dynamic navbar left back-link icon animation. Useful only when you use dynamic navbar with default back-link icon on left side set as "sliding".</td>
+              </tr>
+              <tr>
+                <th colspan="4">Swipe back</th>
+              </tr>
+              <tr>
+                <td>iosSwipeBack</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enable/disable ability to swipe back from left edge of screen to get to the previous page. For iOS theme</td>
+              </tr>
+              <tr>
+                <td>iosSwipeBackThreshold</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Value in px. Swipe back action will start if "touch distance" will be more than this value. For iOS theme</td>
+              </tr>
+              <tr>
+                <td>iosSwipeBackActiveArea</td>
+                <td>number</td>
+                <td>30</td>
+                <td>Value in px. Width of invisible left edge of the screen that triggers swipe back action. For iOS theme</td>
+              </tr>
+              <tr>
+                <td>iosSwipeBackAnimateShadow</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enable/disable box-shadow animation during swipe back action. You can disable it to improve performance. For iOS theme</td>
+              </tr>
+              <tr>
+                <td>iosSwipeBackAnimateOpacity</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enable/disable opacity animation during swipe back action. You can disable it to improve performance. For iOS theme</td>
+              </tr>
+              <tr>
+                <td>mdSwipeBack</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Enable/disable ability to swipe back from left edge of screen to get to the previous page. For MD theme</td>
+              </tr>
+              <tr>
+                <td>mdSwipeBackThreshold</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Value in px. Swipe back action will start if "touch distance" will be more than this value. For MD theme</td>
+              </tr>
+              <tr>
+                <td>mdSwipeBackActiveArea</td>
+                <td>number</td>
+                <td>30</td>
+                <td>Value in px. Width of invisible left edge of the screen that triggers swipe back action. For MD theme</td>
+              </tr>
+              <tr>
+                <td>mdSwipeBackAnimateShadow</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enable/disable box-shadow animation during swipe back action. You can disable it to improve performance. For MD theme</td>
+              </tr>
+              <tr>
+                <td>mdSwipeBackAnimateOpacity</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Enable/disable opacity animation during swipe back action. You can disable it to improve performance. For MD theme</td>
+              </tr>
+              <tr>
+                <th colspan="4">Push State</th>
+              </tr>
+              <tr>
+                <td>pushState</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If you develop web app (not PhoneGap or Home Screen web app) it is useful to enable hash navigation (browser url will look like "http://my-webapp.com/#!/about.html"). User as well will be able to navigate through app's history by using browser's default back and forward buttons.</td>
+              </tr>
+              <tr>
+                <td>pushStateRoot</td>
+                <td>string</td>
+                <td></td>
+                <td>Push state root URL separator, for example "http://my-app.com/". It is useful only in case when you use empty ("") pushStateSeparator</td>
+              </tr>
+              <tr>
+                <td>pushStateAnimate</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Enable/disable page transitions on push state change</td>
+              </tr>
+              <tr>
+                <td>pushStateAnimateOnLoad</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>Enable/disable push state page transition on app load</td>
+              </tr>
+              <tr>
+                <td>pushStateSeparator</td>
+                <td>string</td>
+                <td>#!</td>
+                <td>Push state URL separator, can be changed for something like '#page/' and then your push state urls will look like "http://myapp.com/#page/about.html"</td>
+              </tr>
+              <tr>
+                <td>pushStateOnLoad</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Disable to ignore parsing push state URL and loading page on app load</td>
+              </tr>
+              <tr>
+                <th colspan="4">Events Handlers</th>
+              </tr>
+              <tr>
+                <td>on</td>
+                <td>object</td>
+                <td></td>
+                <td>Object with events handlers. For example:
+                  <pre><code>var view = app.views.create('.view-main', {
+  on: {
+    pageInit: function () {
+      console.log('page init')
+    }
+  }
+})</code></pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="important-note">
+            <p>Note that all following parameters can be used in global app parameters under <code>view</code> property to set defaults for all views. For example:</p>
+            <pre><code>var app = new Framework7({
+  view: {
+    iosDynamicNavbar: false,
+    xhrCache: false,
+  }
+});</code></pre>
+          </div>
+          <h2>View Methods & Properties</h2>
+          <p>So to create View we have to call:</p>
+          <pre><code>var view = app.views.create({ /* parameters */ })</code></pre>
+          <p>After that we have its initialized instance (like <code>view</code> variable in example above) with useful methods and properties:</p>
+          <table class="methods-table">
+            <tbody>
+              <tr>
+                <th colspan="2">Properties</th>
+              </tr>
+              <tr>
+                <td>view.app</td>
+                <td>Link to global app instance</td>
+              </tr>
+              <tr>
+                <td>view.el</td>
+                <td>View HTML element</td>
+              </tr>
+              <tr>
+                <td>view.$el</td>
+                <td>Dom7 instance with view HTML element</td>
+              </tr>
+              <tr>
+                <td>view.name</td>
+                <td>View name that was passed <code>name</code> parameter</td>
+              </tr>
+              <tr>
+                <td>view.main</td>
+                <td>Boolean property indicating is it a main view or not</td>
+              </tr>
+              <tr>
+                <td>view.routes</td>
+                <td>Array with available router's routes</td>
+              </tr>
+              <tr>
+                <td>view.history</td>
+                <td>Array with view history</td>
+              </tr>
+              <tr>
+                <td>view.params</td>
+                <td>Object with view initialization parameters</td>
+              </tr>
+              <tr>
+                <td>view.router</td>
+                <td>View's initialized router instance</td>
+              </tr>
+              <tr>
+                <th colspan="2">Methods</th>
+              </tr>
+              <tr>
+                <td>view.destroy()</td>
+                <td>Destroy view instance</td>
+              </tr>
+              <tr>
+                <td>view.on(<span>event</span>, <span>handler</span>)</td>
+                <td>Add event handler</td>
+              </tr>
+              <tr>
+                <td>view.once(<span>event</span>, <span>handler</span>)</td>
+                <td>Add event handler that will be removed after it was fired</td>
+              </tr>
+              <tr>
+                <td>view.off(<span>event</span>, <span>handler</span>)</td>
+                <td>Remove event handler</td>
+              </tr>
+              <tr>
+                <td>view.off(<span>event</span>)</td>
+                <td>Remove all handlers for specified event</td>
+              </tr>
+              <tr>
+                <td>view.emit(<span>event</span>, <span>...args</span>)</td>
+                <td>Fire event on instance</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Router API / Methods & Properties</h2>
+          <p>View's main purpose is a navigating/routing between pages. We can access its router instance by <code>view.router</code>. It has a lot of useful methods and properties to take control over routing and navigation:</p>
+          <table class="methods-table">
+            <tbody>
+              <tr>
+                <th colspan="2">Router Properties</th>
+              </tr>
+              <tr>
+                <td>router.app</td>
+                <td>Link to global app instance</td>
+              </tr>
+              <tr>
+                <td>router.view</td>
+                <td>Link to related View instance</td>
+              </tr>
+              <tr>
+                <td>router.params</td>
+                <td>Object with router initialization parameters</td>
+              </tr>
+              <tr>
+                <td>router.el</td>
+                <td>Router's view HTML element</td>
+              </tr>
+              <tr>
+                <td>router.$el</td>
+                <td>Dom7 instance with router's view HTML element</td>
+              </tr>
+              <tr>
+                <td>router.routes</td>
+                <td>Array with available router's routes</td>
+              </tr>
+              <tr>
+                <td>router.history</td>
+                <td>Array with router's view history</td>
+              </tr>
+              <tr>
+                <td>router.cache</td>
+                <td>Object with router/view cache data</td>
+              </tr>
+              <tr>
+                <td>router.currentRoute</td>
+                <td>Object with current route data. It has the following properties
+                  <ul>
+                    <li><code>url</code> - route URL</li>
+                    <li><code>path</code> - route path</li>
+                    <li><code>query</code> - object with route query. If the url is <code>/page/?id=5&foo=bar</code> then it will contain the following object <code>{id: '5', foo: 'bar'}</code></li>
+                    <li><code>params</code> - route params. If we have matching route with <code>/page/user/:userId/post/:postId/</code> path and url of the page is <code>/page/user/55/post/12/</code> then it will be the following object <code>{userId: '55', postId: '12'}</code></li>
+                    <li><code>name</code> - route name</li>
+                    <li><code>hash</code> - route URL hash</li>
+                    <li><code>route</code> - object with matching route from available routes</li>
+                    <li><code>context</code> - context that was passed to the route</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>router.previousRoute</td>
+                <td>Object with previously active route data. Same object format as <code>currentRoute</code></td>
+              </tr>
+              <tr>
+                <td>router.allowPageChange</td>
+                <td>Boolean property indicating is it allowed to change page / navigate or not</td>
+              </tr>
+              <tr>
+                <th colspan="2">Router Methods</th>
+              </tr>
+              <tr>
+                <td>router.navigate(<span>url, options</span>)</td>
+                <td>Navigate to (load) new page
+                  <ul class="method-parameters">
+                    <li><span class="parameter">url</span> <span class="parameter-type">string</span> - url to navigate to</li>
+                    <li><span class="parameter">options</span> - <span class="parameter-type">object</span> with additional navigation properties (optional):
+                      <ul>
+                        <li><span class="parameter">reloadCurrent</span> (<span class="parameter-type">boolean</span>) - replace the current page with the new one from route</li>
+                        <li><span class="parameter">reloadPrevious</span> (<span class="parameter-type">boolean</span>) - replace the previous page in history with the new one from route</li>
+                        <li><span class="parameter">reloadAll</span> (<span class="parameter-type">boolean</span>) - load new page and remove all previous pages from history and DOM</li>
+                        <li><span class="parameter">clearPreviousHistory</span> (<span class="parameter-type">boolean</span>) - previous pages history will be cleared after reloading/navigate to the specified route</li>
+                        <li><span class="parameter">animate</span> (<span class="parameter-type">boolean</span>) - whether the page should be animated or not (overwrites default router settings)</li>
+                        <li><span class="parameter">history</span> (<span class="parameter-type">boolean</span>) - whether the page should be saved in router history</li>
+                        <li><span class="parameter">pushState</span> (<span class="parameter-type">boolean</span>) - whether the page should be saved in browser state. In case you are using <code>pushState</code>, then you can pass here <code>false</code> to prevent route getting in browser history</li>
+                        <li><span class="parameter">ignoreCache</span> (<span class="parameter-type">boolean</span>) - If set to <code>true</code> then it will ignore if such URL in cache and reload it using XHR again</li>
+                        <li><span class="parameter">context</span> (<span class="parameter-type">object</span>) - additional Router component or Template7 page context</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>router.back(<span>url, options</span>)</td>
+                <td>Go back to previous page, going back in View history
+                  <ul class="method-parameters">
+                    <li><span class="parameter">url</span> <span class="parameter-type">string</span> - url to navigate to (optional).
+                      <ul>
+                        <li>If not specified, then it will go back to the previous page in history.</li>
+                        <li>If specified and there is previous page in history then it will be ignored.</li>
+                        <li>If specified and there is a <code>force: true</code> option then will remove previous page from DOM and navigate back to the specified page URL</li>
+                      </ul>
+                    </li>
+                    <li><span class="parameter">options</span> - <span class="parameter-type">object</span> with additional navigation properties (optional):
+                      <ul>
+                        <li><span class="parameter">animate</span> (<span class="parameter-type">boolean</span>) - whether the page should be animated or not (overwrites default router settings)</li>
+                        <li><span class="parameter">pushState</span> (<span class="parameter-type">boolean</span>) - whether the page should be saved in browser state. In case you are using <code>pushState</code>, then you can pass here <code>false</code> to prevent route getting in browser history</li>
+                        <li><span class="parameter">ignoreCache</span> (<span class="parameter-type">boolean</span>) - If set to <code>true</code> then it will ignore if such URL in cache and reload it using XHR again</li>
+                        <li><span class="parameter">force</span> (<span class="parameter-type">boolean</span>) - if set to <code>true</code> then it will ignore previous page in history and load specified one</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>router.refreshPage()</td>
+                <td>Refresh/reload current page. Actually same as:
+                  <pre><code class="js">router.navigate(router.currentRoute.url, {
+  reloadCurrent: true,
+  ignoreCache: true,
+});</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>router.clearPreviousHistory()</td>
+                <td>Clear router previous pages history and remove all previous pages from DOM</td>
+              </tr>
+              <tr>
+                <td>router.on(<span>event</span>, <span>handler</span>)</td>
+                <td>Add event handler</td>
+              </tr>
+              <tr>
+                <td>router.once(<span>event</span>, <span>handler</span>)</td>
+                <td>Add event handler that will be removed after it was fired</td>
+              </tr>
+              <tr>
+                <td>router.off(<span>event</span>, <span>handler</span>)</td>
+                <td>Remove event handler</td>
+              </tr>
+              <tr>
+                <td>router.off(<span>event</span>)</td>
+                <td>Remove all handlers for specified event</td>
+              </tr>
+              <tr>
+                <td>router.emit(<span>event</span>, <span>...args</span>)</td>
+                <td>Fire event on instance</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Linking Between Pages & Views</h2>
+          <p>It may be not very comfortable to use router methods all the time to navigate between pages. In many cases we can just use <a href="link.html">links</a> to navigate between pages. And we can pass additional navigation parameters using <code>data-</code> attributes:</p>
+          <pre><code class="html">&lt;!-- same as router.navigate('/somepage/'); --&gt;
+&lt;a href="/somepage/"&gt;Some Page&lt;/a&gt;
+
+&lt;!-- same as router.navigate('/somepage/', {reloadCurrent: true, animate: false}); --&gt;
+&lt;a href="/somepage/" data-animate="false" data-reload-current="true"&gt;Some Page&lt;/a&gt;
+
+&lt;!-- same as router.back(); --&gt;
+&lt;a href="#" class="back"&gt;Go back&lt;/a&gt;
+
+&lt;!-- same as router.back('/home/', {force: true, ignoreCache: true}); --&gt;
+&lt;a href="/home/" data-force="true" data-ignore-cache="true" class="back"&gt;Go back&lt;/a&gt;</code></pre>
+          <p>Links default behavior:</p>
+          <ul>
+            <li>If link is in inside of not initialized view then it will load page in main view</li>
+            <li>If link is in inside of initialized view then it will load page in this view (if other view is not specified in view's <code>linksView</code> parameter)</li>
+          </ul>
+          <p>But if we need to load page in another view we can specify this view's CSS selector in link's <code>data-view</code> attribute</p>
+          <pre><code class="html">&lt;!-- left view --&gt;
+&lt;div class="view view-init view-left" data-name="left"&gt;
+  ...
+  &lt;!-- will load "some-page" to main view --&gt;
+  &lt;a href="/some-page/" data-view=".view-main"&gt;Some Page&lt;/a&gt;
+  ...
+&lt;/div&gt;
+&lt;!-- main view --&gt;
+&lt;div class="view view-init view-main"&gt;
+  ...
+  &lt;!-- will load "another-page" to left view --&gt;
+  &lt;a href="/another-page/" data-view=".view-left"&gt;Another Page&lt;/a&gt;
+  ...
+&lt;/div&gt;</code></pre>
+          <h2>Router Events</h2>
+          <p>Router has a lot of useful events.</p>
+          <h3>Dom Events</h3>
+          <p>Router will fire the following DOM events for swipe back pages (iOS-theme only):</p>
+          <table class="events-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Target</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>swipeback:move</td>
+                <td>View Element<span>&lt;div class="view"&gt;</span></td>
+                <td>Event will be triggered during swipe back move</td>
+              </tr>
+              <tr>
+                <td>swipeback:beforechange</td>
+                <td>View Element<span>&lt;div class="view"&gt;</span></td>
+                <td>Event will be triggered right before swipe back animation to previous page when you release it</td>
+              </tr>
+              <tr>
+                <td>swipeback:afterchange</td>
+                <td>View Element<span>&lt;div class="view"&gt;</span></td>
+                <td>Event will be triggered after swipe back animation to previous page when you release it</td>
+              </tr>
+              <tr>
+                <td>swipeback:beforereset</td>
+                <td>View Element<span>&lt;div class="view"&gt;</span></td>
+                <td>Event will be triggered right before swipe back animation to current page when you release it</td>
+              </tr>
+              <tr>
+                <td>swipeback:afterreset</td>
+                <td>View Element<span>&lt;div class="view"&gt;</span></td>
+                <td>Event will be triggered after swipe back animation to current page when you release it</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Router Instance Events</h3>
+          <div class="important-note">
+            <p>Router events bubble to View instance and to the App instance, so the event emitted on router instance will also be avaiable on view and on app intsances:</p>
+          </div>
+          <table class="events-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Arguments</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>routeChange</td>
+                <td><span>(newRoute, previousRoute, router)</span></td>
+                <td>Event will be fired on current route change</td>
+              </tr>
+              <tr>
+                <td>routeChanged</td>
+                <td><span>(newRoute, previousRoute, router)</span></td>
+                <td>Event will be fired on current route change and after page transitions</td>
+              </tr>
+              <tr>
+                <th colspan="3">XHR Events</th>
+              </tr>
+              <tr>
+                <td>routerAjaxStart</td>
+                <td><span>(xhr, options)</span></td>
+                <td>Event will be fired after router XHR opened and before XHR send. Can be used to modify the XHR object before it is sent. Use this callback to set custom headers, etc. As an arguments receives XHR object and navigating <code>options</code> object</td>
+              </tr>
+              <tr>
+                <td>routerAjaxSuccess</td>
+                <td><span>(xhr, options)</span></td>
+                <td>Event will be fired when the request succeeds. As an arguments receives XHR object and navigating <code>options</code> object</td>
+              </tr>
+              <tr>
+                <td>routerAjaxError</td>
+                <td><span>(xhr, options)</span></td>
+                <td>Event will be fired if the request fails. As an arguments receives XHR object and navigating <code>options</code> object</td>
+              </tr>
+              <tr>
+                <td>routerAjaxComplete</td>
+                <td><span>(xhr, options)</span></td>
+                <td>Event will be fired when the request finishes. As an arguments receives XHR object and navigating <code>options</code> object</td>
+              </tr>
+              <tr>
+                <th colspan="3">Swipe Back Events</th>
+              </tr>
+              <tr>
+                <td>swipebackMove</td>
+                <td><span>(data)</span></td>
+                <td>Event will be triggered during swipe back move. <code>data</code> contains object with the following properties: <code>percentage</code>, <code>currentPageEl</code>, <code>previousPageEl</code>, <code>currentNavbarEl</code>, <code>previousNavbarEl</code></td>
+              </tr>
+              <tr>
+                <td>swipebackBeforeChange</td>
+                <td><span>(data)</span></td>
+                <td>Event will be triggered right before swipe back animation to previous page when you release it. <code>data</code> contains object with the following properties: <code>currentPageEl</code>, <code>previousPageEl</code>, <code>currentNavbarEl</code>, <code>previousNavbarEl</code></td>
+              </tr>
+              <tr>
+                <td>swipebackAfterChange</td>
+                <td><span>(data)</span></td>
+                <td>Event will be triggered after swipe back animation to previous page when you release it. <code>data</code> contains object with the following properties: <code>currentPageEl</code>, <code>previousPageEl</code>, <code>currentNavbarEl</code>, <code>previousNavbarEl</code></td>
+              </tr>
+              <tr>
+                <td>swipebackBeforeReset</td>
+                <td><span>(data)</span></td>
+                <td>Event will be triggered right before swipe back animation to current page when you release it. <code>data</code> contains object with the following properties: <code>currentPageEl</code>, <code>previousPageEl</code>, <code>currentNavbarEl</code>, <code>previousNavbarEl</code></td>
+              </tr>
+              <tr>
+                <td>swipebackAfterReset</td>
+                <td><span>(data)</span></td>
+                <td>Event will be triggered after swipe back animation to current page when you release it. <code>data</code> contains object with the following properties: <code>currentPageEl</code>, <code>previousPageEl</code>, <code>currentNavbarEl</code>, <code>previousNavbarEl</code></td>
+              </tr>
+              <tr>
+                <th colspan="3">Page Events</th>
+              </tr>
+              <tr>
+                <td>pageMounted</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered when new page just inserted to DOM. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageInit</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered after Router initialize required page's components and navbar. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageReinit</td>
+                <td><span>(pageData)</span></td>
+                <td>This event will be triggered in case of navigating to the page that was already initialized. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageBeforeIn</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered when everything initialized and page is ready to be transitioned into view (into active/current position). As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageAfterIn</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered after page transitioned into view. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageBeforeOut</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered right before page is going to be transitioned out of view. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageAfterOut</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered after page transitioned out of view. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <td>pageBeforeRemove</td>
+                <td><span>(pageData)</span></td>
+                <td>Event will be triggered right before Page will be removed from DOM. This event could be very useful if you need to detach some events / destroy some plugins to free memory. As an argument event receives <a href="page.html#page-data">Page Data</a></td>
+              </tr>
+              <tr>
+                <th colspan="3">Routable Tabs Events</th>
+              </tr>
+              <tr>
+                <td>tabInit<br>tabMounted</td>
+                <td><span>(newTabEl, tabRoute)</span></td>
+                <td>Event will be triggered right after routable Tab content will be loaded. As an argument event handler receives:
+                  <ul>
+                    <li><code>newTabEl</code> - tab HTML element where route content was just loaded (new tab)</li>
+                    <li><code>tabRoute</code> - new tab route</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>tabBeforeRemove</td>
+                <td><span>(oldTabEl, newTabEl, tabRoute)</span></td>
+                <td>Event will be triggered right after routable Tab content will be loaded. As an argument event handler receives:
+                  <ul>
+                    <li><code>oldTabEl</code> - tab HTML element where route content was just removed (old tab)</li>
+                    <li><code>newTabEl</code> - tab HTML element where route content was just loaded (new tab)</li>
+                    <li><code>tabRoute</code> - new tab route</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">Routable Modals Events</th>
+              </tr>
+              <tr>
+                <td>modalInit<br>modalMounted</td>
+                <td><span>(modalEl, modalRoute, modal)</span></td>
+                <td>Event will be triggered right after routable modal content will be loaded and added to DOM. As an argument event handler receives:
+                  <ul>
+                    <li><code>modalEl</code> - loaded modal HTML element</li>
+                    <li><code>modalRoute</code> - modal route</li>
+                    <li><code>modal</code> - created modal instance</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>modalBeforeRemove</td>
+                <td><span>(modalEl, modalRoute, modal)</span></td>
+                <td>Event will be triggered right before routable modal will be removed from DOM and destroyed. As an argument event handler receives:
+                  <ul>
+                    <li><code>modalEl</code> - modal HTML element</li>
+                    <li><code>modalRoute</code> - modal route</li>
+                    <li><code>modal</code> - modal instance</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>View Auto Initialization</h2>
+          <p>If you don't need to use View API and your View is inside of DOM on a moment of app initialization then it can be auto initialized with just adding additional <code>view-init</code> class:</p>
+          <pre><code class="html">&lt;!-- Add view-init class --&gt;
+&lt;div class="view view-init"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+          <p>But what about View parameters. In this case we may pass them in <code>data-</code> attributes.</p>
+          <div class="important-note">
+            <p>Parameters that used in camelCase, for example <code>pushState</code>, in data- attributes should be used as kebab-case as <b>data-push-state</b></p>
+          </div>
+          <pre><code>&lt;!-- view parameters in data- attributes --&gt;
+&lt;div class="view view-init" data-url="/" data-name="home" data-push-state="true"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+          <p>In this case if you need to access created View instance you can use:</p>
+          <ul>
+            <li>In case if it is main view, we may use <code>app.views.main</code> to get main view instance</li>
+            <li>Otherwise, we can access it by passed <code>name</code> parameter like <code>app.views.home</code></li>
+          </ul>
+          <pre><code class="html">&lt;!-- main view --&gt;
+&lt;div class="view view-main view-init"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;!-- another view --&gt;
+&lt;div class="view view-init" data-name="home"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+          <pre><code class="js">var mainView = app.views.main;
+var homeView = app.views.home;</code></pre>
+          <h2>Initial Page Route</h2>
+          <p>Initial page can also be loaded correctly using <a href="routes.html">Routes</a>. In app layout we must leave View blank:</p>
+          <pre><code class="html">&lt;body&gt;
+  &lt;div id="app"&gt;
+    &lt;div class="view view-main"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+          <p>In routes we may specify "home" route, for example:</p>
+          <pre><code class="js">routes: [
+  {
+    path: '/',
+    url: './home.html'
+  },
+  ...
+]</code></pre>
+          <p>And when we init the View, we need to specify it is default URL:</p>
+          <pre><code class="js">app.views.create('.view-main', {
+  url: '/'
+})</code></pre>
+          <p>That is all, now on app load, home page content will be loaded from "home.html" file.</p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script>
+    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+    <script>
+      (function(){
+        if(typeof _bsa !== 'undefined' && _bsa) {
+        _bsa.init('default', 'CKYD627I', 'placement:framework7io', {
+          target: '.bsa-cpc',
+          align: 'horizontal',
+          disable_css: 'true'
+        });
+          }
+      })();
+    </script>
+  </body>
+</html>

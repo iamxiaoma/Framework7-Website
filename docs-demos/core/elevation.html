@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="../../packages/core/css/framework7.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="view view-main view-init">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title">Elevation</div>
+              <div class="right"></div>
+            </div>
+          </div>
+          <div class="page-content"><div class="block">
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-1">1</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-2">2</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-3">3</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-4">4</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-5">5</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-6">6</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-7">7</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-8">8</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-9">9</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-10">10</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-11">11</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-12">12</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-13">13</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-14">14</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-15">15</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-16">16</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-17">17</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-18">18</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-19">19</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-20">20</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-21">21</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-22">22</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-23">23</div>
+</div>
+<div class="col">
+<div class="elevation-demo elevation-24">24</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="elevation-demo elevation-6 elevation-hover-24 elevation-pressed-12 elevation-transition">6 + hover-24 + pressed-12</div>
+</div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../packages/core/js/framework7.min.js"></script>
+    <script>
+      var theme = 'ios';
+      if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+      var plugin = {
+        params: {
+          theme: theme,
+          root: '#app',
+        }
+      };
+      if (Framework7.use) Framework7.use(plugin);
+      else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+      
+    </script>
+    <style>
+      .elevation-demo {
+        height: 100px;
+        margin: 30px 10px;
+        background: #fff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+    <script>var app = new Framework7();</script>
+  </body>
+</html>
